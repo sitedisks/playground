@@ -6,7 +6,7 @@ namespace ClassLibrary
     {
         public void PrintOut()
         {    
-			System.Console.WriteLine("class lib print out by p.W");
+			Console.WriteLine("class lib print out by p.W");
         }
 		
 		public string GetStr(){

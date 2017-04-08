@@ -7,12 +7,17 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-        
-			MyClass myC=new MyClass();
-			myC.PrintOut();
-			var str = myC.GetStr();
-			Console.WriteLine(str);
-			Console.WriteLine("Hello World!");
+
+            MyClass myC = new MyClass();
+            PrintOut(myC);
+            var str = myC.GetStr();
+            Console.WriteLine(str);
+            Console.WriteLine("Hello World!");
+        }
+
+        private static void PrintOut(MyClass myC)
+        {
+            myC.PrintOut();
         }
     }
 }
