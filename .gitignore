@@ -213,3 +213,4 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+NodeJS/myExpressApp/node_modules/
