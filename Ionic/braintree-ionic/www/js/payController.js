@@ -43,6 +43,14 @@ function payController($scope, braintreeService) {
 	var braintreeClient;
 	braintreeService.getClientToken().then(function(clientToken) {
 		// braintree.setup(clientToken, "custom", {id: "checkout", enableCORS: true});
+		// v3 client sdk read: https://developers.braintreepayments.com/start/hello-client/javascript/v3
+		/*
+		braintree.client.create({
+			authorization: CLIENT_TOKEN_FROM_SERVER
+			}, function (err, clientInstance) {
+			 
+			}); */
+
 		braintreeClient = new braintree.api.Client({clientToken: clientToken, enableCORS: true});
 		$scope.ready = true;
 	});
@@ -76,6 +84,9 @@ function payController($scope, braintreeService) {
 		}, function(err, nonce) {
 			if (err) {
 				throw err;
+			}else {
+				$scope.paymentMethodNonce = nonce;
+				$scope.step = 'checkout';
 			}
 
 			braintreeService
@@ -88,9 +99,20 @@ function payController($scope, braintreeService) {
 		})
 	};
 
-	$scope.pay = function(amount) {
+	$scope.payByNonce = function(amount){
+		var fakeNonce = 'fake-valid-mastercard-nonce';
 		braintreeService
-			.sale(amount, $scope.paymentMethodToken)
+			.saleByNonce(amount, fakeNonce)
+			.then(function(transactionId) {
+				$scope.step = 'done';
+				$scope.transactionId = transactionId;
+				console.log('transactionId ' + transactionId);
+			});
+	}
+
+	$scope.payByToken = function(amount) {
+		braintreeService
+			.saleByToken(amount, $scope.paymentMethodToken)
 			.then(function(transactionId) {
 				$scope.step = 'done';
 				$scope.transactionId = transactionId;

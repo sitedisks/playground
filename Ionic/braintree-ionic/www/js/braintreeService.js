@@ -59,12 +59,25 @@ function braintreeFactory($http) {
 				});
 		},
 
-		sale: function(amount, paymentMethodToken) {
+		saleByNonce: function(amount, paymentMethodNonce) {
 			var postData = {
-				transaction: {
+					amount: amount,
+					paymentMethodNonce, paymentMethodNonce
+			};
+
+			return $http
+				.post(apiUrl + '/sale', postData)
+				.then(function(response) {
+					if (response.status === 200 && response.data !== undefined) {
+						return response.data;
+					}
+				});
+		},
+
+		saleByToken: function(amount, paymentMethodToken) {
+			var postData = {
 					amount: amount,
 					paymentMethodToken, paymentMethodToken
-				}
 			};
 
 			return $http

@@ -51,6 +51,7 @@
             <label class="item item-input">
               <input type="text" placeholder="Cardholder name" ng-model="card.cardholder">
             </label>
+            <small>Fake mastercard: 5555555555554444</small>
             <label class="item item-input">
               <input type="text" placeholder="Number" ng-model="card.number">
             </label>
@@ -76,7 +77,7 @@
             <span>{{ amount }}</span>
           </div>
           <div class="padding">
-            <button class="button button-block button-positive" ng-click="pay(10)" ng-disabled="!ready">Pay</button>
+            <button class="button button-block button-positive" ng-click="payByNonce(10)" ng-disabled="!ready">Pay</button>
           </div>
         </div>
 
