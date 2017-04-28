@@ -3,6 +3,7 @@ angular
 	.controller('payController', payController);
 
 function payController($scope, braintreeService) {
+	var fakeNonce = 'fake-valid-mastercard-nonce';
 	/**
 	 * Form steps
 	 * 1. signup - create customer
@@ -85,38 +86,58 @@ function payController($scope, braintreeService) {
 			if (err) {
 				throw err;
 			}else {
+				console.log('Real nonce from the server: ' + nonce);
 				$scope.paymentMethodNonce = nonce;
 				$scope.step = 'checkout';
 			}
 
+			// nonce is the entryption of card holder name, card number, cvv etc..
 			braintreeService
 				.createPaymentMethod($scope.customerId, nonce)
-				.then(function(paymentMethodToken) {
-					console.log('paymentMethodToken ' + paymentMethodToken);
-					$scope.paymentMethodToken = paymentMethodToken;
-					$scope.step = 'checkout';
+				.then(function(data) {
+					if(data.Message){
+						console.log("Create Payment Method Error: " + data.Message)
+					}
+					else{
+						var paymentMethodToken = data.Target.Token;
+						console.log('paymentMethodToken ' + paymentMethodToken);
+						$scope.paymentMethodToken = paymentMethodToken;
+						$scope.step = 'checkout';
+					}
 				});
 		})
 	};
 
 	$scope.payByNonce = function(amount){
-		var fakeNonce = 'fake-valid-mastercard-nonce';
 		braintreeService
 			.saleByNonce(amount, fakeNonce)
-			.then(function(transactionId) {
-				$scope.step = 'done';
-				$scope.transactionId = transactionId;
-				console.log('transactionId ' + transactionId);
+			.then(function(data) {
+				if(data.Message){
+					console.log('Transaction Error: ' + data.Message);
+				}
+				else {
+					var transactionId = data.Target.Id;
+					$scope.step = 'done';
+					$scope.transactionId = transactionId;
+					console.log('transactionId ' + transactionId);
+				}
 			});
 	}
 
 	$scope.payByToken = function(amount) {
+		// paymentMethodToken is the combination of customerId and the payment method (card number, cvv, etc)
 		braintreeService
 			.saleByToken(amount, $scope.paymentMethodToken)
 			.then(function(transactionId) {
-				$scope.step = 'done';
-				$scope.transactionId = transactionId;
-				console.log('transactionId ' + transactionId);
+				if(data.Message){
+					console.log('Transaction Error: ' + data.Message);
+				}
+				else {
+					var transactionId = data.Target.Id;
+					$scope.step = 'done';
+					$scope.transactionId = transactionId;
+					console.log('transactionId ' + transactionId);
+				}
 			});
 	};
 };
