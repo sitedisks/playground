@@ -89,7 +89,7 @@ export class AppComponent implements OnInit  {
 
   getHeros(): void {
     this.heroService.getHeros().then(heros=>this.heros=heros);
-
+    // this.heroService.getHeros().then(function(heros){ return this.heros=heros });
   }
 
   ngOnInit(): void{
