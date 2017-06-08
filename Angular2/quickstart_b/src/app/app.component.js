@@ -10,6 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var hero_service_1 = require("./hero.service");
+// const squares = [1, 2, 3].map(function (x) { return x * x });
+var squares = [1, 2, 3].map(function (x) { return x * x; });
 var AppComponent = (function () {
     function AppComponent(heroService) {
         this.heroService = heroService;
