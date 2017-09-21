@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+var pinpieceCtrl = angular.module('pinpiece.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
