@@ -7,7 +7,7 @@
         .state('app', {
           url: '/app',
           abstract: true,
-          templateUrl: 'templates/menu.html',
+          templateUrl: 'app/menu.html',
           controller: 'AppCtrl'
         })
       
@@ -15,7 +15,7 @@
           url: '/search',
           views: {
             'menuContent': {
-              templateUrl: 'templates/search.html'
+              templateUrl: 'app/search.html'
             }
           }
         })
@@ -24,7 +24,7 @@
             url: '/browse',
             views: {
               'menuContent': {
-                templateUrl: 'templates/browse.html'
+                templateUrl: 'app/browse.html'
               }
             }
           })
@@ -32,7 +32,7 @@
             url: '/playlists',
             views: {
               'menuContent': {
-                templateUrl: 'templates/playlists.html',
+                templateUrl: 'app/playList/playlists.html',
                 controller: 'PlaylistsCtrl'
               }
             }
@@ -42,7 +42,7 @@
           url: '/playlists/:playlistId',
           views: {
             'menuContent': {
-              templateUrl: 'templates/playlist.html',
+              templateUrl: 'app/playList/playlist.html',
               controller: 'PlaylistCtrl'
             }
           }
