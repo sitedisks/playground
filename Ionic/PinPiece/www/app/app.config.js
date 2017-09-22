@@ -33,17 +33,17 @@
             views: {
               'menuContent': {
                 templateUrl: 'app/playList/playlists.html',
-                controller: 'PlaylistsCtrl'
+                controller: 'playlistsCtrl'
               }
             }
           })
       
         .state('app.single', {
-          url: '/playlists/:playlistId',
+          url: '/playlists/:itemId',
           views: {
             'menuContent': {
               templateUrl: 'app/playList/playlist.html',
-              controller: 'PlaylistCtrl'
+              controller: 'playlistCtrl'
             }
           }
         });
