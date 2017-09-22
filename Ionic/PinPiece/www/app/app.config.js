@@ -8,9 +8,38 @@
           url: '/app',
           abstract: true,
           templateUrl: 'app/menu.html',
-          controller: 'AppCtrl'
+          controller: 'appCtrl'
         })
       
+
+        .state('app.home', {
+          cache: false,
+          url: '/home',
+          abstract: true,
+          views: {
+            'menuContent': {
+              templateUrl: 'app/home/home.html',
+              controller: 'homeCtrl'
+
+            }
+
+          }
+         
+      })
+
+      .state('app.home.dashboard', {
+        cache: false,
+        url: '/dashboard',
+        views: {
+            'home-dashboard': {
+                templateUrl: 'app/home/dashboard.html',
+                controller: 'dashboardCtrl'
+
+            }
+        }
+    })
+
+
         .state('app.search', {
           url: '/search',
           views: {
