@@ -10,8 +10,7 @@
           templateUrl: 'app/menu.html',
           controller: 'appCtrl'
         })
-      
-
+ 
         .state('app.home', {
           cache: false,
           url: '/home',
@@ -38,6 +37,30 @@
             }
         }
     })
+
+    .state('app.home.post', {
+      cache: false,
+      url: '/post',
+      views: {
+          'home-post': {
+              templateUrl: 'app/home/post.html',
+              controller: 'postCtrl'
+
+          }
+      }
+  })
+
+  .state('app.home.me', {
+    cache: false,
+    url: '/me',
+    views: {
+        'home-me': {
+            templateUrl: 'app/home/me.html',
+            controller: 'meCtrl'
+
+        }
+    }
+})
 
 
         .state('app.search', {
