@@ -55,6 +55,17 @@
           }
         })
 
+        .state('app.addpost', {
+          cache: false,
+          url: '/addpost',
+          views: {
+              'menuContent': {
+                  templateUrl: 'app/home/post/postAdd.html',
+                  controller: 'postAddCtrl'
+              }
+          }
+        })
+
         // Friends
         .state('app.friends', {
             url: '/friends',
