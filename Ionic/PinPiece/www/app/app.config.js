@@ -66,6 +66,17 @@
           }
         })
 
+        .state('app.home.post.viewpost', {
+          cache: false,
+          url: '/viewpost',
+          views: {
+              'home-post@app.home': {
+                  templateUrl: 'app/home/post/postView.html',
+                  controller: 'postViewCtrl'
+              }
+          }
+        })
+
         // Friends
         .state('app.friends', {
             url: '/friends',
