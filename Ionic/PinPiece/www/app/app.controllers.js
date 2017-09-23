@@ -13,6 +13,10 @@ pinpieceCtrl.controller('appCtrl', ['$scope', '$ionicModal', '$timeout',
     // Form data for the login modal
     $scope.loginData = {};
 
+    $scope.closeLogin = closeLogin;
+    $scope.login = login;
+    $scope.doLogin = doLogin;
+
     // Create the login modal that we will use later
     $ionicModal.fromTemplateUrl('app/login.html', {
       scope: $scope
@@ -21,23 +25,19 @@ pinpieceCtrl.controller('appCtrl', ['$scope', '$ionicModal', '$timeout',
     });
 
     // Triggered in the login modal to close it
-    $scope.closeLogin = function() {
+    function closeLogin() {
       $scope.modal.hide();
     };
 
     // Open the login modal
-    $scope.login = function() {
+    function login() {
       $scope.modal.show();
     };
 
     // Perform the login action when the user submits the login form
-    $scope.doLogin = function() {
-      console.log('Doing login', $scope.loginData);
-
-      // Simulate a login delay. Remove this and replace with your login
+    function doLogin() {
+   
       // code if using a login system
-      $timeout(function() {
-        $scope.closeLogin();
-      }, 1000);
+       $scope.closeLogin();
     };
   }]);

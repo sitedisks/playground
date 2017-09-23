@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 var pinpieceApp = angular.module('pinpieceApp', ['ionic', 'pinpiece.controllers'])
 
-.run(function($ionicPlatform) {
+.run(['$ionicPlatform', function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -20,4 +20,4 @@ var pinpieceApp = angular.module('pinpieceApp', ['ionic', 'pinpiece.controllers'
       StatusBar.styleDefault();
     }
   });
-});
+}]);

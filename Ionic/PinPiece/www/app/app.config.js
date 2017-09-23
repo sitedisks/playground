@@ -1,9 +1,10 @@
 (function(){
     'use strict';
 
-    pinpieceApp.config(function($stateProvider, $urlRouterProvider) {
+    pinpieceApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+
         $stateProvider
-      
+    
         .state('app', {
           url: '/app',
           abstract: true,
@@ -11,6 +12,7 @@
           controller: 'appCtrl'
         })
  
+        // Home: Dashboard, Post, Me
         .state('app.home', {
           cache: false,
           url: '/home',
@@ -19,68 +21,75 @@
             'menuContent': {
               templateUrl: 'app/home/home.html',
               controller: 'homeCtrl'
-
-            }
-
-          }
-         
-      })
-
-      .state('app.home.dashboard', {
-        cache: false,
-        url: '/dashboard',
-        views: {
-            'home-dashboard': {
-                templateUrl: 'app/home/dashboard.html',
-                controller: 'dashboardCtrl'
-
-            }
-        }
-    })
-
-    .state('app.home.post', {
-      cache: false,
-      url: '/post',
-      views: {
-          'home-post': {
-              templateUrl: 'app/home/post.html',
-              controller: 'postCtrl'
-
-          }
-      }
-  })
-
-  .state('app.home.me', {
-    cache: false,
-    url: '/me',
-    views: {
-        'home-me': {
-            templateUrl: 'app/home/me.html',
-            controller: 'meCtrl'
-
-        }
-    }
-})
-
-
-        .state('app.search', {
-          url: '/search',
-          views: {
-            'menuContent': {
-              templateUrl: 'app/search.html'
             }
           }
         })
-      
-        .state('app.browse', {
-            url: '/browse',
+        .state('app.home.dashboard', {
+          cache: false,
+          url: '/dashboard',
+          views: {
+              'home-dashboard': {
+                  templateUrl: 'app/home/dashboard.html',
+                  controller: 'dashboardCtrl'
+              }
+          }
+        })
+        .state('app.home.post', {
+          cache: false,
+          url: '/post',
+          views: {
+              'home-post': {
+                  templateUrl: 'app/home/post/postList.html',
+                  controller: 'postListCtrl'
+              }
+          }
+        })
+        .state('app.home.me', {
+          cache: false,
+          url: '/me',
+          views: {
+              'home-me': {
+                  templateUrl: 'app/home/me.html',
+                  controller: 'meCtrl'
+              }
+          }
+        })
+
+        // Friends
+        .state('app.friends', {
+            url: '/friends',
             views: {
               'menuContent': {
-                templateUrl: 'app/browse.html'
+                templateUrl: 'app/user/friends.html',
+                controller: 'friendsCtrl'
               }
             }
-          })
-          .state('app.playlists', {
+        })
+
+        // About
+        .state('app.about', {
+            url: '/about',
+            views: {
+              'menuContent': {
+                templateUrl: 'app/about/about.html'
+               
+              }
+            }
+        })
+
+        // Tutorial
+        .state('app.tutorial', {
+            url: '/tutorial',
+            views: {
+              'menuContent': {
+                templateUrl: 'app/about/tutorial.html'
+                
+              }
+            }
+        })
+
+
+        .state('app.playlists', {
             url: '/playlists',
             views: {
               'menuContent': {
@@ -88,7 +97,7 @@
                 controller: 'playlistsCtrl'
               }
             }
-          })
+        })
       
         .state('app.single', {
           url: '/playlists/:itemId',
@@ -99,7 +108,8 @@
             }
           }
         });
+
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/app/playlists');
-      });
+        $urlRouterProvider.otherwise('/app/home/dashboard');
+      }]);
 })();

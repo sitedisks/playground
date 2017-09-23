@@ -1,6 +1,10 @@
 (function(){
     'use strict';
 
-    pinpieceCtrl.controller('meCtrl', ['$scope', function($scope){}]);
+    pinpieceCtrl.controller('meCtrl', ['$scope', 
+        function($scope){
+
+            
+        }]);
 
 })();
