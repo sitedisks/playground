@@ -1,0 +1,57 @@
+/**
+ * Feed
+ * --------------------------------------------------
+*/
+
+.view-feed {
+	.card {
+		border-radius: 0;
+		box-shadow: none;
+		margin: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		.full-image {
+			display: block;
+		}
+		.item-actions {
+			background-color: $calm;
+			border: 0;
+			color: $light;
+			font-size: 14px;
+			.item-note {
+				color: $light;
+			}
+		}
+		.item-body {
+			padding-bottom: 0;
+			overflow: hidden;
+			h2 {
+				color: $calm;
+			}
+			.item-avatar {
+				padding-left: 60px;
+				img {
+					&:first-child {
+						left: 0;
+					}
+				}
+				h2 {
+					color: $royal;
+					margin-top: 10px;
+				}
+			}
+		}
+		.list {
+			.comment {
+			    display: inline-block;
+				padding: 10px 16px;
+			    width: 100%;
+			}
+			.item {
+				.item-note {
+					color: $royal;
+				}
+			}
+		}
+	}
+}

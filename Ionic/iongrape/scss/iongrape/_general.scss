@@ -1,0 +1,24 @@
+/**
+ * General
+ * --------------------------------------------------
+*/
+
+.bg-image {
+	background-position: 50% 50%;
+	background-size: cover;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.view-more {
+	padding: 10px;
+	float: right;
+	a {
+		&.button {
+			font-size: 14px;
+    		line-height: 32px;
+		    min-height: 30px;
+			padding: 0 18px;
+		}
+	}
+}

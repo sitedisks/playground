@@ -1,0 +1,37 @@
+/**
+ * Friends
+ * --------------------------------------------------
+*/
+
+.input-search {
+	background-color: $royal;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 10px 20px;
+	.item {
+		&.item-input {
+			background-color: inherit;
+			background-color: transparent;
+			border-radius: 50px;
+			padding: 2px 16px;
+			.placeholder-icon {
+				color: $light;
+				font-size: 22px;
+			}
+			input {
+				color: $light;
+				padding-right: 10px;
+				@include placeholder($light);
+			}
+		}
+	}
+}
+.icon-option {
+	display: flex;
+	color: $calm;
+	font-size: 32px;
+	position: absolute;
+	right: 15px;
+	top: 25px;
+}

@@ -1,0 +1,19 @@
+/**
+ * Buttons
+ * --------------------------------------------------
+*/
+
+.button {
+	border: 0;
+	border-radius: 50px;
+	min-height: 40px;
+	&.activated {
+		border: 0;
+	}
+
+	&.button-facebook {
+	    @include button-style($button-facebook-bg, $button-default-border, $button-facebook-active-bg, $button-default-active-border, $button-facebook-text);
+	    @include button-clear($button-facebook-border);
+	    @include button-outline($button-facebook-border);
+	}
+}

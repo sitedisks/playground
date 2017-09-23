@@ -1,0 +1,60 @@
+<!-- File style menu.scss 
+(*) assigned classes -->
+
+<ion-side-menus enable-menu-with-back-views="false">
+	<ion-side-menu-content>
+		<ion-nav-bar>
+			<ion-nav-back-button>
+			</ion-nav-back-button>
+
+			<ion-nav-buttons side="left">
+				<button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
+		<ion-nav-view name="menuContent"></ion-nav-view>
+	</ion-side-menu-content>
+
+	<ion-side-menu side="left" ng-controller="MenuActiveCtrl">
+		<!-- * bg-image / background image -->
+		<!-- class bg-image is in the file general.scss -->
+		<div class="bg-image"style="background-image:url('img/bg.jpg');">
+			<!-- * bg-color / background color -->
+			<div class="bg-color">
+				<ion-content>
+					<ul class="list">
+						<a class="item" ng-class="{active:isActive('/app/feeds')}" menu-close href="#/app/feeds">
+							<i class="icon ion-ios-home-outline"></i>
+							Feeds
+						</a>
+						<a class="item" ng-class="{active:isActive('/app/friends')}" menu-close href="#/app/friends">
+							<i class="icon ion-ios-list-outline"></i>
+							Friends
+						</a>
+						<a class="item" ng-class="{active:isActive('/app/favorites')}" menu-close href="#/app/favorites">
+							<i class="icon ion-ios-heart-outline"></i>
+							Favorites
+						</a>
+						<a class="item" ng-class="{active:isActive('/app/profile')}" menu-close href="#/app/profile">
+							<i class="icon ion-ios-person-outline"></i>
+							Profile
+						</a>
+						<a class="item" ng-class="{active:isActive('/app/settings')}" menu-close href="#/app/settings">
+							<i class="icon ion-ios-settings"></i>
+							Settings
+						</a>
+						<a class="item" menu-close ng-click="doLogout()">
+							<i class="icon ion-log-out"></i>
+							Logout
+						</a>
+						<a class="item item-avatar" nav-clear>
+							<img ng-src="img/perfil.jpg">
+							Charlene Young
+							<p><i class="icon ion-ios-location-outline"> Orlando</i></p>
+						</a>
+					</ul>
+				</ion-content>
+			</div>
+		</div>
+	</ion-side-menu>
+</ion-side-menus>

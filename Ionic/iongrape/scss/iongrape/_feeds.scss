@@ -1,0 +1,83 @@
+/**
+ * Feeds
+ * --------------------------------------------------
+*/
+
+.view-feeds {
+	.card {
+		border-radius: 0;
+		margin: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.bg-color {
+		background: linear-gradient(rgba($calm,.0), rgba($calm,.8));
+		background: -webkit-linear-gradient(rgba($calm,.0), rgba($calm,.8));
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+		.name {
+			top: 20px;
+		    left: 15px;
+		    position: relative;
+			h2 {
+				background-color: rgba($royal,.6);
+				border-radius: 20px;
+				color: $light;
+				display: inline-block;
+				font-size: 12px;
+				font-weight: 400;
+				margin: 0px;
+				padding: 8px;
+			}
+		}
+		.feeds-actions {
+			position: absolute;
+			right: 15px;
+			top: 20px;
+			a {
+				background-color: rgba($royal,.6);
+				border-radius: 50%;
+			    color: $light;
+			    display: inline-block;
+		    	height: 30px;
+			    margin: 0 2px;
+			    text-align: center;
+			    text-decoration: none;
+		    	width: 30px;
+				.icon {
+					display: block;
+					&:before {
+						font-size: 20px;
+						line-height: 32px;
+					}
+				}
+			}
+		}
+		.item {
+		    background-color: transparent;
+		    border: 0;
+		    bottom: 0;
+		    color: $light;
+		    position: absolute;
+		    width: 100%;
+		    &.item-avatar {
+		    	h2 {
+		    		color: $light;
+		    	}
+		    }
+			p {
+				color: $light;
+				font-size: 12px;
+				.item-note {
+					@extend p;
+				}
+			}
+		}
+	}
+}

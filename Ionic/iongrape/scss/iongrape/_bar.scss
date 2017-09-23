@@ -1,0 +1,23 @@
+/**
+ * Bar
+ * --------------------------------------------------
+*/
+
+.bar {
+	background-color: $royal;
+	background-image: none;
+	border-bottom: 0;
+	color: $light;
+	.title {
+		color: $light;
+	}
+	.button {
+		color: $light;
+		&:activated {
+			color: lighten($royal,5%);
+		}
+	}
+}
+.bar-header {
+	background-size: 0;
+}

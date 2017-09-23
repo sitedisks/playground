@@ -1,0 +1,111 @@
+/**
+ * Edit Profile
+ * --------------------------------------------------
+*/
+
+.view-edit-profile {
+	.top-edit-profile {
+		top : 0;	
+	}
+	.bar-edit-profile {
+		background: linear-gradient(rgba($royal,0.5), rgba($royal,0)) !important;
+		background: -webkit-linear-gradient(rgba($royal,0.5), rgba($royal,0)) !important;
+	}
+	.content-image {
+		position: relative;
+		height: 340px;
+		width: 100%;
+		.cont-description {
+			background-color: rgba($royal, 0.5);
+			height: 340px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			.description {
+				position: relative;
+				text-align: center;
+			    top: 50%;
+			    padding-top: 100px;
+			    @include translate(0, -50%);
+			    img {
+			    	border-radius: 50%;
+			    	height: 80px;
+			    	width: 80px;
+			    }
+			    .add-img-perfil {
+				    background-color: rgba($calm, 0.6);
+				    border-radius: 50%;
+				    color: $light;
+				    height: 40px;
+			    	position: absolute;
+				    right: 60px;
+				    top: 120px;
+				    width: 40px;
+				    &.activated {
+				    	background-color: rgba(darken($calm,5%), 0.6);
+				    }
+				    .icon {
+				    	&:before {
+				    	    font-size: 25px;
+	    					line-height: 40px;
+    					}
+				    }
+			    }
+			    h2 {
+					color: $light;
+					font-size: 18px;
+					margin: 10px 0 0;
+				}
+				p {
+					color: $light;
+				}
+				.add-img-bg {
+					background-color: rgba($calm,0.6);
+					color: $light;
+					font-size: 14px;
+				    line-height: 35px;
+				    min-height: 35px;
+				    padding: 0 15px;
+				    text-transform: uppercase;
+				    &.activated {
+				    	background-color: rgba(darken($calm,5%),0.5);
+				    }
+				    &.icon {
+				    	&:before {
+					    	font-size: 25px;
+					    	margin: 0;
+					    	line-height: 35px;
+				    		
+				    	}
+				    }
+				}
+			}
+		}
+	}
+	.list {
+		a.item {
+			color: $input-color;
+			.icon {
+				color: $calm;
+			}
+		}
+		.item-divider {
+			font-size: 14px;
+		    line-height: 30px;
+		}
+		textarea,
+		input[type="text"],
+		input[type="password"],
+		input[type="number"],
+		input[type="email"],
+		input[type="tel"] {
+			text-align: right;
+		}
+		.item-select {
+			select {
+				color: $input-color;
+			}
+		}
+	}
+}

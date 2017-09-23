@@ -1,0 +1,24 @@
+// Colors
+// -------------------------------
+
+$light:                           	#fff !default;
+$stable:                          	#f8f8f8 !default;
+$calm:                            	#8767d3;
+$royal:                           	#8054e7;
+$facebook:						  	#283891;
+
+
+// Button Social
+// -------------------------------
+
+$button-facebook-bg:              	$facebook !default;
+$button-facebook-text:            	#fff !default;
+$button-facebook-border:          	darken($facebook, 10%) !default;
+$button-facebook-active-bg:       	darken($facebook, 10%) !default;
+$button-facebook-active-border:   	darken($facebook, 10%) !default;
+
+// Forms
+// -------------------------------
+
+$input-color:						#838383;
+$input-label-color:					#afafaf;

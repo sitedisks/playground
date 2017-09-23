@@ -1,0 +1,11 @@
+/**
+ * Register
+ * --------------------------------------------------
+*/
+
+.view-register {
+	@extend .view-login;
+	.logo {
+		padding-top: 50px;
+	}
+}

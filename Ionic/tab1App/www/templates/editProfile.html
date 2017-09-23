@@ -1,0 +1,84 @@
+<!-- File style editprofile.scss 
+(*) assigned classes -->
+
+<!-- * view-edit-profile / container general -->
+<ion-view view-title="Edit Profile" class="view-edit-profile">
+    <!-- * bar-edit-profile / bar color background -->
+    <ion-nav-bar class="bar-clear bar-edit-profile">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button class="button button-icon icon ion-ios-checkmark-empty"></button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <!-- * top-edit-profile / position top of content -->
+    <ion-content class="top-edit-profile">
+        <!-- * content-image / container image -->
+        <div class="content-image">
+            <!-- * bg-image / background image -->
+            <!-- class bg-image is in the file general.scss -->
+            <div class="bg-image" style="background-image:url(img/bg-profile.jpg);">
+            </div>
+            <!-- * cont-description / container information perfil -->
+            <div class="cont-description">
+                <!-- * description -->
+                <div class="description">
+                    <img src="img/perfil.jpg">
+                    <!-- * add-img-perfil / perfil image button -->
+                    <a class="add-img-perfil">
+                        <i class="icon icon ion-ios-camera-outline"></i>
+                    </a>
+                    <h2>Charlene Young</h2>
+                    <p>
+                        <i class="icon ion-ios-location-outline"> Orlando</i>
+                    </p>
+                    <!-- * add-img-bg / background image button -->
+                    <a class="add-img-bg button icon ion-ios-camera-outline"></a>
+                </div>
+            </div> 
+        </div>
+        <div class="list">
+            <div class="item item-divider">INFO</div>
+            <label class="item item-input">
+                <span class="input-label">First Name</span>
+                <input type="text" value="Charlene">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Last Name</span>
+                <input type="text" value="Young">
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    City
+                </div>
+                <select>
+                    <option>New York</option>
+                    <option selected>Orlando</option>
+                    <option>Chicago</option>
+                </select>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Phone Number</span>
+                <input type="tel">
+            </label>
+            <div class="item item-divider">ACCOUNT</div>
+            <label class="item item-input">
+                <span class="input-label">Username</span>
+                <input type="text" value="Char">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input type="email" value="Char@gmail.com">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" value="4589632165">
+            </label>
+            <div class="item item-divider">CONNECT YOUR ACCOUNT</div>
+            <a class="item item-icon-left item-icon-right">
+                <i class="icon ion-social-facebook"></i> Facebook
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

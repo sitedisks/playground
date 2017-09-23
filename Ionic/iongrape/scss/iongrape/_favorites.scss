@@ -1,0 +1,44 @@
+/**
+ * Favorites
+ * --------------------------------------------------
+*/
+
+.view-favorites {
+	.row {
+		padding: 0;
+		.col {
+			padding: 0;
+			.item-image {
+				border: 0;
+				.content  {
+					background: linear-gradient(rgba($calm,.0), rgba($calm,.8));
+					background: -webkit-linear-gradient(rgba($calm,.0), rgba($calm,.8));
+					color: $light;
+				    height: 100%;
+				    left: 0;
+				    position: absolute;
+				    top: 0;
+				    width: 100%;
+				    .favorites-actions {
+				    	bottom: 15px;
+				    	position: absolute;
+				    	right: 15px;
+				    	.color-fav {
+				    		color: #ff8383;
+				    	}
+				    }
+					.avatar {
+						bottom: 15px;
+						left: 15px;
+						position: absolute;
+						img {
+							border-radius: 50%;
+							max-height: 35px;
+							max-width: 35px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

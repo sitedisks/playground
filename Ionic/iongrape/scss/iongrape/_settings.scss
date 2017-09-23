@@ -1,0 +1,35 @@
+/**
+ * Settings
+ * --------------------------------------------------
+*/
+
+.view-settings {
+	.list {
+		.item-divider {
+			font-size: 14px;
+		    line-height: 30px;
+		}
+		a {
+			&.item {
+				color: $input-color;
+				.icon {
+					color: $calm;
+				}
+			}
+		}
+		ul {
+			&.list {
+				margin-bottom: 0;
+				.item {
+					color: $input-color;
+					.toggle {
+						input:checked + .track {
+    						background-color: $calm;
+						    border-color: $calm;
+						}
+					}
+				}
+			}
+		}
+	}
+}

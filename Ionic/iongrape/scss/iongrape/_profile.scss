@@ -1,0 +1,142 @@
+/**
+ * Profile
+ * --------------------------------------------------
+*/
+
+.view-profile {
+	.top-profile {
+		top : 0;	
+	}
+	.bar-profile {
+		background: linear-gradient(rgba($royal,0.5), rgba($royal,0)) !important;
+		background: -webkit-linear-gradient(rgba($royal,0.5), rgba($royal,0)) !important;
+	}
+	.content-image {
+		position: relative;
+		height: 340px;
+		width: 100%;
+		.cont-description {
+			background-color: rgba($royal, 0.5);
+			height: 340px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			.description {
+				position: relative;
+				text-align: center;
+			    top: 50%;
+			    padding-top: 100px;
+			    @include translate(0, -50%);
+			    img {
+			    	border-radius: 50%;
+			    	height: 80px;
+			    	width: 80px;
+			    }
+			    h2 {
+					color: $light;
+					font-size: 18px;
+					margin: 10px 0 0;
+				}
+				p {
+					color: $light;
+				}
+				.button {
+					background-color: rgba($calm,0.6);
+					color: $light;
+					font-size: 14px;
+				    line-height: 35px;
+				    min-height: 35px;
+				    padding: 0 15px;
+				    text-transform: uppercase;
+				    &.activated {
+				    	background-color: rgba(darken($calm,5%),0.6);
+				    }
+				}
+			}
+
+		}
+	}
+	.button-bar {
+		> .button {
+			border-right: 1px solid $royal;
+			padding: 8px 0;
+			&:first-child {
+				border-radius: 0;
+			}
+			&:last-child {
+				border-radius: 0;
+				border-right: 0;
+			}
+			h2 {
+				color: $light;
+				font-size: 18px;
+				margin: 0;
+			}
+			p {
+				font-size: 12px;
+				line-height: 14px;
+				margin: 0;
+				text-transform: uppercase;
+			}
+		}
+	}
+	.list {
+		.item-divider {
+	    	font-size: 14px;
+		    line-height: 30px;
+		    .item-note {
+		    	.button {
+				    font-size: 14px;
+				    line-height: 30px;
+	    		    min-height: 30px;
+		    	}
+		    }
+		}
+		.photos {
+			.row {
+				padding: 0;
+				margin: 0;
+				.col {
+					padding: 0;
+					.item {
+						border: 0;
+						.cont-photo {
+							position: relative;
+							height: 160px;
+							width: 100%;
+							.img {
+								background-position: 50% 50%;
+								background-size: cover;
+								background-repeat: no-repeat;
+								height: 100%;
+								width: 100%;
+							}
+							.bg-color {
+								background: linear-gradient(rgba($calm,.0), rgba($calm,.8));
+								background: -webkit-linear-gradient(rgba($calm,.0), rgba($calm,.8));
+								height: 100%;
+								position: absolute;
+								top: 0;
+								width: 100%;
+							}
+						}
+						.photo-actions {
+						    bottom: 10px;
+						    color: $light;
+						    font-size: 14px;
+						    position: absolute;
+						    text-align: center;
+						    width: 100%;
+						}
+					}
+				}
+			}
+		}
+		.followers, .following {
+			.icon {
+				color: $calm;
+			}
+		}
+	}
+}

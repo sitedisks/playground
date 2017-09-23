@@ -1,0 +1,49 @@
+/**
+ * Items
+ * --------------------------------------------------
+*/
+
+.item {
+	h2 {
+		color: $royal;
+	}
+}
+
+// Link and Button Active States
+
+.item.activated,.item .item-content.activated {
+	background-color: tint($royal,30%);
+}
+
+// Item Divider
+// -------------------------------
+
+.item-divider {
+	background-color: $light;
+	color: $calm;
+}
+
+// Item Option List
+//----------------------------------
+
+.item-options {
+	.button {
+		background-color: $calm;
+		color: $light;
+		padding: 0 6px;
+		&:first-child {
+			padding-left: 15px;
+		}
+		&:last-child {
+			padding-right: 15px;
+		}
+		.icon {
+			&:before {
+				background-color: $royal;
+  				border-radius: 50%;
+				font-size: 25px;
+				width: 42px;
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+<!-- File style register.scss 
+(*) assigned classes -->
+
+<!-- * view-register / container general -->
+<ion-modal-view class="view-register">
+    <!-- * bg-image / background image -->
+    <!-- class bg-image is in the file general.scss -->
+    <div class="bg-image" style="background-image:url('img/bg.jpg');">
+        <!-- * bg-color / background-color -->
+        <div class="bg-color">
+            <ion-content>
+                <!-- * logo / logo company -->
+                <div class="logo">
+                    <img src="img/logo.png" alt="logo">
+                </div>
+                <form ng-submit="doRegister()">
+                    <div class="list list-inset">
+                        <label class="item item-input">
+                            <i class="icon ion-ios-person-outline placeholder-icon"></i>
+                            <input type="text" placeholder="Username" ng-model="loginData.username">
+                        </label>
+                        <label class="item item-input">
+                            <i class="icon ion-ios-person-outline placeholder-icon"></i>
+                            <input type="text" placeholder="Email" ng-model="loginData.useremail">
+                        </label>
+                        <label class="item item-input">
+                            <i class="icon ion-ios-locked-outline placeholder-icon"></i>
+                            <input type="password" placeholder="Password" ng-model="loginData.password">
+                        </label>
+                        <button class="button button-block button-calm" type="submit">SING UP</button>
+                        <!-- * line / line separation -->
+                        <div class="line"></div>
+                        <button class="button button-block icon-left ion-social-facebook button-facebook" type="submit">FACEBOOK</button>
+                        <p>
+                            You already an account? <a href="#/login">Sing In</a>
+                        </p>
+                    </div>
+                </form>
+            </ion-content>
+        </div>
+    </div>
+</ion-modal-view>
