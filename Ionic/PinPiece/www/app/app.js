@@ -4,7 +4,10 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var pinpieceApp = angular.module('pinpieceApp', ['ionic', 'pinpiece.controllers'])
+var pinpieceApp = angular.module('pinpieceApp', [
+  'ionic', 
+  'pinpiece.controllers', 
+  'pascalprecht.translate'])
 
 .run(['$ionicPlatform', function($ionicPlatform) {
   $ionicPlatform.ready(function() {

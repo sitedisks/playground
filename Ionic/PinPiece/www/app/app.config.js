@@ -110,6 +110,16 @@
             }
         })
 
+        // Settings
+        .state('app.settings', {
+            url: '/settings',
+            views: {
+              'menuContent': {
+                templateUrl: 'app/settings/settings.html',
+                controller: 'settingsCtrl'
+              }
+            }
+        })
 
         .state('app.playlists', {
             url: '/playlists',
