@@ -6,7 +6,7 @@
 
             $translateProvider
                 .translations('en', {
-                    "TEXT_PinPiece": "PinPiece"
+                    "TEXT_PINPIECE": "PinPiece"
                 });
 
             $translateProvider.useStaticFilesLoader({

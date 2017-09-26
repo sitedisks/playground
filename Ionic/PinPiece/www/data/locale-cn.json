@@ -7,7 +7,7 @@
     "BTN_REGISTER": "注册",
     "BTN_MANAGE": "管理",
     "BTN_HOME": "首页",
-    "BTN_SURVEY": "调查",
+    "BTN_SURVEY": "问卷",
     "BTN_ADD": "添加",
     "BTN_REMOVE": "移除",
     "BTN_CANCEL": "取消",
@@ -15,7 +15,7 @@
     "BTN_MORE": "更多",
     "BTN_NEXT": "下一步",
 
-    "TEXT_CHORICE": "潮米",
+    "TEXT_PINPIECE": "秘片",
     "TEXT_FIRST": "第一个",
     "TEXT_QUESTION": "问题",
     "TEXT_ADD_QUESTION": "添加问题",
