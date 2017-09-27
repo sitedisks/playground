@@ -1,7 +1,9 @@
 <ion-view view-title="Home.Dashboard">
     <ion-content>
-      <h1>Dashboard</h1>
-      <h3>Love</h3>
+
+      <div ng-init="init()" ng-cloak>
+        <div id="mapDiv"></div>
+      </div>
 
       <button class="button button-block button-positive" ng-click="newPost()">
         {{'BTN_ADD' | translate}}
