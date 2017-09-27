@@ -4,6 +4,7 @@
     pinpieceCtrl.controller('dashboardCtrl', ['$scope', '$state', '$cordovaGeolocation',
         function($scope, $state, $cordovaGeolocation){
 
+            var searchManager;
             $scope.map = null;
             $scope.coords = null;
 
@@ -46,6 +47,7 @@
                             // mapTypeId: Microsoft.Maps.MapTypeId.aerial,
                             // zoom: 10
                         });
+                        reverseGeocode();
                         clearInterval(interval);
                     }catch(e){
                     }
@@ -55,6 +57,32 @@
             function newPost(){
 
                 $state.go('app.addpost');
+            }
+
+            function reverseGeocode() {
+                //If search manager is not defined, load the search module.
+                if (!searchManager) {
+                    //Create an instance of the search manager and call the reverseGeocode function again.
+                    Microsoft.Maps.loadModule('Microsoft.Maps.Search', function () {
+                        searchManager = new Microsoft.Maps.Search.SearchManager($scope.map);
+                        reverseGeocode();
+                    });
+                } else {
+                    var searchRequest = {
+                        location: $scope.map.getCenter(),
+                        callback: function (r) {
+                            //Tell the user the name of the result.
+                            alert(r.name);
+                        },
+                        errorCallback: function (e) {
+                            //If there is an error, alert the user about it.
+                            alert("Unable to reverse geocode location.");
+                        }
+                    };
+        
+                    //Make the reverse geocode request.
+                    searchManager.reverseGeocode(searchRequest);
+                }
             }
 
         }]);
