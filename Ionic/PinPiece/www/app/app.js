@@ -6,6 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 var pinpieceApp = angular.module('pinpieceApp', [
   'ionic', 
+  'ngCordova',
   'pinpiece.controllers', 
   'pascalprecht.translate'])
 
