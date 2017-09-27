@@ -2,7 +2,11 @@
     <ion-content>
 
       <div ng-init="init()" ng-cloak>
-        <div id="mapDiv"></div>
+       
+        <div ng-repeat="item in addresses">
+          <h3>{{item.shortAddress}}</h3>
+          <span>{{item.fullAddress | json}}</span>
+        </div>
       </div>
 
       <button class="button button-block button-positive" ng-click="newPost()">
