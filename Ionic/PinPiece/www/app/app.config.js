@@ -1,7 +1,12 @@
 (function(){
     'use strict';
 
-    pinpieceApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+    pinpieceApp.config(['$stateProvider', '$urlRouterProvider', '$sceDelegateProvider', 'RESTSERVICES',
+      function($stateProvider, $urlRouterProvider, $sceDelegateProvider, RESTSERVICES) {
+
+        $sceDelegateProvider.resourceUrlWhitelist([
+          RESTSERVICES.virtualearth + '**'
+        ]);
 
         $stateProvider
     

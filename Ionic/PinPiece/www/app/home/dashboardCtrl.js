@@ -1,11 +1,14 @@
 (function(){
     'use strict';
 
-    pinpieceCtrl.controller('dashboardCtrl', ['$scope', '$http', '$state', '$ionicLoading', '$cordovaGeolocation',
-        function($scope, $http, $state, $ionicLoading, $cordovaGeolocation){
+    pinpieceCtrl.controller('dashboardCtrl', ['$scope', '$state', '$ionicLoading', '$cordovaGeolocation', 'pinpieceFactory',
+        function($scope, $state, $ionicLoading, $cordovaGeolocation, pinpieceFactory){
 
             var bingKey = 'AqlUSI0HFVVtDNrRHti87vFyhCeL34H4hOflM_xKWx4FeLIAROakEXwK0K4z3Pt6';
-            $scope.coords = null;
+            $scope.coords = {
+                latitude: '-37.809341811602465',
+                longitude: '145.08142582185948'
+            };
             $scope.addresses = [];
 
             $scope.init = init;
@@ -29,7 +32,6 @@
             });
 
            }
-            
 
             function init(){
 
@@ -38,15 +40,13 @@
                 var geolocation = $cordovaGeolocation.getCurrentPosition(posOptions);
                 geolocation.then(function (position) {
                     $scope.coords = position.coords;
-                    var lat  = position.coords.latitude;
-                    var long = position.coords.longitude;
-
                     fillAddresses();
 
                   }, function(err) {
                     // error
                     console.log(err);
                     hideLoading();
+                    fillAddresses();
                   });
             
             }
@@ -56,7 +56,7 @@
             }
 
             function fillAddresses(){
-                geolocationReverse($scope.coords).then(function(resp){
+                pinpieceFactory.geolocationReverse($scope.coords).then(function(resp){
                     var resourceSets = resp.data.resourceSets;
                     angular.forEach(resourceSets, function(item){
                         angular.forEach(item.resources, function(add){
@@ -69,20 +69,7 @@
                 }, function(err){
                     // error
                     console.log(err);
-                    hideLoading()
-                });
-            }
-
-            // services
-            function geolocationReverse(coords) {
-                var lat  = coords.latitude;
-                var lng = coords.longitude;
-                var params = lat + ',' + lng;
-                return $http({
-                    type: 'GET',
-                    url: 'http://dev.virtualearth.net/REST/v1/Locations/' + params + '?o=json&key=' + bingKey,           
-                    datatype: 'json',
-                    contentType: 'application/json;charset=utf-8'
+                    hideLoading();
                 });
             }
 
