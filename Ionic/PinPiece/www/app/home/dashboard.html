@@ -1,16 +1,52 @@
 <ion-view view-title="Home.Dashboard">
     <ion-content>
-
       <div ng-init="init()" ng-cloak>
-       
-        <div ng-repeat="item in addresses">
-          <h3>{{item.shortAddress}}</h3>
-          <span>{{item.fullAddress | json}}</span>
-        </div>
-      </div>
+    
+          <div class="topdiv">
+              <div ng-show="addresses.length==0">
+                  <h4>Failed to location, full to refresh...</h4>
+                </div>
+                <div ng-show="addresses.length>0">
+                  <h3>You current Location</h3>
+                  <div ng-repeat="item in addresses">
+                    <h4>{{item.shortAddress}}</h4>
+                    <!-- <span>{{item.fullAddress | json}}</span> -->
+                  </div>
+                </div>
+                <button class="button button-block button-royal" ng-click="newPost()">
+                    {{'BTN_ADD' | translate}}
+                </button>
+          </div>
+          <div class="bottomdiv">
+           
+            <div class="list">
+                    <a class="item item-thumbnail-left" href="#">
+                      <img src="img/favorites/1.jpg">
+                      <h2>Pretty Hate Machine</h2>
+                      <p>Nine Inch Nails</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <a class="item item-thumbnail-left" href="#">
+                      <img src="img/favorites/2.jpg">
+                      <h2>Pretty Hate Machine</h2>
+                      <p>Nine Inch Nails</p>
+                    </a>
+                </div>  
+                
+                <div class="list">
+                    <a class="item item-thumbnail-left" href="#">
+                      <img src="img/favorites/3.jpg">
+                      <h2>Pretty Hate Machine</h2>
+                      <p>Nine Inch Nails</p>
+                    </a>
+                </div>
+          </div>
 
-      <button class="button button-block button-positive" ng-click="newPost()">
-        {{'BTN_ADD' | translate}}
-      </button>
+          <span>Find out more interesting east north 560m.</span>
+      </div>
+      
+      
+ 
     </ion-content>
 </ion-view>

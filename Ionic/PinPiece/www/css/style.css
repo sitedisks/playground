@@ -1,1 +1,13 @@
 /* Empty. Add your own CSS if you like */
+div.topdiv {
+    
+    top: 50px;
+    background: #fff;
+    height: 200px;
+    display: block;
+    color: #4a4a4a;
+}
+div.bottomdiv {
+
+    
+}

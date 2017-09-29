@@ -46,7 +46,7 @@
                     // error
                     console.log(err);
                     hideLoading();
-                    fillAddresses();
+                    // reload it button
                   });
             
             }
