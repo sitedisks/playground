@@ -1,10 +1,11 @@
 //index.js
 //获取应用实例
 const app = getApp()
+// 全局的 getApp() 函数可以用来获取到小程序实例
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: 'Peter Wang',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -50,5 +51,21 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  getMyLocation: function(e){
+
+    wx.getLocation({
+      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+      success: function (res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        wx.openLocation({
+          latitude: latitude,
+          longitude: longitude,
+          scale: 28
+        })
+      }
+    })
   }
+
 })
