@@ -1,1 +1,9 @@
-{{peter}}
+<view class="container">
+
+  <text>{{peter}}</text>
+  <button bindtap="showToastr">Toastr</button>
+  <button bindtap="showModal">Modal</button>
+  <button bindtap="callPhoto">Photo</button>
+
+  <image style="width: 360px; height: 250px; background-color: #eeeeee;" src="{{imageSrc}}"></image>
+</view>

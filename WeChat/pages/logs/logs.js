@@ -11,5 +11,16 @@ Page({
         return util.formatTime(new Date(log))
       })
     })
+    wx.getSetting({
+      success: (res) => {
+        var auth = res.authSetting;
+        /*
+         * res.authSetting = {
+         *   "scope.userInfo": true,
+         *   "scope.userLocation": true
+         * }
+         */
+      }
+    })
   }
 })
