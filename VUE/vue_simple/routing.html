@@ -1,0 +1,42 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+<div id="app">
+    <h1>Hello App route</h1>
+    <p>
+        <span>router-link 渲染成 a tag</span><br/>
+        <router-link to="foo" active-class="_active">Go to Foo</router-link>
+        <router-link to="bar" active-class="_active">Go to Bar</router-link>
+    </p>
+    <router-view></router-view>
+</div>
+
+<script>
+// const Foo = {template: '<div>foo</div>'}
+// const Bar = {template: '<div>bar</div>'}
+
+const routes = [
+    {
+        path: '/foo', component: {template: '<div>foo</div>'}
+    },
+    {
+        path: '/bar', component: {template: '<div>bar</div>'}
+    }
+]
+
+var router = new VueRouter({
+    routes:routes 
+})
+
+var app = new Vue({
+    el:'#app',
+    router:router
+})
+
+</script>
+
+<style>
+    ._active{
+        background-color : red;
+    }
+</style>

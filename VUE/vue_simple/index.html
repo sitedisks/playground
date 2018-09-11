@@ -1,0 +1,93 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    <temp_counter></temp_counter>
+</div>
+
+<template id="counter">
+    <div>
+        <span>{{count}}</span>
+        <button v-on:click="clickMe()">Add ONE</button>
+        <br>
+        <p>{{message}}</p>
+        <input v-model="message">
+        <br/>
+        <h2>Case: Watch</h2>
+        KM: <input v-model="kilometers">
+        M: <input v-model="meters">
+        <br/>
+        <h2>Case: Form</h2>
+        <p>单个复选框：</p>
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">{{ checked }}</label>
+          
+        <p>多个复选框：</p>
+        <input type="checkbox" id="checkboxAll" v-model="allChecked" v-on:change="changeAllChecked">
+        <label for="checkboxAll">{{allChecked}}</label>
+        <br>
+        <input type="checkbox" id="runoob" value="Runoob" v-model="checkedNames">
+        <label for="runoob">Runoob</label>
+        <input type="checkbox" id="google" value="Google" v-model="checkedNames">
+        <label for="google">Google</label>
+        <input type="checkbox" id="taobao" value="Taobao" v-model="checkedNames">
+        <label for="taobao">taobao</label>
+        <br>
+        <span>选择的值为: {{ checkedNames }}</span>
+
+    </div>
+</template>
+
+<script>
+    var vm = new Vue({
+        el:'#app',
+        components:{
+            temp_counter:{
+                template:'#counter', // counter is the template id
+                data(){
+                    return {
+                        count:0,
+                        message: "Love me",
+                        kilometers:0,
+                        meters: 0,
+                        checked:false,
+                        allChecked: false,
+                        checkedNames:[],
+                        checkedArr: ["Runoob", "Taobao", "Google"]
+                    }
+                },
+                methods:{
+                    clickMe: function(){ 
+                        return this.count++
+                    },
+                    changeAllChecked: function(){
+                        if(this.allChecked){
+                            this.checkedNames = this.checkedArr
+                        }
+                        else{
+                            this.checkedNames = []
+                        }
+                    }
+                },
+                computed:{},
+                watch:{
+                    kilometers:function(val){
+                        this.kilometers = val
+                        this.meters = val*1000
+                    },
+                    meters:function(val){
+                        this.kilometers=val/1000
+                        this.meters = val
+                    },
+                    checkedNames:function(){
+                        if(this.checkedNames.length == this.checkedArr.length){
+                            this.allChecked = true
+                        }else{
+                            this.allChecked = false
+                        }
+                    }
+                }
+            }
+        }
+    })
+    //app.$mount('#app')
+</script>
