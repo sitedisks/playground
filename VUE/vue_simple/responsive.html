@@ -1,0 +1,26 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id = "app">
+        <p style = "font-size:25px;">计数器: {{ counter }}</p>
+        <button @click = "counter++" style = "font-size:25px;">点我</button>
+    </div>
+    <script type = "text/javascript">
+    var myproduct = {"id":1, name:"book", "price":"20.00"}
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            counter: 1,
+            products: myproduct
+        }
+    });
+
+    //vm.products.qty = "1"
+    Vue.set(myproduct, 'qty', 1)
+   
+    vm.$watch('counter', function(nval, oval) {
+        console.log(vm.products)
+        console.log('计数器值的变化 :' + oval + ' 变为 ' + nval + '!');
+    });
+ 
+    </script>
