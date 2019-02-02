@@ -1,0 +1,77 @@
+http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg
+http://recurship.com/wp-content/themes/stag-blocks/images/menu.svg
+http://recurship.com/wp-content/themes/stag-blocks/images/close-button.svg
+http://recurship.com/wp-content/themes/stag-blocks/images/search.svg
+http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg
+http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm&r=g
+http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg
+http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm&r=g
+http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg
+http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm&r=g
+http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg
+http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm&r=g
+http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg
+http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm&r=g
+http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg
+http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm&r=g
+http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg
+http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm&r=g
+http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg
+http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm&r=g
+http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg
+http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm&r=g
+http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg
+http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm&r=g
+http://recurship.com/wp-content/themes/stag-blocks/images/back.svg
+
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://recurship.com/wp-content/themes/stag-blocks/images/menu.svg",
+"http://recurship.com/wp-content/themes/stag-blocks/images/close-button. svg",
+"http://recurship.com/wp-content/themes/stag-blocks/images/search.svg",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/back.svg"
+
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://recurship.com/wp-content/themes/stag-blocks/images/menu.svg",
+"http://recurship.com/wp-content/themes/stag-blocks/images/close-button. svg",
+"http://recurship.com/wp-content/themes/stag-blocks/images/search.svg",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/placeholder. svg",
+"http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&d=mm &r=g",
+"http://recurship.com/wp-content/themes/stag-blocks/images/back.svg"

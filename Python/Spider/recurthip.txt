@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+			<script>document.documentElement.classList.remove("no-js");</script>
+	
+	<title>Recurship - Helping Communities Prosper</title>
+
+<!-- All in One SEO Pack 2.7.2 by Michael Torbert of Semper Fi Web Design[296,312] -->
+<meta name="description" content="Recurship has been acquired by Sastaticket.pk"/>
+<link rel='next' href='http://recurship.com/page/2/'/>
+
+<link rel="canonical" href="http://recurship.com/"/>
+			<script type="text/javascript">window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-69009898-1',{'cookieDomain':'recurship.com'});ga('send','pageview');</script>
+			<script async src="https://www.google-analytics.com/analytics.js"></script>
+			<!-- /all in one seo pack -->
+<link rel='dns-prefetch' href='//fonts.googleapis.com'/>
+<link rel='dns-prefetch' href='//s.w.org'/>
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect'/>
+<link rel="alternate" type="application/rss+xml" title="RECURSHIP &raquo; Feed" href="http://recurship.com/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="RECURSHIP &raquo; Comments Feed" href="http://recurship.com/comments/feed/"/>
+		<script type="text/javascript">window._wpemojiSettings={"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/recurship.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.9"}};!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);</script>
+		<style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:none!important;padding:0!important}</style>
+<style id='wp-block-library-theme-css' media='all'>.wp-block-code{border:1px solid #e2e4e7;border-radius:4px;padding:.8em 1em}.wp-block-code,.wp-block-preformatted pre{color:#23282d;font-family:Menlo,Consolas,monaco,monospace;font-size:14px}.wp-block-pullquote{border-bottom:4px solid #555d66;border-top:4px solid #555d66;color:#40464d}.wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:#40464d;font-size:13px;font-style:normal;text-transform:uppercase}.wp-block-quote{margin:20px 0}.wp-block-quote__citation,.wp-block-quote cite,.wp-block-quote footer{color:#6c7781;font-size:13px;font-style:normal;margin-top:1em;position:relative}.wp-block-quote:not(.is-large):not(.is-style-large){border-left:4px solid #000;padding-left:1em}.wp-block-separator{border:none;border-bottom:2px solid #8f98a1;margin:1.65em auto}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){max-width:100px}.wp-block-table{border-collapse:collapse;min-width:240px;width:100%}.wp-block-table td,.wp-block-table th{border:1px solid;padding:.5em;word-break:break-all}</style>
+<link rel='stylesheet' id='wp-block-library-css' href='http://recurship.com/wp-content/plugins/gutenberg/build/block-library/A.style.css,qver=1543123370.pagespeed.cf.YQCC9b9LJe.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='stag-blocks-fonts-css' href='https://fonts.googleapis.com/css?family=Poppins%3A400%2C400i%2C500%2C600%2C600i&#038;subset=latin%2Clatin-ext&#038;ver=20180817' type='text/css' media='all'/>
+<link rel='stylesheet' id='stag-blocks-base-style-css' href='http://recurship.com/wp-content/themes/stag-blocks/A.style.css,qver=20180514.pagespeed.cf.k3UxHD7Ucn.css' type='text/css' media='all'/>
+<style id='stag-blocks-base-style-inline-css' type='text/css'>a,a:hover,a:focus,a:active,.nav-links a:hover,.nav-links a:focus,.comment-meta a:hover,.comment-meta a:focus{color:#008910}.main-navigation .menu>li.current-menu-item>a,.main-navigation .menu li a:hover,.main-navigation .menu li a:focus{color:#008910;border-color:#008910}.sticky-badge .sticky-text,.comment-form .form-submit input{background:#008910}</style>
+<script type='text/javascript' src='http://recurship.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://recurship.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>//<![CDATA[
+var stagBlocksScreenReaderText={"expand":"Expand child menu","collapse":"Collapse child menu"};
+//]]></script>
+<script type='text/javascript' src='http://recurship.com/wp-content/themes/stag-blocks/js/navigation.js,qver=20180514.pagespeed.jm.gtAF6lbae4.js' async></script>
+<script type='text/javascript' defer>//<![CDATA[
+'use strict';(function(){var isIe=/(trident|msie)/i.test(navigator.userAgent);if(isIe&&document.getElementById&&window.addEventListener){window.addEventListener('hashchange',function(){var id=location.hash.substring(1),element;if(!/^[A-z0-9_-]+$/.test(id)){return;}element=document.getElementById(id);if(element){if(!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)){element.tabIndex=-1;}element.focus();}},false);}})();
+//]]></script>
+<script type='text/javascript' defer>//<![CDATA[
+"use strict";document.addEventListener("DOMContentLoaded",function(){var n=[].slice.call(document.querySelectorAll("img.lazy"));if("IntersectionObserver"in window){var s=new IntersectionObserver(function(e,t){e.forEach(function(e){if(e.isIntersecting){var t=e.target;t.src=t.dataset.src,t.dataset.srcset&&(t.srcset=t.dataset.srcset),t.dataset.sizes&&(t.sizes=t.dataset.sizes),t.classList.remove("lazy"),s.unobserve(t)}})});n.forEach(function(e){s.observe(e)})}else{var t=!1,e=function e(){!1===t&&(t=!0,setTimeout(function(){n.forEach(function(t){t.getBoundingClientRect().top<=window.innerHeight&&0<=t.getBoundingClientRect().bottom&&"none"!==getComputedStyle(t).display&&(t.src=t.dataset.src,t.dataset.srcset&&(t.srcset=t.dataset.srcset),t.dataset.sizes&&(t.sizes=t.dataset.sizes),t.classList.remove("lazy"),0===(n=n.filter(function(e){return e!==t})).length&&(document.removeEventListener("scroll",e),window.removeEventListener("resize",e),window.removeEventListener("orientationchange",e)))}),t=!1},200))};document.addEventListener("scroll",e),window.addEventListener("resize",e),window.addEventListener("orientationchange",e)}});
+//]]></script>
+<link rel='https://api.w.org/' href='http://recurship.com/wp-json/'/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://recurship.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://recurship.com/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 4.9.9"/>
+
+		<style type="text/css">.recentcomments a{display:inline!important;padding:0!important;margin:0!important}</style>
+				<style type="text/css">.site-title,.site-description{position:absolute;clip:rect(1px,1px,1px,1px)}</style>
+		<link rel="icon" href="http://recurship.com/wp-content/uploads/2018/11/cropped-recurship-1-32x32.png.pagespeed.ce.OBaO1m-hYn.png" sizes="32x32"/>
+<link rel="icon" href="http://recurship.com/wp-content/uploads/2018/11/xcropped-recurship-1-192x192.png.pagespeed.ic.v0ns77VTxy.png" sizes="192x192"/>
+<link rel="apple-touch-icon-precomposed" href="http://recurship.com/wp-content/uploads/2018/11/xcropped-recurship-1-180x180.png.pagespeed.ic.QuT1B7dXAq.png"/>
+<meta name="msapplication-TileImage" content="http://recurship.com/wp-content/uploads/2018/11/cropped-recurship-1-270x270.png"/>
+		<style type="text/css" id="wp-custom-css">.cat-links>a{display:none}.author-avatar{display:none}.entry-title>a{font-size:140%}</style>
+	</head>
+
+<body class="home blog wp-custom-logo hfeed search-off">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+		<header id="masthead" class="site-header">
+						<div class="header-container">
+				<div class="site-branding">
+					<a href="http://recurship.com/" class="custom-logo-link" rel="home" itemprop="url"><img width="100" height="100" src="http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg" class="custom-logo lazy" alt="RECURSHIP" itemprop="logo" data-src="http://recurship.com/wp-content/uploads/2018/11/xrecurship-1-e1543124913216.png.pagespeed.ic.PzysuaY02j.png" data-sizes="100vw"/></a>											<h1 class="site-title"><a href="http://recurship.com/" rel="home">RECURSHIP</a></h1>
+					
+														</div><!-- .site-branding -->
+
+				<nav id="site-navigation" class="main-navigation" aria-label="Main menu">
+					
+					<button class="menu-toggle" aria-label="Open menu" aria-controls="primary-menu" aria-expanded="false">
+					<img class="menu-toggle-icon" src="http://recurship.com/wp-content/themes/stag-blocks/images/menu.svg" alt="menu-icon">
+					</button>
+
+					<div class="primary-menu-container">
+
+					<button class="menu-close-btn">
+						<img class="menu-close-icon" src="http://recurship.com/wp-content/themes/stag-blocks/images/close-button.svg" alt="menu-close-icon">
+					</button>
+						<ul id="primary-menu" class="menu"><li id="menu-item-618" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-618"><a href="http://recurship.com/" aria-current="page">Home</a></li>
+<li id="menu-item-619" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-619"><a href="http://recurship.com/about/">About</a></li>
+<li id="menu-item-625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-625"><a href="http://recurship.com/playthinks/">Play Thinks</a></li>
+<li id="menu-item-621" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-621"><a href="http://recurship.com/build-a-mvp/">Build a MVP</a></li>
+<li id="menu-item-622" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-622"><a href="http://recurship.com/careers/">Careers</a></li>
+<li id="menu-item-623" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-623"><a href="http://recurship.com/contact/">Contact</a></li>
+</ul>						<span class="search-toggle">
+							<img class="search-icon" src="http://recurship.com/wp-content/themes/stag-blocks/images/search.svg" alt="">
+						</span>
+						<div class="header-search-form">
+								<form role="search" method="get" class="search-form" action="http://recurship.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s"/>
+				</label>
+				<input type="submit" class="search-submit" value="Search"/>
+			</form>						</div>
+					</div>
+				</nav><!-- #site-navigation -->
+			</div><!-- .header-container -->
+		</header><!-- #masthead -->
+
+	<main id="primary" class="site-main">
+
+	<link rel='stylesheet' id='stag-blocks-content-css' href='http://recurship.com/wp-content/themes/stag-blocks/css/A.content.css,qver=20180514.pagespeed.cf.lgtJijtZPq.css' type='text/css' media='all'/>
+
+<article id="post-586" class="post-586 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-achievement">
+	<header class="entry-header">
+		<span class="cat-links"><a href="http://recurship.com/blog/category/uncategorized/" rel="category tag">Uncategorized</a> </span>		<h2 class="entry-title"><a href="http://recurship.com/blog/2018/07/08/2018-7-8-sastaticket-acquires-recurship/" rel="bookmark">Brace For Impact: Disruption Incoming</a></h2>			<div class="entry-meta">
+				<span class="byline"> <span class="author vcard"><a class="author-avatar" href="http://recurship.com/blog/author/mashhoodr/"><img alt src="http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg" class="avatar avatar-80 photo lazy" height="80" width="80" data-src="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g" data-srcset="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x"><noscript><img alt='' src='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80'/></noscript></a><a class="author-name" href="http://recurship.com/blog/author/mashhoodr/">Mashhood Rastgar</a></span> </span><span class="posted-on">On <a href="http://recurship.com/blog/2018/07/08/2018-7-8-sastaticket-acquires-recurship/" rel="bookmark"><time class="entry-date published" datetime="2018-07-08T09:27:36+00:00">July 8, 2018</time><time class="updated" datetime="2018-11-25T06:25:34+00:00">November 25, 2018</time></a> </span>			</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+		
+		<a class="post-thumbnail" href="http://recurship.com/blog/2018/07/08/2018-7-8-sastaticket-acquires-recurship/" aria-hidden="true">
+					</a>
+
+		
+	<div class="entry-content">
+		<p style="white-space: pre-wrap;">Recurship has been acquired by Sastaticket.pk</p>
+	</div><!-- .entry-content -->
+
+		<hr/>
+
+	
+</article><!-- #post-586 -->
+
+
+<article id="post-564" class="post-564 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+	<header class="entry-header">
+		<span class="cat-links"><a href="http://recurship.com/blog/category/uncategorized/" rel="category tag">Uncategorized</a> </span>		<h2 class="entry-title"><a href="http://recurship.com/blog/2018/06/03/2018-6-4-ngrx-selectors-how-to-stop-worrying-about-your-store-structure/" rel="bookmark">NgRx Selectors – How to Stop Worrying about your Store Structure</a></h2>			<div class="entry-meta">
+				<span class="byline"> <span class="author vcard"><a class="author-avatar" href="http://recurship.com/blog/author/mashhoodr/"><img alt src="http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg" class="avatar avatar-80 photo lazy" height="80" width="80" data-src="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g" data-srcset="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x"><noscript><img alt='' src='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80'/></noscript></a><a class="author-name" href="http://recurship.com/blog/author/mashhoodr/">Mashhood Rastgar</a></span> </span><span class="posted-on">On <a href="http://recurship.com/blog/2018/06/03/2018-6-4-ngrx-selectors-how-to-stop-worrying-about-your-store-structure/" rel="bookmark"><time class="entry-date published" datetime="2018-06-03T22:09:38+00:00">June 3, 2018</time><time class="updated" datetime="2018-11-28T11:58:26+00:00">November 28, 2018</time></a> </span>			</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+		
+		<a class="post-thumbnail" href="http://recurship.com/blog/2018/06/03/2018-6-4-ngrx-selectors-how-to-stop-worrying-about-your-store-structure/" aria-hidden="true">
+					</a>
+
+		
+	<div class="entry-content">
+		<p style="white-space: pre-wrap;">It is one of the biggest things. It can be subscribed from, one can get state changes when they are updated. But how to structure the store for an entire app?</p>
+	</div><!-- .entry-content -->
+
+		<hr/>
+
+	
+</article><!-- #post-564 -->
+
+
+<article id="post-561" class="post-561 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+	<header class="entry-header">
+		<span class="cat-links"><a href="http://recurship.com/blog/category/uncategorized/" rel="category tag">Uncategorized</a> </span>		<h2 class="entry-title"><a href="http://recurship.com/blog/2018/06/03/2018-6-1-jjknwadn9ivw1gba3wxsspjlpe9grk/" rel="bookmark">The Magic of Template Reference Variables</a></h2>			<div class="entry-meta">
+				<span class="byline"> <span class="author vcard"><a class="author-avatar" href="http://recurship.com/blog/author/mashhoodr/"><img alt src="http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg" class="avatar avatar-80 photo lazy" height="80" width="80" data-src="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g" data-srcset="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x"><noscript><img alt='' src='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80'/></noscript></a><a class="author-name" href="http://recurship.com/blog/author/mashhoodr/">Mashhood Rastgar</a></span> </span><span class="posted-on">On <a href="http://recurship.com/blog/2018/06/03/2018-6-1-jjknwadn9ivw1gba3wxsspjlpe9grk/" rel="bookmark"><time class="entry-date published" datetime="2018-06-03T22:03:05+00:00">June 3, 2018</time><time class="updated" datetime="2018-11-28T11:58:33+00:00">November 28, 2018</time></a> </span>			</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+		
+		<a class="post-thumbnail" href="http://recurship.com/blog/2018/06/03/2018-6-1-jjknwadn9ivw1gba3wxsspjlpe9grk/" aria-hidden="true">
+					</a>
+
+		
+	<div class="entry-content">
+		<p style="white-space: pre-wrap;">Use template variables, which is very easy. It brings a lot of interesting features to the table and just like many things in Angular whereas always interesting lesser known use cases to all of these features.  </p>
+	</div><!-- .entry-content -->
+
+		<hr/>
+
+	
+</article><!-- #post-561 -->
+
+
+<article id="post-527" class="post-527 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-angular tag-development tag-programming">
+	<header class="entry-header">
+		<span class="cat-links"><a href="http://recurship.com/blog/category/uncategorized/" rel="category tag">Uncategorized</a> </span>		<h2 class="entry-title"><a href="http://recurship.com/blog/2018/06/03/2018-5-31-angulars-user-authentication-tool-belt/" rel="bookmark">Angular&#8217;s User Authentication Tool Belt</a></h2>			<div class="entry-meta">
+				<span class="byline"> <span class="author vcard"><a class="author-avatar" href="http://recurship.com/blog/author/mashhoodr/"><img alt src="http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg" class="avatar avatar-80 photo lazy" height="80" width="80" data-src="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g" data-srcset="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x"><noscript><img alt='' src='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80'/></noscript></a><a class="author-name" href="http://recurship.com/blog/author/mashhoodr/">Mashhood Rastgar</a></span> </span><span class="posted-on">On <a href="http://recurship.com/blog/2018/06/03/2018-5-31-angulars-user-authentication-tool-belt/" rel="bookmark"><time class="entry-date published" datetime="2018-06-03T21:46:41+00:00">June 3, 2018</time><time class="updated" datetime="2018-11-28T11:58:39+00:00">November 28, 2018</time></a> </span>			</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+		
+		<a class="post-thumbnail" href="http://recurship.com/blog/2018/06/03/2018-5-31-angulars-user-authentication-tool-belt/" aria-hidden="true">
+					</a>
+
+		
+	<div class="entry-content">
+		<p style="white-space: pre-wrap;">Front-end frameworks are frameworks which power public clients. The public clients, as the name suggests are just public. It cannot have any kind of real sense of authentication in a traditional manner. </p>
+	</div><!-- .entry-content -->
+
+		<hr/>
+
+	
+</article><!-- #post-527 -->
+
+
+<article id="post-500" class="post-500 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+	<header class="entry-header">
+		<span class="cat-links"><a href="http://recurship.com/blog/category/uncategorized/" rel="category tag">Uncategorized</a> </span>		<h2 class="entry-title"><a href="http://recurship.com/blog/2018/06/03/2018-5-31-xfvrq9aauqkayhkd4kzp7gsbfg2bfl/" rel="bookmark">Custom Schematics: An Angular Application by the push of a Button</a></h2>			<div class="entry-meta">
+				<span class="byline"> <span class="author vcard"><a class="author-avatar" href="http://recurship.com/blog/author/mashhoodr/"><img alt src="http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg" class="avatar avatar-80 photo lazy" height="80" width="80" data-src="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g" data-srcset="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x"><noscript><img alt='' src='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80'/></noscript></a><a class="author-name" href="http://recurship.com/blog/author/mashhoodr/">Mashhood Rastgar</a></span> </span><span class="posted-on">On <a href="http://recurship.com/blog/2018/06/03/2018-5-31-xfvrq9aauqkayhkd4kzp7gsbfg2bfl/" rel="bookmark"><time class="entry-date published" datetime="2018-06-03T21:44:14+00:00">June 3, 2018</time><time class="updated" datetime="2018-11-28T11:58:43+00:00">November 28, 2018</time></a> </span>			</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+		
+		<a class="post-thumbnail" href="http://recurship.com/blog/2018/06/03/2018-5-31-xfvrq9aauqkayhkd4kzp7gsbfg2bfl/" aria-hidden="true">
+					</a>
+
+		
+	<div class="entry-content">
+		<p style="white-space: pre-wrap;">To use the angular CLI, it just requires calling ng new. It creates a new project. Then, the ng generate can be called in order to create components to create new services, new models, etc.  </p>
+	</div><!-- .entry-content -->
+
+		<hr/>
+
+	
+</article><!-- #post-500 -->
+
+
+<article id="post-540" class="post-540 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+	<header class="entry-header">
+		<span class="cat-links"><a href="http://recurship.com/blog/category/uncategorized/" rel="category tag">Uncategorized</a> </span>		<h2 class="entry-title"><a href="http://recurship.com/blog/2018/06/03/2018-5-31-real-time-stream-processing-with-reactive-extensions-rx/" rel="bookmark">Real-Time Stream Processing with Reactive-Extensions (RX)</a></h2>			<div class="entry-meta">
+				<span class="byline"> <span class="author vcard"><a class="author-avatar" href="http://recurship.com/blog/author/mashhoodr/"><img alt src="http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg" class="avatar avatar-80 photo lazy" height="80" width="80" data-src="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g" data-srcset="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x"><noscript><img alt='' src='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80'/></noscript></a><a class="author-name" href="http://recurship.com/blog/author/mashhoodr/">Mashhood Rastgar</a></span> </span><span class="posted-on">On <a href="http://recurship.com/blog/2018/06/03/2018-5-31-real-time-stream-processing-with-reactive-extensions-rx/" rel="bookmark"><time class="entry-date published" datetime="2018-06-03T21:37:03+00:00">June 3, 2018</time><time class="updated" datetime="2018-11-28T11:58:49+00:00">November 28, 2018</time></a> </span>			</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+		
+		<a class="post-thumbnail" href="http://recurship.com/blog/2018/06/03/2018-5-31-real-time-stream-processing-with-reactive-extensions-rx/" aria-hidden="true">
+					</a>
+
+		
+	<div class="entry-content">
+		<p style="white-space: pre-wrap;">The 1970s is considered to be the beginning of time. In 1991, the public internet was introduced. In 2004, the @ character was added to the morse code by its official committee. In 2009, the Rx was released and now in 2018, Rx is all the things.  </p>
+	</div><!-- .entry-content -->
+
+		<hr/>
+
+	
+</article><!-- #post-540 -->
+
+
+<article id="post-486" class="post-486 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-angular tag-coding tag-development tag-programming">
+	<header class="entry-header">
+		<span class="cat-links"><a href="http://recurship.com/blog/category/uncategorized/" rel="category tag">Uncategorized</a> </span>		<h2 class="entry-title"><a href="http://recurship.com/blog/2018/05/31/2018-5-31-supercharging-the-angular-cli-with-nx/" rel="bookmark">Supercharging the Angular CLI with NX</a></h2>			<div class="entry-meta">
+				<span class="byline"> <span class="author vcard"><a class="author-avatar" href="http://recurship.com/blog/author/mashhoodr/"><img alt src="http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg" class="avatar avatar-80 photo lazy" height="80" width="80" data-src="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g" data-srcset="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x"><noscript><img alt='' src='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80'/></noscript></a><a class="author-name" href="http://recurship.com/blog/author/mashhoodr/">Mashhood Rastgar</a></span> </span><span class="posted-on">On <a href="http://recurship.com/blog/2018/05/31/2018-5-31-supercharging-the-angular-cli-with-nx/" rel="bookmark"><time class="entry-date published updated" datetime="2018-05-31T15:22:25+00:00">May 31, 2018</time></a> </span>			</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+		
+		<a class="post-thumbnail" href="http://recurship.com/blog/2018/05/31/2018-5-31-supercharging-the-angular-cli-with-nx/" aria-hidden="true">
+					</a>
+
+		
+	<div class="entry-content">
+		<p style="white-space: pre-wrap;">In order to understand why NX exists, we will be talking about Collaboration and how it is impacted by Code Storage and Code Structure. What we do, is write code, which is interpreted by machines but read by human beings. So, to write code that is easily understood even over a long period of times, we have to collaborate with people in our teams. For collaboration to be effective, there are certain things that we need to keep in mind related to code storage and code structure. While these aspects do not necessarily make your collaborations mind-blowing, they do make it easier to have a good collaboration.  </p>
+	</div><!-- .entry-content -->
+
+		<hr/>
+
+	
+</article><!-- #post-486 -->
+
+
+<article id="post-467" class="post-467 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-bazel tag-development tag-programming">
+	<header class="entry-header">
+		<span class="cat-links"><a href="http://recurship.com/blog/category/uncategorized/" rel="category tag">Uncategorized</a> </span>		<h2 class="entry-title"><a href="http://recurship.com/blog/2018/05/31/2018-5-31-angular-as-a-strategy-for-collaboration-and-scale/" rel="bookmark">Angular as a Strategy for Collaboration and Scale</a></h2>			<div class="entry-meta">
+				<span class="byline"> <span class="author vcard"><a class="author-avatar" href="http://recurship.com/blog/author/mashhoodr/"><img alt src="http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg" class="avatar avatar-80 photo lazy" height="80" width="80" data-src="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g" data-srcset="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x"><noscript><img alt='' src='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80'/></noscript></a><a class="author-name" href="http://recurship.com/blog/author/mashhoodr/">Mashhood Rastgar</a></span> </span><span class="posted-on">On <a href="http://recurship.com/blog/2018/05/31/2018-5-31-angular-as-a-strategy-for-collaboration-and-scale/" rel="bookmark"><time class="entry-date published updated" datetime="2018-05-31T15:03:09+00:00">May 31, 2018</time></a> </span>			</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+		
+		<a class="post-thumbnail" href="http://recurship.com/blog/2018/05/31/2018-5-31-angular-as-a-strategy-for-collaboration-and-scale/" aria-hidden="true">
+					</a>
+
+		
+	<div class="entry-content">
+		<p style="white-space: pre-wrap;">Bazel has a really nice environment where the builds are all hermetic, it provides fully incremental builds every time and it never redoes work which is already done. If the applications are required to be tested, it reuses that, when some other part is run, it is not required to redo something which has been done.  </p>
+	</div><!-- .entry-content -->
+
+		<hr/>
+
+	
+</article><!-- #post-467 -->
+
+
+<article id="post-451" class="post-451 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-angular tag-angular-v5 tag-coding tag-development tag-programming">
+	<header class="entry-header">
+		<span class="cat-links"><a href="http://recurship.com/blog/category/uncategorized/" rel="category tag">Uncategorized</a> </span>		<h2 class="entry-title"><a href="http://recurship.com/blog/2018/05/12/keynote-five-years-of-angular/" rel="bookmark">Keynote: Five years of Angular</a></h2>			<div class="entry-meta">
+				<span class="byline"> <span class="author vcard"><a class="author-avatar" href="http://recurship.com/blog/author/mashhoodr/"><img alt src="http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg" class="avatar avatar-80 photo lazy" height="80" width="80" data-src="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g" data-srcset="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x"><noscript><img alt='' src='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80'/></noscript></a><a class="author-name" href="http://recurship.com/blog/author/mashhoodr/">Mashhood Rastgar</a></span> </span><span class="posted-on">On <a href="http://recurship.com/blog/2018/05/12/keynote-five-years-of-angular/" rel="bookmark"><time class="entry-date published updated" datetime="2018-05-12T21:06:34+00:00">May 12, 2018</time></a> </span>			</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+		
+		<a class="post-thumbnail" href="http://recurship.com/blog/2018/05/12/keynote-five-years-of-angular/" aria-hidden="true">
+					</a>
+
+		
+	<div class="entry-content">
+		<p style="white-space: pre-wrap;">Angular is a platform for building sophisticated web apps. The platform refers to adding, mixing and matching different technologies to make a very powerful, sophisticated web app. Angular 5 is more popular than Angular JS was before. More developers are using it to produce cooler Web apps and projects which are shown on the internet. &nbsp;</p>
+	</div><!-- .entry-content -->
+
+		<hr/>
+
+	
+</article><!-- #post-451 -->
+
+
+<article id="post-434" class="post-434 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+	<header class="entry-header">
+		<span class="cat-links"><a href="http://recurship.com/blog/category/uncategorized/" rel="category tag">Uncategorized</a> </span>		<h2 class="entry-title"><a href="http://recurship.com/blog/2018/04/29/2018-4-29-understanding-advanced-dependancy-injection-in-angular/" rel="bookmark">Understanding Advanced Dependancy Injection (in Angular)</a></h2>			<div class="entry-meta">
+				<span class="byline"> <span class="author vcard"><a class="author-avatar" href="http://recurship.com/blog/author/mashhoodr/"><img alt src="http://recurship.com/wp-content/themes/stag-blocks/images/placeholder.svg" class="avatar avatar-80 photo lazy" height="80" width="80" data-src="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g" data-srcset="http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x"><noscript><img alt='' src='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=80&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8a081ac7e6aadaabfdc51ec038867890?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80'/></noscript></a><a class="author-name" href="http://recurship.com/blog/author/mashhoodr/">Mashhood Rastgar</a></span> </span><span class="posted-on">On <a href="http://recurship.com/blog/2018/04/29/2018-4-29-understanding-advanced-dependancy-injection-in-angular/" rel="bookmark"><time class="entry-date published updated" datetime="2018-04-29T21:10:26+00:00">April 29, 2018</time></a> </span>			</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+		
+		<a class="post-thumbnail" href="http://recurship.com/blog/2018/04/29/2018-4-29-understanding-advanced-dependancy-injection-in-angular/" aria-hidden="true">
+					</a>
+
+		
+	<div class="entry-content">
+		<p>Want to explore DI? Then why only learn basics? Go beyond that and learn about the two parallel DI hierarchies and which comes out victorious. Do you know what will be the outcome of providing same token twice? Explore the effect of lazy loading, what’s going on in forRoot and forFeature, what’s in a component’s injector, and how to talk to the components in content children when you don’t know their types. It’ll be fast, code-frontal, fun. A complete DI treasure waiting for you! </p>
+	</div><!-- .entry-content -->
+
+		<hr/>
+
+	
+</article><!-- #post-434 -->
+
+
+	<nav class="navigation posts-navigation" role="navigation">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="http://recurship.com/page/2/"><h5>Older Posts</h5><div class="separator"></div><img class="arrow-right" src="http://recurship.com/wp-content/themes/stag-blocks/images/back.svg" alt="arrow-right"/></a></div></div>
+	</nav>
+	</main><!-- #primary -->
+
+
+<footer id="colophon" class="site-footer">
+	<p style="text-align:center;">
+		Recurship.com &copy; 2019 
+	</p>
+	
+	
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>//<![CDATA[
+var stagblocksFitvidsCustomSelectors={"customSelector":"iframe[src*='www.viddler.com'],iframe[src*='money.cnn.com'],iframe[src*='www.educreations.com'],iframe[src*='\/\/blip.tv'],iframe[src*='\/\/embed.ted.com'],iframe[src*='\/\/www.hulu.com']"};
+//]]></script>
+<script type='text/javascript' src='http://recurship.com/wp-content/themes/stag-blocks/js/fitVids.js'></script>
+<script type='text/javascript'>!function($){function setupFitVids(){if(!$.fn.fitVids){return;}var selectors;if('object'===typeof stagblocksFitvidsCustomSelectors){selectors=stagblocksFitvidsCustomSelectors.customSelector;}$('.entry-content').fitVids({customSelector:selectors});$('.fluid-width-video-wrapper:nth-child(2)','.video-container').css({'paddingTop':0});}setupFitVids();}(jQuery);</script>
+<script type='text/javascript' src='http://recurship.com/wp-includes/js/wp-embed.min.js?ver=4.9.9'></script>
+
+</body>
+</html>
