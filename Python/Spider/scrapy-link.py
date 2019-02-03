@@ -10,7 +10,7 @@ class AuthorSpider(scrapy.Spider):
     def parse(self, response):
         #follow links to author pages
         for img in response.css('a::attr(href)'):
-            yield response.follow(img, self.parse_images)
+            yield response.follow(img, callback=self.parse_images)
 
     def parse_images(self, response):
         #print "URL:" + response.request.url
@@ -31,4 +31,3 @@ process = CrawlerProcess({
 process.crawl(AuthorSpider)
 process.start()
 '''
-#scrapy runspider scrapy.py -o quotes.json
