@@ -1,4 +1,5 @@
 import scrapy
+#from scrapy.crawler import CrawlerProcess
 
 class AuthorSpider(scrapy.Spider):
     name = 'Links'
@@ -19,3 +20,15 @@ class AuthorSpider(scrapy.Spider):
                 'URL': response.request.url,
                 'image_link': extract_with_css('img::attr(src)')
         }
+
+'''
+# debug only
+process = CrawlerProcess({
+    'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)',
+
+})
+
+process.crawl(AuthorSpider)
+process.start()
+'''
+#scrapy runspider scrapy.py -o quotes.json
