@@ -8,3 +8,6 @@ class BlogSpider(Spider):
         titles=response.xpath('//a[@class="post-title-link"]/text()').extract()
         for title in titles:
             print(title)
+
+
+#scrapy crawl woodenrobot 
