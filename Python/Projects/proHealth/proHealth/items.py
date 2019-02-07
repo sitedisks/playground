@@ -14,7 +14,7 @@ class ProhealthItem(scrapy.Item):
     business_name = scrapy.Field()
     business_id = scrapy.Field()
     business_tel = scrapy.Field()
-    business_contact = scrapy.Field()
+    #business_contact = scrapy.Field()
     business_address = scrapy.Field()
 
     details_html = scrapy.Field()
@@ -22,6 +22,6 @@ class ProhealthItem(scrapy.Item):
     _tel = scrapy.Field()
     _fax = scrapy.Field()
     _contact = scrapy.Field()
-    _address = scrapy.Field()
+    #_address = scrapy.Field()
     _email = scrapy.Field()
     _website = scrapy.Field()
