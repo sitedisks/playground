@@ -8,7 +8,7 @@ from proHealth.items import ProhealthItem
 class TestSpider(Spider):
     name = "testspider"
     start_urls = [
-        "https://www.bestong.com.au/index.php?City=Melbourne&Category=11&page=1&ipp=All"]
+        "https://www.bestong.com.au/index.php?City=Melbourne&Category=5&page=1&ipp=All"]
         
     all_companies = {}
     err = []
@@ -64,7 +64,7 @@ class TestSpider(Spider):
             item['details_html'] = response.css('.details').get().replace(
                 "联系时请说明是在百事通网站看到的，谢谢。提及百事通，享受更多优惠。", "")
             
-            res = response.xpath('//iframe/preceding::p[1]')
+            res = response.xpath('//iframe/preceding::p[1]') #ensure only contact <p> been selected
 
             item['_tel'] = res.xpath(
                 '//a[contains(@href, "tel:")]/text()').get()
