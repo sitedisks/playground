@@ -25,3 +25,4 @@ class ProhealthItem(scrapy.Item):
     #_address = scrapy.Field()
     _email = scrapy.Field()
     _website = scrapy.Field()
+    business_category = scrapy.Field()
