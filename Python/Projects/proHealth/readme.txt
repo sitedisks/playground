@@ -4,6 +4,7 @@ categories:
 华人医生 Family Doctors 6
 牙医诊所 Denture & Dentists 7
 美容美体 Beauty & Skin 11
+成人服务 Adults Services 15
 中医诊所 Traditional Chinese Therapy 64
 中医药材 Traditional Chinese Medicine 65
 

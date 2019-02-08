@@ -16,6 +16,7 @@ class TestSpider(Spider):
         '6': 'Family Doctors',
         '7': 'Denture & Dentists',
         '11': 'Beauty & Skin',
+        '15': 'Adult Services',
         '64': 'Traditional Chinese Therapy',
         '65': 'Traditional Chinese Medicine'
     }
@@ -26,7 +27,7 @@ class TestSpider(Spider):
         self.start_urls = ['https://www.bestong.com.au/index.php?City=' +
                            city + '&Category=' + category + '&page=1&ipp=All']
 
-    def parse(self, response):  
+    def parse(self, response):
         # debug only
         '''
         details_link = self.detail_page_url + '9299'
@@ -77,7 +78,8 @@ class TestSpider(Spider):
                 "联系时请说明是在百事通网站看到的，谢谢。提及百事通，享受更多优惠。", "")
 
             # ensure only contact <p> been selected
-            res = response.xpath('//iframe/preceding::p[1]')
+            res = response.xpath(
+                '//iframe[contains(@src, "Google_Map")]/preceding::p[1]')
 
             item['_tel'] = res.xpath(
                 '//a[contains(@href, "tel:")]/text()').get()
