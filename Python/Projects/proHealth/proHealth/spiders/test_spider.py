@@ -21,7 +21,7 @@ class TestSpider(Spider):
         '65': 'Traditional Chinese Medicine'
     }
 
-    def __init__(self, city='Melbourne', category='5', *args, **kwargs):
+    def __init__(self, city='Sydney', category='15', *args, **kwargs):
         super(TestSpider, self).__init__(*args, **kwargs)
         self.category = category
         self.start_urls = ['https://www.bestong.com.au/index.php?City=' +
@@ -42,7 +42,9 @@ class TestSpider(Spider):
                 tel = business.xpath(
                     './/a[contains(@href, "tel:")]/text()').get()
 
-                address = business.css('.google_address::text').get().strip()
+                address = business.css('.google_address::text').get()
+                if address:
+                    address = address.strip()
                 company_id = business.css('.business_id::text').get().replace(
                     "商家 ID: B", "").strip()
                 self.all_companies[company_id] = {
