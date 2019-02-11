@@ -5,8 +5,8 @@ from scrapy.spiders import Spider
 from proHealth.items import ProhealthItem
 
 
-class TestSpider(Spider):
-    name = "testspider"
+class BestongSpider(Spider):
+    name = "bestongspider"
 
     all_companies = {}
     err = []
@@ -22,7 +22,7 @@ class TestSpider(Spider):
     }
 
     def __init__(self, city='Sydney', category='15', *args, **kwargs):
-        super(TestSpider, self).__init__(*args, **kwargs)
+        super(BestongSpider, self).__init__(*args, **kwargs)
         self.category = category
         self.start_urls = ['https://www.bestong.com.au/index.php?City=' +
                            city + '&Category=' + category + '&page=1&ipp=All']

@@ -3,8 +3,8 @@ import re
 from scrapy.spiders import Spider
 
 
-class DetailSpider(Spider):
-    name = "detailspider"
+class BestongPageSpider(Spider):
+    name = "bestongpagespider"
 
     def __init__(self, bid='10147'):
         self.start_urls = [
