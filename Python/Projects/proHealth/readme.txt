@@ -14,8 +14,8 @@ categories:
     # start_urls = ["https://www.bestong.com.au/index.php?City=Melbourne&Category=5&page=1&ipp=All"]
 
 In order to run 
-> scrapy crawl testspider -a city=Melbourne -a category=5 -o melb_healthcare.csv
+> scrapy crawl bestongspider -a city=Melbourne -a category=5 -o melb_healthcare.csv
 
 If you want to scrape TCM in Sydney
-> scrapy crawl testspider -a city=Sydney -a category=65 -o syd_tcm.csv
+> scrapy crawl bestongspider -a city=Sydney -a category=65 -o syd_tcm.csv
 
