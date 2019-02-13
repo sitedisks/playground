@@ -9,12 +9,16 @@ import scrapy
 
 
 class ProdoctorItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+
+    pid = scrapy.Field() # practitioner id
     name = scrapy.Field()
+    cname = scrapy.Field()
     profession = scrapy.Field()
     clinic = scrapy.Field()
     location = scrapy.Field()
+    eduction = scrapy.Field()
     phone = scrapy.Field()
+    mobile = scrapy.Field()
     specialties = scrapy.Field()
+    sid = scrapy.Field() # practice id / location id
 

@@ -28,11 +28,7 @@ class BestongSpider(Spider):
                            city + '&Category=' + category + '&page=1&ipp=All']
 
     def parse(self, response):
-        # debug only
-        '''
-        details_link = self.detail_page_url + '9299'
-        yield response.follow(details_link, self.parse_details)
-        '''
+
         try:
             business_list = response.xpath(
                 '//p[contains(@class, "line_shade_")]')
@@ -50,6 +46,7 @@ class BestongSpider(Spider):
                 self.all_companies[company_id] = {
                     "name": name, "tel": tel, "address": address}
 
+                
             print("#> Total business: ", len(self.all_companies))
 
             for id in self.all_companies:
