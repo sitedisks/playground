@@ -1,5 +1,5 @@
 import scrapy
-
+import json
 
 class HealthEngineSpider(scrapy.Spider):
 
@@ -7,7 +7,6 @@ class HealthEngineSpider(scrapy.Spider):
     base_url = 'https://healthengine.com.au'
     all_practitioners = {}
     all_practices = {}
-
 
     counter = 0
     err = []
@@ -22,7 +21,7 @@ class HealthEngineSpider(scrapy.Spider):
             practice = section.xpath('@data-practice-id')
             practitioner = section.xpath('@data-practitioner-id')
             try:
-                
+
                 name = section.css('h2.search-main-title a::text').get()
                 link = section.css(
                     'h2.search-main-title a').xpath('@href').get()
@@ -61,10 +60,23 @@ class HealthEngineSpider(scrapy.Spider):
             yield scrapy.Request(self.base_url+next_page, callback=self.parse)
         else:
             print("Practice: " + str(len(self.all_practices)))
+            print("Processing all practices! ...")
+           
             print("Practitioners: " + str(len(self.all_practitioners)))
+            print("Processing all practices! ...")
+            for pid, values in self.all_practitioners.items():
+                details_link =self.base_url + values['link']
+                self.logger.info("Open practitioner detail page")
+                yield response.follow(details_link, self.parse_practitioner)
 
-    def parse_practice(self,response):
+
+    def parse_practice(self, response):
         pass
 
-    def parse_practitioner(self,response):
-        pass
+    def parse_practitioner(self, response):
+        self.logger.info('logger: Parse function called on %s', response.url)
+        detail_json = response.css('div.container').xpath(
+            './script[contains(@type, "application")]/text()').get()
+
+        detail_obj = json.loads(detail_json)
+        print(detail_obj["name"])
