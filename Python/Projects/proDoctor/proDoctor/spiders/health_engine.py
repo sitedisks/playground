@@ -1,6 +1,8 @@
 import scrapy
 import json
 
+from proDoctor.items import ProdoctorItem
+
 
 class HealthEngineSpider(scrapy.Spider):
 
@@ -80,12 +82,46 @@ class HealthEngineSpider(scrapy.Spider):
         def find_between(s, start, end):
             return (s.split(start))[1].split(end)[0]
 
+        item = ProdoctorItem()
+
         tempData = response.xpath(
             './head/script[contains(text(), "var heData")]').get()
         tempJson = find_between(tempData, 'heData = ', ';')
         heData_obj = json.loads(tempJson)
 
-
         detail_json = response.css('div.container').xpath(
             './script[contains(@type, "application")]/text()')
         detail_obj = json.loads(detail_json)
+
+        
+        
+
+        item['p_id'] = heData_obj['practitionerData']['ID']
+        item['p_name'] = heData_obj['practitionerData']['practitionerName']
+        item['p_profession'] = response.css('p.practitioner-info-text span::text').get()
+        item['p_gender'] = heData_obj['practitionerData']['gender']
+        item['p_image'] = detail_obj['image']
+
+        p_languages = response.css('div.languages')
+        if p_languages:
+            item['p_languages'] = response.css('div.languages ul li::text').get()
+
+        item['p_eduction'] = "blah"
+        item['p_specialties'] = "blah"
+        prac_description = response.css('div#practice-description').get()
+        
+        if prac_description:
+            item['p_description']=response.css('div#practice-description > div.description-content').get()
+
+
+        item['s_id'] = "blah"
+        item['s_clinic_name'] = "blah"
+
+        item['s_location'] = response.css('div.container span.practice-address-text::text').get()
+        item['s_phone'] = "blah"
+        item['s_mobile'] = "blah"
+
+        item['s_add_state'] = heData_obj['practitionerData']['state']
+        item['s_add_suburb'] = heData_obj['practitionerData']['suburb']
+        item['s_add_post'] = heData_obj['practitionerData']['postcode']
+        item['s_add_street'] = detail_obj['address']['streetAddress']
