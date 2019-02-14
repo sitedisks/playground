@@ -1,6 +1,7 @@
 import scrapy
 import json
 
+
 class HealthEngineSpider(scrapy.Spider):
 
     name = 'healthenginespider'
@@ -61,22 +62,30 @@ class HealthEngineSpider(scrapy.Spider):
         else:
             print("Practice: " + str(len(self.all_practices)))
             print("Processing all practices! ...")
-           
+
             print("Practitioners: " + str(len(self.all_practitioners)))
             print("Processing all practices! ...")
             for pid, values in self.all_practitioners.items():
-                details_link =self.base_url + values['link']
+                details_link = self.base_url + values['link']
                 self.logger.info("Open practitioner detail page")
                 yield response.follow(details_link, self.parse_practitioner)
-
 
     def parse_practice(self, response):
         pass
 
     def parse_practitioner(self, response):
+        # url link: /chinese-medicine-practitioner/wa/floreat/yolanda-shi/p42269?location=60505
         self.logger.info('logger: Parse function called on %s', response.url)
-        detail_json = response.css('div.container').xpath(
-            './script[contains(@type, "application")]/text()').get()
 
+        def find_between(s, start, end):
+            return (s.split(start))[1].split(end)[0]
+
+        tempData = response.xpath(
+            './head/script[contains(text(), "var heData")]').get()
+        tempJson = find_between(tempData, 'heData = ', ';')
+        heData_obj = json.loads(tempJson)
+
+
+        detail_json = response.css('div.container').xpath(
+            './script[contains(@type, "application")]/text()')
         detail_obj = json.loads(detail_json)
-        print(detail_obj["name"])
