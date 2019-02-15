@@ -93,33 +93,79 @@ class HealthEngineSpider(scrapy.Spider):
             './script[contains(@type, "application")]/text()')
         detail_obj = json.loads(detail_json)
 
-        
-        
+        # Fill the Items
 
         item['p_id'] = heData_obj['practitionerData']['ID']
         item['p_name'] = heData_obj['practitionerData']['practitionerName']
-        item['p_profession'] = response.css('p.practitioner-info-text span::text').get()
+        item['p_profession'] = response.css(
+            'p.practitioner-info-text span::text').get()
         item['p_gender'] = heData_obj['practitionerData']['gender']
         item['p_image'] = detail_obj['image']
+        item['p_location'] = response.css(
+            'div.container span.practice-address-text::text').get()
 
-        p_languages = response.css('div.languages')
-        if p_languages:
-            item['p_languages'] = response.css('div.languages ul li::text').get()
+        # Overview
+        # Check if practice-description section exist
+        if response.css('div#practice-description'):
+            if response.css('div.practitioner-description'):
+                item['p_description'] = response.css(
+                    'div#practice-description > div.practitioner-description').get()
+            
+            if response.css('div.practitioner-interest'):
+                interests = []
+                interest_list = response.css(
+                    'div.practitioner-interest ul li a::text')
+                for i in interest_list:
+                    interests.append(i)
 
-        item['p_eduction'] = "blah"
-        item['p_specialties'] = "blah"
-        prac_description = response.css('div#practice-description').get()
-        
-        if prac_description:
-            item['p_description']=response.css('div#practice-description > div.description-content').get()
+                # Todo: parse the interests to string to item['p_interest']
+
+        # Qualification and Experience
+        if response.css('div#qualifications-experience'):
+
+            if response.css('div.languages'):
+                languages = []
+                language_list = response.css(
+                    'div.languages ul li::text')
+                for l in language_list:
+                    languages.append(l)
+                    item['p_languages'] = item['p_languages'] + l + ', '
+
+            if response.css('div.educashun'):
+                educations = []
+                education_list = response.css('div.educashun ul li::text')
+                for e in education_list:
+                    educations.append(e)
+                    item['p_eduction'] = item['p_eduction'] + e + ', '
+
+            if response.css('div.affliations'):
+                affliations = []
+                affliation_list = response.css('div.affliations ul li::text')
+                for a in affliation_list:
+                    affliations.append(a)
+                    item['p_specialties'] = item['p_specialties'] + a + ', '
 
 
+
+        # Practice Info
         item['s_id'] = "blah"
-        item['s_clinic_name'] = "blah"
+        # #contact-info .practice-information-contain
+        # .basic-detail .opening-hours .practice-facilities .social-media
+        if response.css('div#contact-info'):
+            basic_details = response.css(
+                'div#contact-info > div.basic-details')
+            if basic_details:
 
-        item['s_location'] = response.css('div.container span.practice-address-text::text').get()
-        item['s_phone'] = "blah"
-        item['s_mobile'] = "blah"
+                item['s_clinic_name'] = basic_details.css('li.practice-name a::text').get()
+                item['s_address'] = basic_details.css(
+                    'li.address::text').get()
+                item['s_phone'] = basic_details.css('li.phone').xpath('./span/@data-tel').get()
+                if basic_details.css('li.mobile'):
+                    item['s_mobile'] = basic_details.css(
+                        'li.mobile').xpath('./span/@data-tel').get()
+                if basic_details.css('li.url-info'):
+                    item['s_website'] = basic_details.css('li.url-info a::text()').get()
+
 
         item['s_add_state'] = heData_obj['practitionerData']['state']
         item['s_add_suburb'] = heData_obj['practitionerData']['suburb']

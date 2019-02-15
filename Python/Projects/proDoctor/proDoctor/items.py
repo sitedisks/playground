@@ -20,18 +20,33 @@ class ProdoctorItem(scrapy.Item):
     p_gender = scrapy.Field()
     # detail_obj['image']
     p_image = scrapy.Field()
-    p_languages = scrapy.Field()
-    p_eduction = scrapy.Field()
+    p_location = scrapy.Field()
+ 
     # heData_obj['practitionerData']['primarySpecialty']
     p_specialties = scrapy.Field()  # 特色
+
+    # Overview
     p_description = scrapy.Field()
 
+    # Areas of Interest
+    p_interest = scrapy.Field()
+
+    # Qualification and Experience
+    p_affliation = scrapy.Field()
+    p_languages = scrapy.Field()
+    p_eduction = scrapy.Field()
+
+
+    # Practice Info
     # practice: s_
     s_id = scrapy.Field()  # practice id / location id
     s_clinic_name = scrapy.Field()
-    s_location = scrapy.Field()
+    s_address = scrapy.Field()
     s_phone = scrapy.Field()
     s_mobile = scrapy.Field()
+    s_website = scrapy.Field()
+
+    s_opening_hours = scrapy.Field()
 
     # heData_obj['practitionerData']['state']
     s_add_state = scrapy.Field()
