@@ -126,7 +126,6 @@ class HealthEngineSpider(scrapy.Spider):
                         interests.append(i.get())
 
             special_interests = response.css('div.content-wrapper div#body div p')
-            #special_interest = response.css('div.content-wrapper div#body div p::text').get():
             if "interest" in special_interests.css('::text').get():
                 for i in special_interests.css('a'):
                     interests.append(i.css('::text').get())
@@ -187,11 +186,17 @@ class HealthEngineSpider(scrapy.Spider):
                         item['s_website'] = basic_details.css(
                             'li.url-info a::text').get()
 
+                opening_hours = response.css('div#contact-info div.opening-hours')
+                if opening_hours:
+                    item['s_opening_hours'] = opening_hours.css('dl').get()
+
+
             item['s_add_state'] = heData_obj['practitionerData']['state']
             item['s_add_suburb'] = heData_obj['practitionerData']['suburb']
             item['s_add_post'] = heData_obj['practitionerData']['postcode']
             item['s_add_street'] = detail_obj['address']['streetAddress']
 
+            yield item
             print("Practitioner data extracted")
            
         except:
