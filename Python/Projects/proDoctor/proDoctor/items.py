@@ -9,6 +9,7 @@ import scrapy
 
 
 class ProdoctorItem(scrapy.Item):
+    data_type = scrapy.Field()
     # practitioner: p_
     # practitioner id: heData_obj['practitionerData']['ID']
     p_id = scrapy.Field()
@@ -21,7 +22,7 @@ class ProdoctorItem(scrapy.Item):
     # detail_obj['image']
     p_image = scrapy.Field()
     p_location = scrapy.Field()
- 
+
     # heData_obj['practitionerData']['primarySpecialty']
     p_specialties = scrapy.Field()  # 特色
 
@@ -36,7 +37,6 @@ class ProdoctorItem(scrapy.Item):
     p_languages = scrapy.Field()
     p_eduction = scrapy.Field()
 
-
     # Practice Info
     # practice: s_
     s_id = scrapy.Field()  # practice id / location id
@@ -45,6 +45,9 @@ class ProdoctorItem(scrapy.Item):
     s_phone = scrapy.Field()
     s_mobile = scrapy.Field()
     s_website = scrapy.Field()
+    s_specialties = scrapy.Field()
+    s_bulkbilled = scrapy.Field()
+    s_afterhours = scrapy.Field()
 
     s_opening_hours = scrapy.Field()
 

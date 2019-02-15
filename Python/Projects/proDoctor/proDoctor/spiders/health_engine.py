@@ -73,10 +73,26 @@ class HealthEngineSpider(scrapy.Spider):
                 yield response.follow(details_link, self.parse_practitioner)
 
     def parse_practice(self, response):
-        pass
+        # url link example: /chinese-medicine-practitioner/vic/malvern/green-element-wellness/s69618
+        self.logger.info('logger: Parse function called on %s', response.url)
+
+        def find_between(s, start, end):
+            return (s.split(start))[1].split(end)[0]
+
+        item = ProdoctorItem()
+
+        try:
+            tempData = response.xpath(
+                './head/script[contains(text(), "var heData")]').get()
+            tempJson = find_between(tempData, 'heData = ', ';')
+            heData_obj = json.loads(tempJson)
+
+            
+        except:
+            pass
 
     def parse_practitioner(self, response):
-        # url link: /chinese-medicine-practitioner/wa/floreat/yolanda-shi/p42269?location=60505
+        # url link example: /chinese-medicine-practitioner/wa/floreat/yolanda-shi/p42269?location=60505
         self.logger.info('logger: Parse function called on %s', response.url)
 
         def find_between(s, start, end):
@@ -95,7 +111,7 @@ class HealthEngineSpider(scrapy.Spider):
             detail_obj = json.loads(detail_json)
 
             # Fill the Items
-
+            item['data_type'] = heData_obj['pageData']['pageType']
             item['p_id'] = heData_obj['practitionerData']['ID']
             item['p_name'] = heData_obj['practitionerData']['practitionerName']
             item['p_profession'] = response.css(
@@ -198,6 +214,6 @@ class HealthEngineSpider(scrapy.Spider):
 
             yield item
             print("Practitioner data extracted")
-           
+        
         except:
             print('Pratitioner extracting error')

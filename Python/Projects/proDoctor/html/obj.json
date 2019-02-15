@@ -23,7 +23,7 @@
             "apptCount": "0"
         }
     },
-    "details": {
+    "practitioner": {
         "@context": "http://schema.org/",
         "@type": "Person",
         "name": " Yolanda Shi",
@@ -35,5 +35,62 @@
             "postalCode": "6014",
             "streetAddress": "2 / 434 Cambridge Street"
         }
+    },
+    "practice": {
+        "@context": "http:\/\/schema.org",
+        "@type": "LocalBusiness",
+        "description": "We are providing natural health solutions to help your fertility and general health.We love what we do and dedicate ourselves to delivery high level healthcare and the best possible outcomes for all clients. Providing different natural treatments such as Acupuncture, Chinese Herbal Medicine, Remedial Massage, Cupping and Moxibustion, we assist with a various kinds of health issues and disorders:Fertility &amp; Pregnancy: Male and Female Infertility, IVF Support, Miscarriage Prevention, Pregnancy Care and Labor Induction&nbsp;Women&rsquo;s Health: Menopause, Polycystic Ovary Syndrome (PCOS), Endometriosis, Period Pain, Irregular Periods, PMS&nbsp;Pain Management: Neck, shoulder and Back Pain, Sciatica, Headache and Migraine, Frozen Shoulder, Tennis Elbow, Carpel tunnel syndrome, Knee Pain, Sports Injuries, Arthritis, Gout, Fibromyalgia, Tenosynovitis&nbsp;Skin Issues: Acne, Eczema, Urticaria(Hives), Shingles, Alopecia, Neurodermatitis,&nbsp;Digestive Disorder: Diarrhea, Constipation, IBS, Gastritis, Reflux&nbsp;Respiratory Disorders: Common Cold, Flu, Hayfever, Asthma, Rhinitis, Sinusitis, Chronic Cough, Bronchitis, Acute Tonsillitis&nbsp;Mental Disorders: Insomnia, Stress, Depression, Anxiety, Panic Attack&nbsp;Nerve System Diseases: Facioplegia, Apoplectic Sequela, Trigeminal Neuralgia&nbsp;Men&rsquo;s Health: Low Libido, Impotence&nbsp;Other Conditions: Urinary Disorder, Weight Loss, Quit Smoking, Cancer Support, Fatigue, Poor CirculationServices Offered:&nbsp;AcupunctureChinese Herbal MedicineRemedial MassageCupping&nbsp;MoxibustionSurrounding Suburbs: Floreat, City Beach, Mt Claremont, Wembley, Jolimont, Daglish, Churchlands, Woodlands, Wembley Downs, Doubleview, Innaloo, Osborne Park, Glendalough, Herdsman, Subiaco, Shenton Park, Mount Hawthorn, Perth, Scarborough, karrinyup",
+        "address": "2 \/ 434 Cambridge Street, Floreat, WA, 6014",
+        "name": "acu8 Health Fertility and Healing Centre",
+        "telephone": "+61893873389",
+        "image": "https:\/\/healthengine.imgix.net\/photos\/groups\/grploc60505-20160411061126.jpg?auto=compress&ixlib=php-2.1.0&or=0",
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "opens": "09:00:00",
+            "closes": "18:00:00",
+            "dayOfWeek": "http:\/\/schema.org\/Monday"
+        }, {
+            "@type": "OpeningHoursSpecification",
+            "opens": "09:00:00",
+            "closes": "18:00:00",
+            "dayOfWeek": "http:\/\/schema.org\/Tuesday"
+        }, {
+            "@type": "OpeningHoursSpecification",
+            "opens": "09:00:00",
+            "closes": "18:00:00",
+            "dayOfWeek": "http:\/\/schema.org\/Wednesday"
+        }, {
+            "@type": "OpeningHoursSpecification",
+            "opens": "09:00:00",
+            "closes": "18:00:00",
+            "dayOfWeek": "http:\/\/schema.org\/Thursday"
+        }, {
+            "@type": "OpeningHoursSpecification",
+            "opens": "09:00:00",
+            "closes": "18:00:00",
+            "dayOfWeek": "http:\/\/schema.org\/Friday"
+        }, {
+            "@type": "OpeningHoursSpecification",
+            "opens": "09:00:00",
+            "closes": "18:00:00",
+            "dayOfWeek": "http:\/\/schema.org\/Saturday"
+        }],
+        "openingHours": ["mo 09:00-18:00", "tu 09:00-18:00", "we 09:00-18:00", "th 09:00-18:00",
+            "fr 09:00-18:00", "sa 09:00-18:00"
+        ],
+        "member": [{
+            "@type": "Person",
+            "@context": "http:\/\/schema.org",
+            "name": "Ivan Qiu",
+            "jobTitle": "Acupuncturist",
+            "gender": "Male",
+            "image": "https:\/\/healthengine.imgix.net\/photos\/doctors\/doc42268-20150924052509.jpg?auto=compress&ixlib=php-2.1.0&or=0"
+        }, {
+            "@type": "Person",
+            "@context": "http:\/\/schema.org",
+            "name": "Yolanda Shi",
+            "jobTitle": "Chinese Medicine Practitioner",
+            "image": "https:\/\/healthengine.imgix.net\/photos\/doctors\/doc42269-20150924053508.jpg?auto=compress&ixlib=php-2.1.0&or=0"
+        }]
     }
 }
