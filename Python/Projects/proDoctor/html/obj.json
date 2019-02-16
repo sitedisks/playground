@@ -1,5 +1,5 @@
 {
-    "heData": {
+    "heData_p": {
         "pageData": {
             "section": "Con",
             "subSection": "Profile",
@@ -34,6 +34,38 @@
             "addressRegion": "WA",
             "postalCode": "6014",
             "streetAddress": "2 / 434 Cambridge Street"
+        }
+    },
+    "heData_s": {
+        "pageData": {
+            "section": "Con",
+            "subSection": "Profile",
+            "pageType": "Practice"
+        },
+        "userData": {
+            "loggedIn": "Anonymous"
+        },
+        "practiceData": {
+            "grpLocId": "60505",
+            "practiceName": "acu8 Health Fertility and Healing Centre",
+            "state": "WA",
+            "postcode": "6014",
+            "suburb": "Floreat",
+            "primarySpecialty": "Acupuncture",
+            "specialties": "Acupuncture, Chinese Medicine",
+            "agpal": "false",
+            "bulkBilled": "false",
+            "afterHours": "false",
+            "paidProfile": "true",
+            "apptCount": "0",
+            "hadBookingWithinLastDay": "false",
+            "corporateProfile": "false",
+            "useBookNowButton": "false",
+            "rescripts": "false",
+            "ratingsData": {
+                "disable_ratings": false,
+                "num_responses": 0
+            }
         }
     },
     "practice": {

@@ -41,6 +41,7 @@ class ProdoctorItem(scrapy.Item):
     # practice: s_
     s_id = scrapy.Field()  # practice id / location id
     s_clinic_name = scrapy.Field()
+    s_description = scrapy.Field()
     s_address = scrapy.Field()
     s_phone = scrapy.Field()
     s_mobile = scrapy.Field()
