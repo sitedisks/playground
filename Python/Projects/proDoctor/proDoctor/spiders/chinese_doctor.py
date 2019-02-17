@@ -45,7 +45,7 @@ class ChineseDoctor(scrapy.Spider):
 
     def parse_doctor(self, response):
         item = ProdoctorItem()
-        item['data_type'] = ""
+        item['data_type'] = "Practitioner"
         item['p_name'] = ""
         item['p_cname'] = ""
         item['p_profession'] = ""
