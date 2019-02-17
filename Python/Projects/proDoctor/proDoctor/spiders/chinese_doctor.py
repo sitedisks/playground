@@ -1,4 +1,5 @@
 import scrapy
+from proDoctor.items import ProdoctorItem
 
 
 class ChineseDoctor(scrapy.Spider):
@@ -36,11 +37,23 @@ class ChineseDoctor(scrapy.Spider):
         doctor_list = response.css('div.member_results')
         for doctor in doctor_list:
             self.counter = self.counter + 1
-
             image_link = doctor.css(
                 'div.img_section a').xpath('./img/@src').get()
             name = doctor.css('div.mid_section a h2 b::text').get()
 
-            print(name + ' ' + self.base_url + image_link)
-
         print("Total results: " + str(self.counter))
+
+    def parse_doctor(self, response):
+        item = ProdoctorItem()
+        item['data_type'] = ""
+        item['p_name'] = ""
+        item['p_cname'] = ""
+        item['p_profession'] = ""
+        item['p_gender'] = ""
+        item['p_image'] = ""
+        item['p_location'] = ""
+        item['p_specialties'] = ""
+        item['p_interest'] = ""
+        item['p_languages'] = ""
+        item['p_education'] = ""
+        item['s_phone'] = ""
