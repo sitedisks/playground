@@ -15,7 +15,7 @@ class ProdoctorItem(scrapy.Item):
     p_id = scrapy.Field()
     # heData_obj['practitionerData']['practitionerName']
     p_name = scrapy.Field()
-    P_cname = scrapy.Field()
+    p_cname = scrapy.Field()
     p_profession = scrapy.Field()  # 职业
     # heData_obj['practitionerData']['gender']
     p_gender = scrapy.Field()
@@ -35,7 +35,7 @@ class ProdoctorItem(scrapy.Item):
     # Qualification and Experience
     p_affliation = scrapy.Field()
     p_languages = scrapy.Field()
-    p_eduction = scrapy.Field()
+    p_education = scrapy.Field()
 
     # Practice Info
     # practice: s_

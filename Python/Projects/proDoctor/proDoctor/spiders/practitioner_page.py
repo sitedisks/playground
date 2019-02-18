@@ -82,7 +82,7 @@ class PractitionerPageSpider(Spider):
                     education_list = response.css('div.educashun ul li::text')
                     for e in education_list:
                         educations.append(e.get().strip())
-                    item['p_eduction'] = ', '.join(educations)
+                    item['p_education'] = ', '.join(educations)
 
                 if response.css('div#qualifications-experience div.affliations'):
                     affliations = []
