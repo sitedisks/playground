@@ -13,4 +13,6 @@ class HentaiorgItem(scrapy.Item):
     # name = scrapy.Field()
     image_urls = scrapy.Field()
     images = scrapy.Field()
+    image_name = scrapy.Field()
+    country = scrapy.Field()
     
