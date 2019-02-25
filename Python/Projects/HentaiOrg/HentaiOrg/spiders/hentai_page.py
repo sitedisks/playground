@@ -1,13 +1,17 @@
 import scrapy
 from HentaiOrg.items import HentaiorgItem
-
+import os
 
 class HentaiOrgSpider(scrapy.Spider):
     name = 'hentaispider'
-    # start_urls = ["https://e-hentai.org/g/1364922/e0b8d5cc0e/"]
 
-    start_urls = ["https://e-hentai.org/g/1367680/4f54dd1b96/", "https://e-hentai.org/g/1366914/faec9abcf9/",
-                  "https://e-hentai.org/g/1363312/18fa7680c6/", "https://e-hentai.org/g/1360982/f0aa94a6a9/"]
+    file_to_open = os.path.abspath('urls/resource1.txt')
+    urls = open(file_to_open, 'r')
+    file_urls = urls.readlines()
+    start_urls = []
+
+    for url in file_urls:
+        start_urls.append(url.strip('\n'))
 
     def parse(self, response):
 
