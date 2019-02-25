@@ -7,38 +7,17 @@
 import scrapy
 from scrapy.pipelines.images import ImagesPipeline
 from scrapy.exceptions import DropItem
+from urllib.parse import urlparse
+from os.path import basename
 
 
-class HentaiorgPipeline(object):
-    def process_item(self, item, spider):
-        return item
-
-    def image_key(self, url):
-        image_guid = url.split('/')[-1]
-        return 'full/%s.jpg' % (image_guid)
+class HentaiorgPipeline(ImagesPipeline):
+    def file_path(self, request, response=None, info=None):
+        folder = request.meta['folder']
+        path = urlparse(request.url).path
+        return 'full/hentai/%s/%s' % (folder, basename(path))
 
     def get_media_requests(self, item, info):
         for image_url in item['image_urls']:
-            yield scrapy.Request(image_url)
-
-    def item_completed(self, results, item, info):
-        image_paths = [x['path'] for ok, x in results if ok]
-        if not image_paths:
-            raise DropItem("Item contains no images")
-        item['image_paths'] = image_paths
-        return item
-
-'''
-    def item_completed(self, results, item, info):
-        image_paths = [x['path'] for ok, x in results if ok]
-        if not image_paths:
-            raise DropItem("Item contains no images")
-
-        if item['jk']:
-            newname = item['car'] + '-' + item['jk'] + '-' + item['model'] + '.jpg'
-        else:
-            newname = item['car'] + '-' + item['model'] + '.jpg'
-        os.rename("/neteaseauto/" + image_paths[0], "/neteaseauto/" + newname)
-
-        return item  
+            yield scrapy.Request(url = image_url, meta = {'folder': item['folder']})
 

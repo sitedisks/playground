@@ -8,10 +8,10 @@
 import scrapy
 
 
-class HentaiorgItem(scrapy.Item):
+class PcautoItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     image_urls = scrapy.Field()
     images = scrapy.Field()
-    folder = scrapy.Field()
-    
+    image_name = scrapy.Field()
+    country = scrapy.Field()
