@@ -1,6 +1,7 @@
 Todo: 
-1. dir
-2. filename
-3. pass url as value
+1. deploy online
+2. auto select url
+3. scrapy images and zip
+4. download 
 
 > scrapy crawl hentaispider {url}
