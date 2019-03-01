@@ -13,7 +13,7 @@ class HentaiOrgSpider(scrapy.Spider):
             self.start_urls = [url]
             #scrapy crawl hentaispider -a url=https://e-hentai.org/g/1051485/44efbafb5d/
         else:
-            file_to_open = os.path.abspath('urls/fetish+chinese.txt')
+            file_to_open = os.path.abspath('urls/bdsm+chinese.txt')
             urls = open(file_to_open, 'r')
             file_urls = urls.readlines()
             self.start_urls = []
@@ -24,10 +24,12 @@ class HentaiOrgSpider(scrapy.Spider):
     def parse(self, response):
 
         title = response.css('body div h1::text').get()
-        if "Content Warning" in title:
-            pass_link = response.css('body div p').xpath(
-                './/a[contains(text(), "View Gallery")]/@href').get()
-            yield response.follow(pass_link, self.parse)
+        
+        if title:
+            if "Content Warning" in title:
+                pass_link = response.css('body div p').xpath(
+                    './/a[contains(text(), "View Gallery")]/@href').get()
+                yield response.follow(pass_link, self.parse)
 
         imageLinks = response.css(
             'body div#gdt div.gdtm div a').xpath('@href').getall()

@@ -4,7 +4,7 @@ import scrapy
 class HentaiOrgSearch(scrapy.Spider):
     name = 'hentaisearch'
 
-    link = 'https://e-hentai.org/?f_doujinshi=1&f_manga=1&f_artistcg=1&f_gamecg=1&f_western=1&f_non-h=1&f_imageset=1&f_cosplay=1&f_asianporn=1&f_misc=1&f_search=fetish+chinese&f_apply=Apply+Filter'
+    link = 'https://e-hentai.org/?f_doujinshi=1&f_manga=1&f_artistcg=1&f_gamecg=1&f_western=1&f_non-h=1&f_imageset=1&f_cosplay=1&f_asianporn=1&f_misc=1&f_search=bdsm+chinese&f_apply=Apply+Filter'
     start_urls = [link]
 
     def parse(self, response):
