@@ -20,6 +20,7 @@ class AuthorSpider(scrapy.Spider):
                 'URL': response.request.url,
                 'image_link': extract_with_css('img::attr(src)')
         }
+        
 
 '''
 # debug only

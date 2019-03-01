@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for HentaiOrg project
+# Scrapy settings for Pcauto project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,17 +9,17 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'HentaiOrg'
+BOT_NAME = 'Pcauto'
 
-SPIDER_MODULES = ['HentaiOrg.spiders']
-NEWSPIDER_MODULE = 'HentaiOrg.spiders'
+SPIDER_MODULES = ['Pcauto.spiders']
+NEWSPIDER_MODULE = 'Pcauto.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'HentaiOrg (+http://www.yourdomain.com)'
+#USER_AGENT = 'Pcauto (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 
 # MAC
 #IMAGES_STORE = '/Users/Shared/Hentai/Images'
@@ -44,33 +44,33 @@ IMAGES_STORE = '\Images'
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-# DEFAULT_REQUEST_HEADERS = {
+#DEFAULT_REQUEST_HEADERS = {
 #   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #   'Accept-Language': 'en',
-# }
+#}
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-# SPIDER_MIDDLEWARES = {
-#    'HentaiOrg.middlewares.HentaiorgSpiderMiddleware': 543,
-# }
+#SPIDER_MIDDLEWARES = {
+#    'Pcauto.middlewares.PcautoSpiderMiddleware': 543,
+#}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#    'HentaiOrg.middlewares.HentaiorgDownloaderMiddleware': 543,
-# }
+#DOWNLOADER_MIDDLEWARES = {
+#    'Pcauto.middlewares.PcautoDownloaderMiddleware': 543,
+#}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
-# EXTENSIONS = {
+#EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
-# }
+#}
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'HentaiOrg.pipelines.HentaiorgPipeline': 300,
+   'Pcauto.pipelines.PcautoPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
