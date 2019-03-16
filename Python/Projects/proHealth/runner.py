@@ -11,5 +11,5 @@ process = CrawlerProcess({
     'FEED_URI': 'data.json'
 })
 
-process.crawl(ChineseDoctor)
+process.crawl(BestongPageSpider)
 process.start() # the script will block here until the crawling is finished
