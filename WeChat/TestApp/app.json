@@ -2,7 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/play/play"
+    "pages/play/play",
+    "pages/map/map",
+    "pages/health/health",
+    "pages/index/me/me"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,6 +26,14 @@
       {
         "pagePath": "pages/play/play",
         "text": "Play"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图"
+      },
+      {
+        "pagePath": "pages/health/health",
+        "text": "健康"
       }
     ]
   }

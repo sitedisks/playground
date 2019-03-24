@@ -1,5 +1,5 @@
 <!--pages/play/play.wxml-->
-<view class="container">
+<view>
   <text>Font awesome: http://fontawesome.dashgame.com/</text>
   <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover">
     default

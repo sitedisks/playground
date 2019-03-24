@@ -50,5 +50,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  goMe:function(e){
+    console.log('go to me')
+    wx.navigateTo({
+      url: '/pages/index/me/me',
+    })
   }
 })
