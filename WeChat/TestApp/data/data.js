@@ -1,4 +1,4 @@
-[
+var json = [
   {
     "data_type": "Practitioner",
     "p_id": "63613",
@@ -4586,4 +4586,8 @@
     "lat": -37.8602429,
     "lng": 145.0583194
   }
-]
+];
+
+module.exports = {
+  testJsonList:json 
+}

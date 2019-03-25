@@ -1,5 +1,18 @@
 <block wx:if='{{isshow}}'>
-  <map id="map" longitude="114.048410" latitude="22.648760" scale="8" include-points="{{markers}}" markers="{{markers}}" bindmarkertap="showModal" data-id="{{markers}}" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 100%;">
+  <map 
+    id="map" 
+    longitude="114.048410" 
+    latitude="22.648760" 
+    scale="8" 
+    include-points="{{markers}}" 
+    markers="{{markers}}" 
+    bindmarkertap="showModal" 
+    data-id="{{markers}}" 
+    polyline="{{polyline}}" 
+    bindregionchange="regionchange" 
+    show-location 
+    style="width: 100%; height: 100%;">
+  
 
 
     <cover-view class='index_bt1'>

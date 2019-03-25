@@ -1,17 +1,30 @@
 <!--pages/map/map.wxml-->
-<view>
-<map
-  id="map"
-  longitude="{{lng}}"
-  latitude="{{lat}}"
-  scale="14"
-  controls="{{controls}}"
-  bindcontroltap="controltap"
-  markers="{{markers}}"
-  bindmarkertap="markertap"
-  polyline="{{polyline}}"
-  bindregionchange="regionchange"
-  show-location
-  style="width: 100%; height: 600px;"
-></map>
-</view>
+<block>
+  <map id="map" longitude="{{lng}}" latitude="{{lat}}" scale="14" markers="{{markers}}" bindmarkertap="showDetails" bindregionchange="regionchange" show-location style="width: 100%; height: 100%;">
+    <cover-view class='index_bt1'>
+      <cover-image class='xiaoer' bindtap="showDetails" src="/image/location.png" />
+    </cover-view>
+
+    <cover-view class="commodity_screen" bindtap="hideDetails" wx:if="{{showModalStatus}}"></cover-view>
+    <cover-view class="commodity_attr_box" animation="{{animationData}}" wx:if="{{showModalStatus}}">
+
+      <cover-view class='placeBox'>
+        <cover-view class='placeViewLt'>
+          <cover-view class='viewTitle'>同仁堂</cover-view>
+          <cover-view class='viewDis'>品牌</cover-view>
+          <cover-view class='viewAddr'>好</cover-view>
+        </cover-view>
+        <cover-view class='placeViewRt'>
+          <cover-image data-id="{{myall.id}}" bindtap="opendetail" src='/image/icons/apple-touch-icon.png'></cover-image>
+        </cover-view>
+      </cover-view>
+
+      <cover-view class='viewIcon'>
+        <cover-view class='timeText'><i class="fa fa-clock-o fa-lg"></i> 营业时间</cover-view>
+        <cover-view class='timeText1' data-id="cwan40" bindtap='calling'><i class="fa fa-phone fa-lg"></i> 电话</cover-view>
+        <cover-view class='timeText1'><i class="fa fa-globe fa-lg"></i> 导航</cover-view>
+      </cover-view>
+
+    </cover-view>
+  </map>
+</block>

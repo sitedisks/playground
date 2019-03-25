@@ -1,62 +1,120 @@
 // China
-var lat = 23.099994;
-var lng = 113.324520;
+// var lat = 39.0851;
+// var lng = 117.19937;
+var localData = require('../../data/data.js')
 
 //Melbourne
-// var lat = -37.813611;
-// var lng = 144.963056;
+var lat = -37.813611;
+var lng = 144.963056;
 
 Page({
   data: {
     lng: lng,
     lat: lat,
-    markers: [{
-      iconPath: '/image/location.png',
-      id: 0,
-      latitude: lat,
-      longitude: lng,
-      width: 50,
-      height: 50,
-      callout: {
-        content: "   语言：珊珊是不是傻    \n    预计到达时间：10分钟    \n    车牌号：12345",
-        //color: "#ffff33",
-        fontSize: "16",
-        borderRadius: "10",
-        bgColor: "#ffffff",
-        padding: "10",
-        //display: "ALWAYS"
-      },
-       
-    }],
-    polyline: [{
-      points: [{
-        longitude: 113.3245211,
-        latitude: 23.10229
-      }, {
-        longitude: 113.324520,
-        latitude: 23.21229
-      }],
-      color: '#FF0000DD',
-      width: 2,
-      dottedLine: true
-    }],
-    controls: [{
-      id: 1,
-      iconPath: '/image/location.png',
-      position: {
-        left: 0,
-        top: 300 - 50,
+
+  },
+  onLoad: function(e) {
+    console.log('on load')
+    //repaire the markers
+    var markers = []
+    var i = 0
+    localData.testJsonList.forEach(function(item){
+      markers.push({
+        iconPath: '/image/location.png',
+        id: i++,
+        latitude: item.lat,
+        longitude: item.lng,
         width: 50,
         height: 50
-      },
-      clickable: true
-    }]
+      })
+    })
+
+    this.setData({
+      lat: lat,
+      lng: lng,
+      markers: markers
+    })
+
+    /*
+    var that = this
+    wx.getLocation({
+      type: 'gcj02', // 返回可以用于wx.openLocation的经纬度
+      success(res) {
+        const latitude = res.latitude
+        const longitude = res.longitude
+        
+        that.setData({
+          lat: latitude,
+          lng: longitude,
+          markers: markers
+        });
+      }
+    })
+    */
   },
+  refresh: function(e) {
+    wx.showToast({
+      title: 'Refresh!',
+    })
+  },
+  calling: function(e) {
+    wx.showToast({
+      title: 'Calling',
+    })
+  },
+
+  showDetails: function(e) {
+    console.log('show modal')
+
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: "linear",
+      delay: 0
+    })
+    this.animation = animation
+    animation.translateY(300).step()
+
+    this.setData({
+      animationData: animation.export(),
+      showModalStatus: true
+    })
+    setTimeout(function() {
+      animation.translateY(0).step()
+      this.setData({
+        animationData: animation.export()
+      })
+    }.bind(this), 100)
+
+  },
+
+  hideDetails: function(e) {
+    console.log('hide modal')
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: "linear",
+      delay: 0
+    })
+    this.animation = animation
+    animation.translateY(300).step()
+    this.setData({
+      animationData: animation.export(),
+    })
+    setTimeout(function() {
+      animation.translateY(0).step()
+      this.setData({
+        animationData: animation.export(),
+        showModalStatus: false
+      })
+    }.bind(this), 200)
+  },
+
   regionchange(e) {
     console.log(e.type)
   },
   markertap(e) {
     console.log(e.markerId)
+
+
   },
   controltap(e) {
     console.log(e.controlId)

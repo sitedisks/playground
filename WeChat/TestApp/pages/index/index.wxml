@@ -7,9 +7,14 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  <view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx"></view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
   <button type="primary" bindtap="goMe">Me</button>
-  
+  <button type="primary" bindtap="rotateAndScale">Rotate And Scale</button>
+  <button type="primary" bindtap="scaleIt">Scale</button>
+  <button type="primary" bindtap="rotateAndScaleThenTranslate">Move</button>
+ 
+
 </view>
