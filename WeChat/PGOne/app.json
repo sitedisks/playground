@@ -26,26 +26,26 @@
       {
         "pagePath": "pages/index/index",
         "text": "附近",
-        "iconPath": "image/fontawesome/white/png/32/map-marker.png",
-        "selectedIconPath": "image/fontawesome/black/png/32/map-marker.png"
+        "iconPath": "image/fontawesome/white/png/64/map.png",
+        "selectedIconPath": "image/fontawesome/black/png/64/map.png"
       },
       {
         "pagePath": "pages/list/list",
         "text": "搜索",
-        "iconPath": "image/fontawesome/white/png/32/search.png",
-        "selectedIconPath": "image/fontawesome/black/png/32/search.png"
+        "iconPath": "image/fontawesome/white/png/64/search.png",
+        "selectedIconPath": "image/fontawesome/black/png/64/search.png"
       },
       {
         "pagePath": "pages/care/care",
         "text": "健康",
-        "iconPath": "image/fontawesome/white/png/32/heartbeat.png",
-        "selectedIconPath": "image/fontawesome/black/png/32/heartbeat.png"
+        "iconPath": "image/fontawesome/white/png/64/heartbeat.png",
+        "selectedIconPath": "image/fontawesome/black/png/64/heartbeat.png"
       },
       {
         "pagePath": "pages/me/me",
         "text": "我",
-        "iconPath": "image/fontawesome/white/png/32/user.png",
-        "selectedIconPath": "image/fontawesome/black/png/32/user.png"
+        "iconPath": "image/fontawesome/white/png/64/user.png",
+        "selectedIconPath": "image/fontawesome/black/png/64/user.png"
       }
     ]
   }
