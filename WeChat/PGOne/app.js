@@ -1,6 +1,18 @@
 //app.js
 App({
   onLaunch: function () {
+
+    // show tabBar red dot
+    wx.showTabBarRedDot({
+      index: (0),
+    })
+
+    // set tabBar badge
+    wx.setTabBarBadge({
+      index: 2,
+      text: 'new'
+    })
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

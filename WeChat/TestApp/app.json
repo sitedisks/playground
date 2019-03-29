@@ -19,26 +19,41 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "backgroundColor": "#ffff00", 
+    
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "image/fontawesome/black/png/32/home.png",
+        "selectedIconPath": "image/fontawesome/black/png/32/home.png"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "text": "日志",
+        "iconPath": "image/fontawesome/black/png/32/address-book.png",
+        "selectedIconPath": "image/fontawesome/black/png/32/address-book.png"
       },
       {
         "pagePath": "pages/play/play",
-        "text": "Play"
+        "text": "Play",
+        "iconPath": "image/fontawesome/black/png/32/play-circle.png",
+        "selectedIconPath": "image/fontawesome/black/png/32/play-circle.png"
       },
       {
         "pagePath": "pages/map/map",
-        "text": "地图"
+        "text": "地图",
+        "iconPath": "image/fontawesome/black/png/32/map.png",
+        "selectedIconPath": "image/fontawesome/black/png/32/map.png"
       },
       {
         "pagePath": "pages/health/health",
-        "text": "健康"
+        "text": "健康",
+        "iconPath": "image/fontawesome/black/png/32/hospital-o.png",
+        "selectedIconPath": "image/fontawesome/black/png/32/hospital-o.png"
       }
     ]
   }

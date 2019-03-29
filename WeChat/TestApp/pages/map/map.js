@@ -1,11 +1,12 @@
 // China
 // var lat = 39.0851;
 // var lng = 117.19937;
-var localData = require('../../data/data.js')
+var localData = require('../../data/data.js');
 
 //Melbourne
 var lat = -37.813611;
 var lng = 144.963056;
+var markers = [];
 
 Page({
   data: {
@@ -16,9 +17,9 @@ Page({
   onLoad: function(e) {
     console.log('on load')
     //repaire the markers
-    var markers = []
     var i = 0
-    localData.testJsonList.forEach(function(item){
+
+    localData.testJsonList.forEach(function(item) {
       markers.push({
         iconPath: '/image/location.png',
         id: i++,
@@ -32,7 +33,8 @@ Page({
     this.setData({
       lat: lat,
       lng: lng,
-      markers: markers
+      markers: markers,
+
     })
 
     /*
@@ -65,6 +67,25 @@ Page({
 
   showDetails: function(e) {
     console.log('show modal')
+    console.log(e.markerId)
+
+    var details = localData.testJsonList[e.markerId]
+    if (details.data_type == 'Practice') {
+      this.setData({
+        location: details.s_address,
+        name: details.s_clinic_name,
+        specialties: details.s_specialties,
+        phone: details.s_phone
+      })
+    } else if (details.data_type == 'Practitioner') {
+      this.setData({
+        location: details.p_location,
+        name: details.p_name,
+        specialties: details.p_specialties,
+        phone: details.s_phone
+      })
+    }
+    
 
     var animation = wx.createAnimation({
       duration: 200,
@@ -113,10 +134,6 @@ Page({
   },
   markertap(e) {
     console.log(e.markerId)
-
-
-  },
-  controltap(e) {
-    console.log(e.controlId)
   }
+
 })

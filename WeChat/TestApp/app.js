@@ -1,6 +1,18 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
+
+    // show tabBar red dot
+    wx.showTabBarRedDot({
+      index: (2),
+    })
+
+    // set tabBar badge
+    wx.setTabBarBadge({
+      index: 4,
+      text: 'new'
+    })
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -10,6 +22,7 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log('user login')
       }
     })
     // 获取用户信息
@@ -35,6 +48,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    url: '',
+    url_zhihu_api: 'http://news-at.zhihu.com/api/4/news/latest',
   }
 })

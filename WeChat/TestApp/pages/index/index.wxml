@@ -7,6 +7,7 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  
   <view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx"></view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
@@ -15,6 +16,14 @@
   <button type="primary" bindtap="rotateAndScale">Rotate And Scale</button>
   <button type="primary" bindtap="scaleIt">Scale</button>
   <button type="primary" bindtap="rotateAndScaleThenTranslate">Move</button>
- 
+
+  <block wx:for="{{[1, 2, 3]}}">
+    <view>{{index}}:</view>
+    <view>{{item}}</view>
+  </block>
+  <text>below</text>
+  <view wx:for="{{[1,2,3]}}">
+    {{item}}
+  </view>
 
 </view>

@@ -12,11 +12,41 @@ Page({
   },
   //事件处理函数
   bindViewTap: function() {
-    wx.navigateTo({
+    wx.switchTab({
       url: '../logs/logs'
     })
   },
   onLoad: function () {
+    // set navigation bar title
+    wx.setNavigationBarTitle({
+      title: '用心',
+    })
+
+    // set top bar text
+    wx.setTopBarText({
+      text: 'This is the topbar text'
+    })
+
+    // set background color
+    wx.setBackgroundColor({
+      backgroundColor: '#ff0000', // 窗口的背景色为白色
+    })
+
+    wx.setBackgroundColor({
+      backgroundColorTop: '#ff0000', // 顶部窗口的背景色为白色
+      backgroundColorBottom: '#ff0000', // 底部窗口的背景色为白色
+    })
+
+
+ 
+
+    // local storage 
+    const res = wx.getSystemInfoSync()
+    console.log('>>>' + res.platform)
+    wx.setStorageSync('developer', 'Peter Wang')
+    
+
+    // default case:
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -43,6 +73,12 @@ Page({
         }
       })
     }
+  },
+  onReachBottom: function () {
+    console.log('Reach bottom')
+    wx.showToast({
+      title: 'Bottom up',
+    })
   },
   onShow:function(){
     const animation = wx.createAnimation({
@@ -97,8 +133,18 @@ Page({
   },
   goMe:function(e){
     console.log('go to me')
-    wx.navigateTo({
-      url: '/pages/index/me/me',
+    wx.vibrateShort({
+      success(res){
+        console.log('Vibration Good')
+
+      },fail(res){
+        console.log('Vibration Bad')
+      }
     })
+
+    wx.navigateTo({
+      url: '/pages/index/me/me?year=2019&month=03',
+    })
+   
   }
 })

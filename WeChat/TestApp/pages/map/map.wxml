@@ -10,9 +10,9 @@
 
       <cover-view class='placeBox'>
         <cover-view class='placeViewLt'>
-          <cover-view class='viewTitle'>同仁堂</cover-view>
-          <cover-view class='viewDis'>品牌</cover-view>
-          <cover-view class='viewAddr'>好</cover-view>
+          <cover-view class='viewTitle'>{{name}}</cover-view>
+          <cover-view class='viewDis'>{{specialties}}</cover-view>
+          <cover-view class='viewAddr'>{{location}}</cover-view>
         </cover-view>
         <cover-view class='placeViewRt'>
           <cover-image data-id="{{myall.id}}" bindtap="opendetail" src='/image/icons/apple-touch-icon.png'></cover-image>
@@ -21,8 +21,8 @@
 
       <cover-view class='viewIcon'>
         <cover-view class='timeText'><i class="fa fa-clock-o fa-lg"></i> 营业时间</cover-view>
-        <cover-view class='timeText1' data-id="cwan40" bindtap='calling'><i class="fa fa-phone fa-lg"></i> 电话</cover-view>
-        <cover-view class='timeText1'><i class="fa fa-globe fa-lg"></i> 导航</cover-view>
+        <cover-view class='timeText1' data-id="cwan40" bindtap='calling'><i class="fa fa-phone fa-lg"></i> {{phone}}</cover-view>
+        <cover-view class='timeText1'><i class="fa fa-globe fa-lg"></i> 到这里去</cover-view>
       </cover-view>
 
     </cover-view>

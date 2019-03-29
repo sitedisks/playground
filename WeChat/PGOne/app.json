@@ -1,33 +1,51 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/map/map",
-    "pages/test/test"
+    "pages/list/list",
+    "pages/care/care",
+    "pages/me/me",
+    "pages/me/test/test"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Test App",
-    "navigationBarTextStyle":"black"
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#78C2AD",
+    "navigationBarTitleText": "健康海外",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#000",
+    "borderStyle": "white",
+    "backgroundColor": "#78C2AD",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "附近",
+        "iconPath": "image/fontawesome/white/png/32/map-marker.png",
+        "selectedIconPath": "image/fontawesome/black/png/32/map-marker.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "pagePath": "pages/list/list",
+        "text": "搜索",
+        "iconPath": "image/fontawesome/white/png/32/search.png",
+        "selectedIconPath": "image/fontawesome/black/png/32/search.png"
       },
       {
-        "pagePath": "pages/map/map",
-        "text": "Map"
+        "pagePath": "pages/care/care",
+        "text": "健康",
+        "iconPath": "image/fontawesome/white/png/32/heartbeat.png",
+        "selectedIconPath": "image/fontawesome/black/png/32/heartbeat.png"
       },
       {
-        "pagePath": "pages/test/test",
-        "text": "测试"
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "image/fontawesome/white/png/32/user.png",
+        "selectedIconPath": "image/fontawesome/black/png/32/user.png"
       }
     ]
   }

@@ -1,6 +1,39 @@
 <!--logs.wxml-->
-<view class="container log-list">
+<!-- <view class="container log-list">
   <block wx:for="{{logs}}" wx:for-item="log">
     <text class="log-item">{{index + 1}}. {{log}}</text>
   </block>
+</view> -->
+<view>
+  <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' class='banners' interval='{{interval}}' duration='{{duration}}'>
+    <block wx:for='{{zhihu}}'>
+      <swiper-item class='banner'>
+        <image src='{{item.image}}' data-id='{{item.id}}' bindtap='bindViewTap' class='banner-image' width='100%' height='100%' />
+        <text class='banner-title'>{{item.title}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
 </view>
+
+<template name="msgItem">
+  <view>
+    <text>{{temp.index}}: {{temp.msg}}</text>
+    <text>Time: {{temp.time}}</text>
+  </view>
+</template>
+
+<template is="msgItem" data="{{temp}}" />
+<text>view is div, text is span</text>
+
+
+User Avatar: 
+<open-data type="userAvatarUrl"></open-data>
+User Gender: 
+<open-data type="userGender" lang="zh_CN"></open-data>
+User Nick Name: 
+<open-data type="userNickName"></open-data>
+
+User City: <open-data type="userCity"></open-data>
+User Provice: <open-data type="userProvince"></open-data>
+User Country: <open-data type="userCountry"></open-data>
+User Language: <open-data type="userLanguage"></open-data>
