@@ -1,0 +1,4 @@
+<!--pages/index/item/item.wxml-->
+<view class="container">
+<text>business item</text>
+</view>

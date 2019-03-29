@@ -1,2 +1,5 @@
 <!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<view class="container">
+<text>Search</text>
+<i class="fa fa-search fa-lg"></i>
+</view>

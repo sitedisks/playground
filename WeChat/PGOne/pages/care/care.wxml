@@ -1,2 +1,5 @@
 <!--pages/care/care.wxml-->
-<text>pages/care/care.wxml</text>
+<view class="container">
+<text>Healthcare</text>
+<i class="fa fa-hospital-o fa-lg"></i>
+</view>
