@@ -52,8 +52,8 @@ Page({
       hasUserInfo: true
     })
   },
+  
   getMyLocation: function (e) {
-
     wx.getLocation({
       type: 'gcj02', //返回可以用于wx.openLocation的经纬度
       success: function (res) {

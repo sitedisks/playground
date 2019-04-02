@@ -1,0 +1,11 @@
+<!--example/test/test.wxml-->
+<view class="container log-list">
+  <!--有wx:key-->
+  <input value="id:{{item.id}}" wx:for="{{input_data}}" wx:key="unique" />
+  <button bindtap="addToFront">
+    前部插入元素
+  </button>
+  <button bindtap="switch">
+    随机排序
+  </button>
+</view>

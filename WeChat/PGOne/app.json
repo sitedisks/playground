@@ -1,11 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/item/item",
     "pages/list/list",
-    "pages/list/item/item",
     "pages/care/care",
     "pages/me/me",
+    "pages/item/item",
+    "pages/scan/scan",
     "pages/me/test/test"
   ],
   "permission": {
@@ -22,8 +22,8 @@
   "tabBar": {
     "color": "#000",
     "selectedColor": "#78C2AD",
-    "borderStyle": "black",
-    "backgroundColor": "#f8f9fa",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -39,9 +39,9 @@
       },
       {
         "pagePath": "pages/care/care",
-        "text": "健康",
-        "iconPath": "image/fontawesome/black/png/64/heartbeat.png",
-        "selectedIconPath": "image/fontawesome/primary/png/64/heartbeat.png"
+        "text": "新闻",
+        "iconPath": "image/fontawesome/black/png/64/newspaper-o.png",
+        "selectedIconPath": "image/fontawesome/primary/png/64/newspaper-o.png"
       },
       {
         "pagePath": "pages/me/me",

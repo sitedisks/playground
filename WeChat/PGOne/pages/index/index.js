@@ -22,6 +22,7 @@ Page({
 
     localData.testJsonList.forEach(function(item) {
       markers.push({
+        // iconPath: '/image/location.png',
         iconPath: '/image/location.png',
         id: i++,
         latitude: item.lat,
@@ -130,10 +131,23 @@ Page({
     }.bind(this), 200)
   },
   opendetail: function(opt){
-
     wx.navigateTo({
-      url: '../index/item/item',
+      url: '../item/item',
     })
+  },
+
+  getScancode: function(){
+    wx.scanCode({
+      success: (res) => {
+        var result = res.result
+        console.log(result)
+        wx.setStorageSync('scan', result)
+        wx.navigateTo({
+          url: '../scan/scan',
+        })
+      }
+    })
+
   },
   regionchange(e) {
     console.log(e.type)

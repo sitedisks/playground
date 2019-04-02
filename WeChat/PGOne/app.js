@@ -46,6 +46,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    todaynews_api: 'http://is.snssdk.com/api/news/feed/v51/',
+    juhe_apiKey: 'a88e61a44a0a9606e75d886e3ba1746e',
+    juhe_api: 'http://v.juhe.cn/toutiao/index'
   }
 })
