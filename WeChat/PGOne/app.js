@@ -47,8 +47,15 @@ App({
   },
   globalData: {
     userInfo: null,
+    page_size: 20,
     todaynews_api: 'http://is.snssdk.com/api/news/feed/v51/',
+    //juhe: http://v.juhe.cn/toutiao/index?type=top&key=a88e61a44a0a9606e75d886e3ba1746e
     juhe_apiKey: 'a88e61a44a0a9606e75d886e3ba1746e',
-    juhe_api: 'http://v.juhe.cn/toutiao/index'
+    juhe_api: 'http://v.juhe.cn/toutiao/index',
+    //newsapi.org: https://newsapi.org/v2/everything?q=health&pageSize=40&page=1&apiKey=60b923e5e58c4b9d88122c0a9d2ad60b
+    newsapi_key: '60b923e5e58c4b9d88122c0a9d2ad60b',
+    newsapi: 'https://newsapi.org/v2/'
+ 
+
   }
 })

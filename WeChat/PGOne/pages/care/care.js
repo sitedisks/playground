@@ -1,50 +1,130 @@
 // pages/care/care.js
 const util = require('../../utils/util.js')
 var app = getApp()
+var page = 1
+var category = 'health'
+var news_headlines = 'top-headlines?category=' + category
+var news_everything = 'everything?q=' + category
+var data = []
 
 Page({
   data: {
-    message: 'Love me',
     data: [],
 
   },
-
-  onLoad:function(e){
+  onLoad: function(e) {
     var that = this
-    var api = app.globalData.todaynews_api + '?category=news_hot'
-    var data = []
+
+    var api = app.globalData.newsapi + news_everything +
+      '&pageSize=' + app.globalData.page_size + '&page=' +
+      page + '&apiKey=' + app.globalData.newsapi_key
+
+    wx.showLoading({
+      title: '加载中',
+    })
 
     wx.request({
       url: api,
       success(res) {
-        var one_item = JSON.parse(res.data.data[0].content)
-        console.log(one_item)
+        wx.hideLoading()
+        if (res.data.status === 'ok') {
+          var one_item = res.data.articles[0]
+          console.log(one_item)
 
-        // new Date(log)
-        res.data.data.forEach(item=>{
-          var itemObj = JSON.parse(item.content)
-          var dataItem = {
-            item_id: itemObj.item_id,
-            title: itemObj.share_info.title,
-            media_info: itemObj.media_info,
-            media_name: itemObj.media_name,
-            user_info:itemObj.user_info,
-            abstract: itemObj.abstract,
-            article_url: itemObj.article_url,
-            display_url: itemObj.display_url,
-            keywords: itemObj.keywords,
-            publish_time: itemObj.publish_time
-          }
+          res.data.articles.map(function(item) {
+            if (item.source.name != 'The New York Times') {
+              data.push(item)
+            }
+          })
 
-          data.push(dataItem)
-        })
-
-        console.log(data)
-        that.setData({
-          data: data
-        })
+          that.setData({
+            data: data
+          })
+        } else {
+          console.log('failed to load from news api')
+        }
       }
     })
 
+  },
+  onPullDownRefresh: function() {
+    page = 1
+    data = []
+    console.log('Pull down refresh')
+    var that = this
+
+    var api = app.globalData.newsapi + news_everything +
+      '&pageSize=' + app.globalData.page_size + '&page=' +
+      page + '&apiKey=' + app.globalData.newsapi_key
+
+    wx.showNavigationBarLoading();
+    // wx.showLoading({
+    //   title: '刷新中',
+    // })
+
+    wx.request({
+      url: api,
+      success(res) {
+        // wx.hideLoading()
+        wx.hideNavigationBarLoading();
+        wx.stopPullDownRefresh();
+        
+        if (res.data.status === 'ok') {
+          var one_item = res.data.articles[0]
+          console.log(one_item)
+
+          res.data.articles.map(function(item) {
+            if (item.source.name != 'The New York Times') {
+              data.push(item)
+            }
+          })
+
+          that.setData({
+            data: data
+          })
+        } else {
+          console.log('failed to load from news api')
+        }
+      }
+    })
+
+  },
+  onReachBottom: function() {
+    page++
+
+    console.log('Load ' + page + ' page')
+
+    var that = this
+
+    var api = app.globalData.newsapi + news_everything +
+      '&pageSize=' + app.globalData.page_size + '&page=' +
+      page + '&apiKey=' + app.globalData.newsapi_key
+
+    wx.showLoading({
+      title: '加载更多',
+    })
+
+    wx.request({
+      url: api,
+      success(res) {
+        wx.hideLoading()
+        if (res.data.status === 'ok') {
+          var one_item = res.data.articles[0]
+          console.log(one_item)
+
+          res.data.articles.map(function(item) {
+            if (item.source.name != 'The New York Times') {
+              data.push(item)
+            }
+          })
+
+          that.setData({
+            data: data
+          })
+        } else {
+          console.log('failed to load from news api')
+        }
+      }
+    })
   }
 });
