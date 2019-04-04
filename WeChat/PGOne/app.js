@@ -54,8 +54,9 @@ App({
     juhe_api: 'http://v.juhe.cn/toutiao/index',
     //newsapi.org: https://newsapi.org/v2/everything?q=health&pageSize=40&page=1&apiKey=60b923e5e58c4b9d88122c0a9d2ad60b
     newsapi_key: '60b923e5e58c4b9d88122c0a9d2ad60b',
-    newsapi: 'https://newsapi.org/v2/'
- 
+    newsapi: 'https://newsapi.org/v2/',
+    azure_dev_api: 'https://hp-app-api-dev.azurewebsites.net/Search/practice?Longitude=144.963056&Latitude=-37.813611'
+
 
   }
 })
