@@ -16,6 +16,11 @@ Page({
       url: '../me/test/test'
     })
   },
+  goMedi:function(){
+    wx.navigateTo({
+      url: '/pages/list/list',
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

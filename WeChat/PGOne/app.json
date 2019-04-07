@@ -2,6 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/list/list",
+    "pages/medi/medi",
+    "pages/medinfo/medinfo",
     "pages/care/care",
     "pages/me/me",
     "pages/item/item",
@@ -32,7 +34,7 @@
         "selectedIconPath": "image/fontawesome/primary/png/64/map.png"
       },
       {
-        "pagePath": "pages/list/list",
+        "pagePath": "pages/medi/medi",
         "text": "搜索",
         "iconPath": "image/fontawesome/black/png/64/search.png",
         "selectedIconPath": "image/fontawesome/primary/png/64/search.png"

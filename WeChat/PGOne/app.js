@@ -1,6 +1,6 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
 
     // show tabBar red dot
     wx.showTabBarRedDot({
@@ -55,8 +55,12 @@ App({
     //newsapi.org: https://newsapi.org/v2/everything?q=health&pageSize=40&page=1&apiKey=60b923e5e58c4b9d88122c0a9d2ad60b
     newsapi_key: '60b923e5e58c4b9d88122c0a9d2ad60b',
     newsapi: 'https://newsapi.org/v2/',
-    azure_dev_api: 'https://hp-app-api-dev.azurewebsites.net/Search/practice'
-
-
+    azure_dev_api: 'https://hp-app-api-dev.azurewebsites.net/Search/practice',
+    //showapi
+    showapi_app_id: 91308,
+    showapi_app_key: 'c22eef52c48b401eae9435e3f2af4acd',
+    showapi_disease_type_list: 'http://route.showapi.com/546-1',
+    showapi_search_disease: 'http://route.showapi.com/546-2',
+    showapi_disease_detail: 'http://route.showapi.com/546-3'
   }
 })
