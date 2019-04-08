@@ -2,7 +2,6 @@
 //获取应用实例
 const app = getApp()
 // 全局的 getApp() 函数可以用来获取到小程序实例
-
 Page({
   data: {
 

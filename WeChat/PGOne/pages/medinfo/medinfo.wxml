@@ -7,8 +7,8 @@
 
       <view class="weui-article__section">
 
-        <view class="weui-article__title">> {{medi.typeName}} > {{medi.subTypeName}}</view>
-
+        <view class="weui-article__title"><i class="fa fa-book"></i> {{medi.typeName}} - {{medi.subTypeName}}</view>
+        <view style="margin:5px;"></view>
         <view class="weui-article__section">
           <view class="weui-article__h2">概述</view>
            <template is="wxParse" data="{{wxParseData:medi.summary.nodes}}" />

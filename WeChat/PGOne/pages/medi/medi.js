@@ -3,8 +3,8 @@ var WxParse = require('../../wxParse/wxParse.js');
 
 var app = getApp()
 var api = app.globalData.showapi_search_disease
-var app_id = app.globalData.showapi_app_id
-var app_key = app.globalData.showapi_app_key
+var app_id = app.globalData.showapi_disease_app_id
+var app_key = app.globalData.showapi_disease_app_key
 
 Page({
   data: {

@@ -9,8 +9,7 @@ var data = []
 
 Page({
   data: {
-    data: [],
-
+    data: []
   },
   onLoad: function(e) {
     var that = this
