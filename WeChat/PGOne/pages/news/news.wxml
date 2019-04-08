@@ -2,7 +2,7 @@
 <view class="page">
   <view class="page__bd">
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
-      <button type="default">{{array[index].name}}新闻</button>
+      <button class="weui-btn" type="primary" plain="true">{{array[index].name}}新闻</button>
     </picker>
 
     <view class="weui-panel weui-panel_access" wx:for="{{data}}" wx:key="item.uniquekey">
