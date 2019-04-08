@@ -55,6 +55,10 @@ Page({
 
     var api = app.globalData.juhe_api + '?type=' + category[0].value + '&key=' + app.globalData.juhe_apiKey
 
+    wx.setNavigationBarTitle({
+      title: category[0].name + '新闻'
+    })
+
     wx.showLoading({
       title: '加载中',
     })
@@ -97,6 +101,10 @@ Page({
     var that = this
 
     var api = app.globalData.juhe_api + '?type=' + category[e.detail.value].value + '&key=' + app.globalData.juhe_apiKey
+
+    wx.setNavigationBarTitle({
+      title: category[e.detail.value].name + '新闻'
+    })
 
     wx.showLoading({
       title: '加载中',

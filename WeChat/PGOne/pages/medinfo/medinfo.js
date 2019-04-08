@@ -46,6 +46,10 @@ Page({
         var item = res.data.showapi_res_body.item
         console.log(item)
 
+        wx.setNavigationBarTitle({
+          title: item.name
+        })
+
         WxParse.wxParse('summary', 'html', item.summary, that, 5);
 
         var tags = []
