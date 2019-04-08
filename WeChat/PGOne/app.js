@@ -65,7 +65,7 @@ App({
     showapi_disease_detail: 'https://route.showapi.com/546-3',
     showapi_newspage_app_id: 91490,
     showapi_newspage_app_key: '1f6dc1d7815b4ca4a0871576915f2f46',
-    showapi_newspage_api: 'http://route.showapi.com/883-1',
+    showapi_newspage_api: 'https://route.showapi.com/883-1',
     //ccbde.cn: get http://www.ccbde.cn:80/api/521/news
     ccbde_key: '26480968218db442a88df58a1e83021fe',
     ccbde_api: 'https://www.ccbde.cn:80/api/521/news',
