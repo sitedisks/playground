@@ -2,7 +2,11 @@
   "pages": [
     "pages/index/index",
     "pages/list/list",
+    "pages/medi/medi",
+    "pages/medinfo/medinfo",
     "pages/care/care",
+    "pages/news/news",
+    "pages/news/page",
     "pages/me/me",
     "pages/item/item",
     "pages/scan/scan",
@@ -32,13 +36,13 @@
         "selectedIconPath": "image/fontawesome/primary/png/64/map.png"
       },
       {
-        "pagePath": "pages/list/list",
+        "pagePath": "pages/medi/medi",
         "text": "搜索",
         "iconPath": "image/fontawesome/black/png/64/search.png",
         "selectedIconPath": "image/fontawesome/primary/png/64/search.png"
       },
       {
-        "pagePath": "pages/care/care",
+        "pagePath": "pages/news/news",
         "text": "新闻",
         "iconPath": "image/fontawesome/black/png/64/newspaper-o.png",
         "selectedIconPath": "image/fontawesome/primary/png/64/newspaper-o.png"

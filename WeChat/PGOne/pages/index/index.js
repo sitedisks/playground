@@ -72,6 +72,8 @@ Page({
     console.log(e.markerId)
 
     var details = localData.testJsonList[e.markerId]
+    var item = null
+
     if (details.data_type == 'Practice') {
       this.setData({
         location: details.s_address,
@@ -79,6 +81,15 @@ Page({
         specialties: details.s_specialties,
         phone: details.s_phone
       })
+
+      item = {
+        address: details.s_address,
+        latitude: details.lat,
+        longitude: details.lng,
+        name: details.s_clinic_name,
+        specialties: details.s_specialties
+      }
+
     } else if (details.data_type == 'Practitioner') {
       this.setData({
         location: details.p_location,
@@ -86,8 +97,17 @@ Page({
         specialties: details.p_specialties,
         phone: details.s_phone
       })
+
+      item = {
+        address: details.p_location,
+        latitude: details.lat,
+        longitude: details.lng,
+        name: details.p_name,
+        specialties: details.p_specialties
+      }
     }
 
+    wx.setStorageSync("item", item)
 
     var animation = wx.createAnimation({
       duration: 200,
@@ -130,13 +150,16 @@ Page({
       })
     }.bind(this), 200)
   },
-  opendetail: function(opt){
+  opendetail: function(opt) {
+
+
+
     wx.navigateTo({
       url: '../item/item',
     })
   },
 
-  getScancode: function(){
+  getScancode: function() {
     wx.scanCode({
       success: (res) => {
         var result = res.result

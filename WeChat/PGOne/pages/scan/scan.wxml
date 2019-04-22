@@ -1,3 +1,4 @@
 <!--pages/scan/scan.wxml-->
-<text>pages/scan/scan.wxml</text>
-<text>{{message}}</text>
+<view class="container" style="color: #6CC3D5">
+  <i class="fa fa-qrcode fa-5x"></i> {{message}}
+</view>

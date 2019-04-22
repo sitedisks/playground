@@ -2,7 +2,7 @@
 <block>
   <map id="map" longitude="{{lng}}" latitude="{{lat}}" scale="14" markers="{{markers}}" bindmarkertap="showDetails" bindregionchange="regionchange" show-location style="width: 100%; height: 100%;">
     <cover-view class='index_bt1'>
-      <cover-image class='xiaoer' bindtap="getScancode" src="/image/fontawesome/primary/png/128/qrcode.png" />
+      <cover-image class='xiaoer' bindtap="getScancode" src="/image/qrscanner.png" />
     </cover-view>
 
     <cover-view class="commodity_screen" bindtap="hideDetails" wx:if="{{showModalStatus}}"></cover-view>

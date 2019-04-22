@@ -1,0 +1,25 @@
+<!--pages/medinfo/medinfo.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__h1">{{medi.name}}</view>
+
+      <view class="weui-article__section">
+
+        <view class="weui-article__title"><i class="fa fa-book"></i> {{medi.typeName}} - {{medi.subTypeName}}</view>
+        <view style="margin:5px;"></view>
+        <view class="weui-article__section">
+          <view class="weui-article__h2">概述</view>
+           <template is="wxParse" data="{{wxParseData:medi.summary.nodes}}" />
+        </view>
+
+        <view class="weui-article__section" wx:for="{{medi.tagList}}" wx:key="*this">
+          <view class="weui-article__h3">{{item.name}}</view>
+          <template is="wxParse" data="{{wxParseData:item.content.nodes}}" />
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

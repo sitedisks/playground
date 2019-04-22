@@ -1,0 +1,37 @@
+<!--pages/medi/medi.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="病症..." value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">病症...</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="searchInput">查找</view>
+    </view>
+
+    <view class="weui-panel" wx:for="{{data}}" wx:key="id" bindtap="goItem" data-id="{{item.id}}">
+      <view class="weui-panel__hd">{{item.typeName}} - {{item.subTypeName}}</view>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text">{{item.name}}</view>
+          <template is="wxParse" data="{{wxParseData:item.summary.nodes}}"/>
+          <view class="weui-media-box__info">
+            <view class="weui-media-box__info__meta">{{item.id}}</view>
+            <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">详细信息</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
