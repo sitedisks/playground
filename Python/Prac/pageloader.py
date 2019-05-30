@@ -5,6 +5,7 @@ import sys
 
 # run python pageloader.py http://www.com.au
 url = 'https://www.smh.com.au/healthcare/drop-the-phone-millions-turn-to-the-internet-to-book-gp-appointments-20190404-p51az7.html'
+# url = 'https://www.smh.com.au/healthcare/how-screen-time-is-turning-adults-into-volatile-three-year-olds-20190502-p51jiv.html'
 jsonfilename = 'default_json.json'
 htmlfilename = 'default_html.html'
 
@@ -23,7 +24,9 @@ if len(sys.argv) > 1:
 
 
 token = 'shKZWrxnRaGdXEi-9QiavQ'
-api_url = 'http://api.url2io.com/article?token=' + token + '&url=' + url
+api = 'http://api.url2io.com/article'
+api2 = 'http://url2api.applinzi.com/article'
+api_url = api2 + '?token=' + token + '&url=' + url
 
 response = requests.get(api_url)
 
