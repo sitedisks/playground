@@ -4,14 +4,16 @@ import scrapy
 class HentaiOrgSearch(scrapy.Spider):
     name = 'hentaisearch'
 
-    link = 'https://e-hentai.org/?f_doujinshi=1&f_manga=1&f_artistcg=1&f_gamecg=1&f_western=1&f_non-h=1&f_imageset=1&f_cosplay=1&f_asianporn=1&f_misc=1&f_search=bdsm+chinese&f_apply=Apply+Filter'
+    # link = 'https://e-hentai.org/?f_doujinshi=1&f_manga=1&f_artistcg=1&f_gamecg=1&f_western=1&f_non-h=1&f_imageset=1&f_cosplay=1&f_asianporn=1&f_misc=1&f_search=bdsm+chinese&f_apply=Apply+Filter'
+    link = 'https://e-hentai.org/uploader/demon233/3'
     start_urls = [link]
 
     def parse(self, response):
         result_links = response.css(
             'body table.itg div.it5').xpath('.//a/@href').getall()
 
-        file_name = self.link.split('search=')[1].split('&')[0]
+        # file_name = self.link.split('search=')[1].split('&')[0]
+        file_name = self.link.split('uploader/')[1].split('/')[0]
 
         with open('urls/' + file_name + '.txt', 'a') as f:
             for link in result_links:
