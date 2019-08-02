@@ -1,0 +1,22 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+
+.banners{
+  background-color: bisque;
+  height:360px;
+}
+
+.banner-image{
+  width: 100%;
+}
+
+.banner-title{
+  font-size: 18px;
+  color: blueviolet
+}

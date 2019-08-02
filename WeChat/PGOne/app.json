@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/medi/medi",
+    "pages/medinfo/medinfo",
+    "pages/care/care",
+    "pages/news/news",
+    "pages/news/page",
+    "pages/me/me",
+    "pages/item/item",
+    "pages/scan/scan",
+    "pages/me/test/test"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#78C2AD",
+    "navigationBarTitleText": "健康海外",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#78C2AD",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "附近",
+        "iconPath": "image/fontawesome/black/png/64/map.png",
+        "selectedIconPath": "image/fontawesome/primary/png/64/map.png"
+      },
+      {
+        "pagePath": "pages/medi/medi",
+        "text": "搜索",
+        "iconPath": "image/fontawesome/black/png/64/search.png",
+        "selectedIconPath": "image/fontawesome/primary/png/64/search.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻",
+        "iconPath": "image/fontawesome/black/png/64/newspaper-o.png",
+        "selectedIconPath": "image/fontawesome/primary/png/64/newspaper-o.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "image/fontawesome/black/png/64/user.png",
+        "selectedIconPath": "image/fontawesome/primary/png/64/user.png"
+      }
+    ]
+  }
+}
