@@ -3,25 +3,34 @@
 class LikeButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { liked: false };
+    this.state = { isToggleOn: false };
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  // React.Component must implement the render() function
+  handleClick(){
+    console.log('clicked')
+    this.setState(state=> ({
+      isToggleOn:true
+    }));
+  }
+
   render() {
-    if (this.state.liked) {
-      return 'You liked P.';
+    if (this.state.isToggleOn) {
+      console.log('trigger it');
+      return 'You isToggleOn P.';
     }
 
-    return React.createElement(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Peter'
+    return (
+      <button onClick={this.handleClick}>
+        Peter
+      </button>
     );
   }
 }
 
 
 ReactDOM.render(
-  React.createElement(LikeButton), // React.createElement(React.Component)
+  // React.createElement(LikeButton), // React.createElement(React.Component)
+  <LikeButton />,
   document.getElementById('like_button_container')
   );

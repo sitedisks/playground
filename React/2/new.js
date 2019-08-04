@@ -23,5 +23,5 @@ class NameT extends React.Component {
 ReactDOM.render(
     // React.createElement('span',null,'Peter and Elena'),
     React.createElement(NameT),
-    document.getElementById('peter')
+    document.getElementById('new')
 );

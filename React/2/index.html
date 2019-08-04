@@ -14,12 +14,17 @@
 
   <div id="babalcase"></div>
 
-  <div id='peter'></div>
+  <div id='new'></div>
 
   <!-- We will put our React component inside this div. -->
   <div id="like_button_container"></div>
+  <div id="like_button_container2"></div>
+
   <div id="root"></div>
 
+  <div>====== LOGIN AREA =====</div>
+  <div id="loginarea"></div>
+  <div>========================</div>
 
   <!-- Load React. -->
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
@@ -30,17 +35,63 @@
 
   <script src="babelcase.js" type="text/babel"></script>
 
-  <script src="like_button.js"></script>
+  <script src="like_button.js" type='text/babel'></script>
+  <script src="like_button2.js" type='text/babel'></script>
   <script src="new.js"></script>
+  <script src="loginCtrl.js" type='text/babel'></script>
 
 
   <script type="text/babel">
-    ReactDOM.render( 
-      <h1> Hello, world! </h1>,
-      document.getElementById('root')
-    );
+    class FormattedDate extends React.Component{
+      render(){
+        return <h2>It is {this.props.date.toLocaleTimeString()}</h2>
+      }
+      
+    }
 
-    
+    class Clock extends React.Component{
+      constructor(props){
+        super(props);
+        this.state = {date: new Date()} //The only place where you can assign this.state is the constructor.
+      }
+
+      componentDidMount(){
+        this.timerID = setInterval(
+          () => {return this.setState({date: new Date()})}, 
+          1000);
+      }
+
+      compoenentWillUnmount(){
+        clearInterval(this.timerID);
+      }
+
+      render(){
+        return (
+          <div>
+            <h1>Hello world {this.props.name}</h1>
+            <FormattedDate date={this.state.date} />
+          </div>
+        )
+      }
+    } //Clock is now defined as a class rather than a function.
+
+    class App extends React.Component{
+      render(){
+        return (
+          <div>
+            <Clock name="Peter"/>
+            <Clock name="Elsie"/>
+            <Clock name="Elena"/>
+          </div>
+        )
+      }
+    }
+
+      ReactDOM.render( 
+        <App />,
+        document.getElementById('root')
+      );
+
   </script>
 
 </body>
