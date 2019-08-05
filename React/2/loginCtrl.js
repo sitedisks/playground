@@ -35,7 +35,6 @@ class LoginControl extends React.Component {
 }
 
 function Greeting(props) {
-
     if (props.userstate) {
         return <h1>Welcome back!</h1>;
     }
