@@ -13,7 +13,7 @@ class HentaiOrgSpider(scrapy.Spider):
             self.start_urls = [url]
             #scrapy crawl hentaispider -a url=https://e-hentai.org/g/1051485/44efbafb5d/
         else:
-            file_to_open = os.path.abspath('urls/demon233.txt')
+            file_to_open = os.path.abspath('urls/taochui.txt')
             urls = open(file_to_open, 'r')
             file_urls = urls.readlines()
             self.start_urls = []
