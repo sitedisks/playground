@@ -15,7 +15,7 @@ class HentaiorgPipeline(ImagesPipeline):
     def file_path(self, request, response=None, info=None):
         folder = request.meta['folder']
         path = urlparse(request.url).path
-        return 'full/hentai/%s/%s' % (folder, basename(path))
+        return 'full/hentai/G-Panda/%s/%s' % (folder, basename(path))
 
     def get_media_requests(self, item, info):
         for image_url in item['image_urls']:
