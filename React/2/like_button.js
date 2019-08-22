@@ -9,9 +9,11 @@ class LikeButton extends React.Component {
 
   handleClick(){
     console.log('clicked')
-    this.setState(state=> ({
-      isToggleOn:true
-    }));
+    // this.setState(()=> ({
+    //   isToggleOn:true
+    // }));
+
+    this.setState({isToggleOn: true});
   }
 
   render() {

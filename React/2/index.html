@@ -35,11 +35,16 @@
   <div id="stateUp"></div>
   <div>========================</div>
 
+  <div>=====Lifting State Up =====</div>
+  <div id="ajax"></div>
+  <div>========================</div>
+
   <!-- Load React. -->
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <script src="https://cdn.staticfile.org/jquery/2.1.4/jquery.min.js"></script>
   <!-- Load our React component. -->
 
   <script src="babelcase.js" type="text/babel"></script>
@@ -50,6 +55,7 @@
   <script src="loginCtrl.js" type='text/babel'></script>
   <script src="listkeys.js" type='text/babel'></script>
   <script src="liftingState.js" type='text/babel'></script>
+  <script src="ajax.js" type='text/babel'></script>
 
 
   <script type="text/babel">
@@ -67,6 +73,7 @@
       }
 
       componentDidMount(){
+        //Ajax call
         this.timerID = setInterval(
           () => {return this.setState({date: new Date()})}, 
           1000);
