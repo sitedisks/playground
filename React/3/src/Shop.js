@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import { Link } from 'react-router-dom';
 
 
 // fetch : https://fortnite-api.theapinetwork.com/upcoming/get?authorization=e23f8d7474d9dabe9864e82c7d7b1b1b
@@ -7,15 +8,15 @@ import './App.css';
 function Shop() {
 
   //Similar to componentDidMount and componentDidUpdate 
-  useEffect(()=>{
+  useEffect(() => {
     fetchItems();
-  },[]);
+  }, []);
 
-  const [items, setItems]=useState([]);
+  const [items, setItems] = useState([]);
 
-  const fetchItems = async()=>{
+  const fetchItems = async () => {
     const data = await fetch('https://fortnite-api.theapinetwork.com/upcoming/get?authorization=e23f8d7474d9dabe9864e82c7d7b1b1b');
-    
+
     const items = await data.json();
     console.log(items);
     setItems(items.data);
@@ -23,11 +24,16 @@ function Shop() {
 
   return (
     <div className="App">
-     {items.map(item=>(
-       <h1 key={item.itemId}>{item.item.name}</h1>
-     ))}
+      {items.map(item => (
+        <h1 key={item.itemId}>
+          <Link to={`/shop/${item.itemId}`}>
+            {item.item.name}
+          </Link>
+         
+        </h1>
+      ))}
     </div>
-  ); 
+  );
 }
 
 export default Shop;
