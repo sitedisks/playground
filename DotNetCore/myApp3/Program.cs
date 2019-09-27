@@ -1,14 +1,12 @@
 ﻿using System;
 
-namespace myApp
+namespace myApp3
 {
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.WriteLine("Current time is: " + DateTime.Now);
-
         }
     }
 }
