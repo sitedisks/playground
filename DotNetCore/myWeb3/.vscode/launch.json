@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.0/myApp3.dll",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.0/myWeb3.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",

@@ -10,7 +10,6 @@
             "args": [
                 "build",
                 // Ask dotnet build to generate full paths for file names.
-                "${workspaceFolder}/myApp3.csproj",
                 "/property:GenerateFullPaths=true",
                 // Do not generate summary otherwise it leads to duplicate errors in Problems panel
                 "/consoleloggerparameters:NoSummary"
