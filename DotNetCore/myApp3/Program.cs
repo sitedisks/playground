@@ -7,6 +7,7 @@ namespace myApp3
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Current time: " + DateTime.Now);
         }
     }
 }
