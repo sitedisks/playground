@@ -1,4 +1,6 @@
 using System;
+using System.Reflection;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,8 +14,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using myApi3Todo.Models;
+using Microsoft.OpenApi.Models;
 
 namespace myApi3Todo
+
 {
     public class Startup
     {
@@ -27,8 +31,19 @@ namespace myApi3Todo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<TodoContext>(o=>o.UseInMemoryDatabase("TodoList"));
+            services.AddDbContext<TodoContext>(o => o.UseInMemoryDatabase("TodoList"));
             services.AddControllers();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Todo API",
+                    Version = "v1",
+                    Description = "A simple exampel ASP.NET Core Web API",
+                   
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +55,9 @@ namespace myApi3Todo
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1.1"));
 
             app.UseRouting();
 
