@@ -1,6 +1,5 @@
 namespace myApi3Todo.Models
 {
-    //Good class
     public class TodoItem{
         public long Id { get; set; }
         public string Name { get; set; }
