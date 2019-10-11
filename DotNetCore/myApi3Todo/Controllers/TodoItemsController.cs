@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using myApi3Todo.Models;
+using Microsoft.Extensions.Logging;
 
 namespace myApi3Todo.Controllers
 {
@@ -14,16 +15,19 @@ namespace myApi3Todo.Controllers
     public class TodoItemsController : ControllerBase
     {
         private readonly TodoContext _context;
+        private readonly ILogger _logger;
 
-        public TodoItemsController(TodoContext context)
+        public TodoItemsController(TodoContext context, ILogger<TodoItemsController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         // GET: api/TodoItems
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
         {
+            // _logger.LogInformation(LoggingEvents.GetTodoItems, "Getting all items");
             return await _context.TodoItems.ToListAsync();
         }
 
