@@ -1,0 +1,11 @@
+tutorial: react wit webpack init
+1 how to install and configure webpack
+2 how to install and configure Babel
+3 how to install react
+4 how to create 2 React components (Container/Presentational)
+5 how to include the resulting bundle into an HTML page
+6 how to install and configure webpack dev server
+
+Note: 
+babel preset env: ES6 to ES5
+babel preset react: JSX to javascript
