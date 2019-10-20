@@ -24,7 +24,7 @@ export default () => (
       <NavLeft>
         <Link iconIos="f7:menu" iconAurora="f7:menu" iconMd="material:menu" panelOpen="left" />
       </NavLeft>
-      <NavTitle sliding>F7 webApp cordova</NavTitle>
+      <NavTitle sliding>F7 webApp cordova left</NavTitle>
       <NavRight>
         <Link iconIos="f7:menu" iconAurora="f7:menu" iconMd="material:menu" panelOpen="right" />
       </NavRight>

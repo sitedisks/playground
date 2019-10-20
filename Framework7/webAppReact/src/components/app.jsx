@@ -126,7 +126,7 @@ export default class extends React.Component {
                 </NavRight>
               </Navbar>
               <Block>
-                <p>Popup content goes here.</p>
+                <p>Popup content goes here!</p>
               </Block>
             </Page>
           </View>
