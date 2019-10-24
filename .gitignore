@@ -229,3 +229,5 @@ DotNetCore/webAuthentication/.vs/
 webpackprac/node_modules/
 NodeJS/myapp/node_modules/
 NodeJS/pugApp/node_modules/
+NodeJS/pugApp/.vscode/
+NodeJS/pugApp/
