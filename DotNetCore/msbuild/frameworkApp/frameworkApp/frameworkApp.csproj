@@ -50,4 +50,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  
+  <Target Name="HelloWorld">
+    <Message Text="Configuration is $(Configuration)"></Message>
+    <Message Text="Platform is $(Platform)"></Message>
+  
+    <Message Text="MSBuildToolsPath is $(MSBuildToolsPath)"></Message>
+    <Message Text="MSBuildVersion is $(MSBuildVersion)"></Message>
+    <Message Text="MSBuildToolsVersion is $(MSBuildToolsVersion)"></Message>
+    <Message Text="MSBuildThisFileDirectory is $(MSBuildThisFileDirectory)"></Message>
+
+    <Message Text="Compile Filename: %(Compile.Filename)" />
+
+    <Message Text="Compile item type contains @(Compile)" />
+    <Message Text="Reference item type contains @(Reference)" />
+  </Target>
 </Project>
