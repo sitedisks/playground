@@ -10,6 +10,9 @@ namespace frameworkApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello MSBuild - .net framework 4");
+            Console.ReadLine();
         }
     }
 }
+ 
