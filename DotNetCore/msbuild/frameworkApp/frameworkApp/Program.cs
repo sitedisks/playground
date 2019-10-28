@@ -10,6 +10,8 @@ namespace frameworkApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("OK new compile at the solution!");
+            Console.ReadLine();
         }
     }
 }
