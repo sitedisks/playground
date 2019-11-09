@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebToTest.Data;
+using Microsoft.EntityFrameworkCore;
+using WebToTest.Services;
 
 namespace WebToTest
 {
@@ -23,6 +26,11 @@ namespace WebToTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddTransient<IPersonService, PersonService>();
+
             services.AddControllersWithViews();
         }
 
