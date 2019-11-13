@@ -1,4 +1,3 @@
-using System;
 namespace webApiDB.Model
 {
     public class Prodcut
