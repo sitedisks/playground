@@ -35,7 +35,8 @@ namespace BooksApi
             services.AddSingleton<IBookstoreDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<BookstoreDatabaseSettings>>().Value);
 
-            services.AddSingleton<BookService>();
+            // use singleton lifetime carefully since you need to deal with multithreading and potential memory leak problems.
+            services.AddSingleton<BookService>(); 
 
             services.AddControllers().AddNewtonsoftJson(o=>o.UseMemberCasing());
         }
