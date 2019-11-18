@@ -12,6 +12,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using pinApi.Data;
+using pinApi.Service;
+using pinApi.Service.Interface;
 
 namespace pinApi
 {
@@ -30,6 +32,7 @@ namespace pinApi
             string connString = Configuration.GetConnectionString("PinDbConnectionString");
             // services.AddDbContext<PinDbContext>(opt => opt.UseMySQL(connString));
             services.AddDbContext<PinDbContext>(opt => opt.UseMySql(connString));
+            services.AddTransient<IDateTime,SystemDateTime>();
             services.AddControllers();
         }
 
