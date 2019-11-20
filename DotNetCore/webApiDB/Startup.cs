@@ -27,8 +27,8 @@ namespace webApiDB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connString = Configuration.GetConnectionString("MYSQLConnectionString");
-            services.AddDbContext<WebAPIDbContext>(options => options.UseMySql(connString));
+            string connString = Configuration.GetConnectionString("SQLExpressConnectionString");
+            services.AddDbContext<WebAPIDbContext>(options => options.UseSqlServer(connString));
             services.AddControllers();
         }
 
