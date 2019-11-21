@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using webApiDB.Model;
 using System.Linq;
+using NetTopologySuite;
+using NetTopologySuite.Geometries;
 
 namespace webApiDB.Controllers
 {
@@ -24,7 +26,21 @@ namespace webApiDB.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers(){
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        {
+
+            var geometryFactory = NtsGeometryServices.Instance.CreateGeometryFactory(srid: 4326);
+            var point1 = new Coordinate(-122.121512, 47.6739882);
+            var point2 = new Coordinate(-122.321512, 47.5739882);
+            var pointDis = point1.Distance(point2);
+
+            var currentLocation1 = geometryFactory.CreatePoint(point1);
+            var currentLocation2 = geometryFactory.CreatePoint(point2);
+            var locationDis = currentLocation1.Distance(currentLocation2);
+
+            _logger.LogInformation("point distance: " + pointDis);
+            _logger.LogInformation("location distance: " + locationDis);
+
             return await _context.Users.ToListAsync();
         }
     }
