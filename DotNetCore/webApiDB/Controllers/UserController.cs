@@ -28,7 +28,8 @@ namespace webApiDB.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-
+            // 0.00001 - 1m
+            // 0.01 - 1000m
             var geometryFactory = NtsGeometryServices.Instance.CreateGeometryFactory(srid: 4326);
             var point1 = new Coordinate(-122.121512, 47.6739882);
             var point2 = new Coordinate(-122.321512, 47.5739882);
