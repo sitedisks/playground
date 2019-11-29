@@ -9,8 +9,11 @@ import {
     IonList,
     IonItem, IonLabel, IonCard, IonCardTitle, IonCardContent, IonCardSubtitle, IonCardHeader
 } from '@ionic/react';
+import { Plugins } from '@capacitor/core';
 import { config } from '@ionic/core';
 import { CONFIG } from '../constants';
+
+const { Browser } = Plugins;
 
 class Tab2 extends React.Component {
 
@@ -49,13 +52,13 @@ class Tab2 extends React.Component {
 
                     <IonList>
                         <IonItem routerLink="/tab2/details">
-                        <IonIcon name="wifi" slot="start" />
+                            <IonIcon name="wifi" slot="start" />
                             <IonLabel>Go to detail</IonLabel>
                         </IonItem>
                     </IonList>
 
                     {this.state.news.map((article, index) =>
-                        <IonCard key={index}>
+                        <IonCard key={index} onClick={async ()=>{await Browser.open({ url: article.url })}}>
                             <img src={article.urlToImage} />
                             <IonCardHeader>
                                 <IonCardSubtitle>{article.publishedAt}</IonCardSubtitle>
