@@ -15,7 +15,7 @@ import { add, pin, share } from 'ionicons/icons';
 import { Plugins, CameraResultType } from '@capacitor/core';
 import './Tab1.css';
 
-const { Camera, Geolocation, Share } = Plugins;
+const { Camera, Geolocation, Share, Modals } = Plugins;
 
 class Tab1 extends React.Component {
     constructor(props) {
@@ -27,6 +27,11 @@ class Tab1 extends React.Component {
         console.log('get location');
         const coordinates = await Geolocation.getCurrentPosition();
         console.log('Current', coordinates);
+        let confirmRet = await Modals.confirm({
+            title: 'GeoLocation',
+            message: 'Your location lat: ' + coordinates.coords.latitude
+                + ', lng: ' + coordinates.coords.longitude
+        });
     }
 
     async takePicture() {
