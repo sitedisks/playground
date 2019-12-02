@@ -1,0 +1,7 @@
+{
+  "name": "news_app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

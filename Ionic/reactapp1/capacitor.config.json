@@ -1,0 +1,8 @@
+{
+  "appId": "com.sitedisks.newsapp",
+  "appName": "newSup",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {}
+}
