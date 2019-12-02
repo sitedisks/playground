@@ -1,12 +1,16 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
-import { 
-  IonApp, 
-  IonRouterOutlet, 
-  IonSplitPane, 
-  IonMenu, 
-  IonHeader, 
-  IonContent, 
+
+import '@ionic/react/css/core.css';
+import '@ionic/react/css/ionic.bundle.css';
+import './App.css';
+
+import {
+  IonApp,
+  IonRouterOutlet,
+  IonSplitPane,
+  IonMenu,
+  IonHeader,
+  IonContent,
   IonMenuToggle,
   IonIcon,
   IonItem,
@@ -14,15 +18,17 @@ import {
   IonList,
   IonTitle,
   IonToolbar
- } from '@ionic/react';
+} from '@ionic/react';
+import { Redirect, Route } from 'react-router-dom';
+
 import { IonReactRouter } from '@ionic/react-router';
 
 import Home from './pages/Home/Home';
+import HomePage from './pages/HomePage';
 import List from './pages/List/List';
 
 import { home, list } from 'ionicons/icons';
-import '@ionic/react/css/core.css';
-import '@ionic/react/css/ionic.bundle.css';
+
 
 
 class App extends React.Component {
@@ -42,6 +48,10 @@ class App extends React.Component {
               <IonContent>
                 <IonList>
                   <IonMenuToggle>
+                  <IonItem routerLink="/homepage">
+                      <IonIcon icon={home}></IonIcon>
+                      <IonLabel>Home Page</IonLabel>
+                    </IonItem>
                     <IonItem routerLink="/home">
                       <IonIcon icon={home}></IonIcon>
                       <IonLabel>Home</IonLabel>
@@ -56,6 +66,7 @@ class App extends React.Component {
             </IonMenu>
 
             <IonRouterOutlet id="main">
+              <Route path="/homepage" component={HomePage} />
               <Route path="/home" component={Home} />
               <Route path="/list" component={List} />
               <Route path="/" component={Home} exact />
