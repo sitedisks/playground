@@ -7,7 +7,7 @@ import {
     IonPage,
     IonIcon,
     IonList,
-    IonItem, IonLabel, IonCard, IonCardTitle, IonCardContent, IonCardSubtitle, IonCardHeader
+    IonItem, IonLabel, IonCard, IonCardTitle, IonCardContent, IonCardSubtitle, IonCardHeader, IonImg
 } from '@ionic/react';
 import { config } from '@ionic/core';
 import { CONFIG } from '../constants';
@@ -49,14 +49,15 @@ class Tab2 extends React.Component {
 
                     <IonList>
                         <IonItem routerLink="/tab2/details">
-                        <IonIcon name="wifi" slot="start" />
+                            <IonIcon name="wifi" slot="start" />
                             <IonLabel>Go to detail</IonLabel>
                         </IonItem>
                     </IonList>
 
                     {this.state.news.map((article, index) =>
                         <IonCard key={index}>
-                            <img src={article.urlToImage} />
+                            <IonImg  src={article.urlToImage} />
+                            {/* <img src={article.urlToImage} /> */}
                             <IonCardHeader>
                                 <IonCardSubtitle>{article.publishedAt}</IonCardSubtitle>
                                 <IonCardTitle>{article.title}</IonCardTitle>
