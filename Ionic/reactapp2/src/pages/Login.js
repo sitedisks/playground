@@ -30,6 +30,23 @@ class LoginPage extends React.Component {
                         duration={400}
                     ></IonToast>
                 </IonContent>
+                <form action="">
+                    <IonItem>
+                        <IonInput onIonChange={this.updateEmail} type="email" placeholder="Email"></IonInput>
+                    </IonItem>
+
+                    <IonItem>
+                        <IonInput onIonChange={this.updatePassword} type="password" placeholder="Password"></IonInput>
+                    </IonItem>
+                </form>
+
+                <IonButton></IonButton>
+                
+                <IonFooter>
+                    <IonToobar text-center>
+                        Click here to 
+                    </IonToobar>
+                </IonFooter>
             </>
         )
     }
