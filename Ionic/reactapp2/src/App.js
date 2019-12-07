@@ -24,11 +24,13 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonReactRouter } from '@ionic/react-router';
 
 import Home from './pages/Home/Home';
-import HomePage from './pages/HomePage';
 import List from './pages/List/List';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import ArticlePage from './pages/ArticlePage';
+import TestPage from './pages/TestPage';
 
-import { home, list } from 'ionicons/icons';
-
+import { home, list, lock } from 'ionicons/icons';
 
 
 class App extends React.Component {
@@ -48,17 +50,24 @@ class App extends React.Component {
               <IonContent>
                 <IonList>
                   <IonMenuToggle>
-                  <IonItem routerLink="/homepage">
+                    <IonItem routerLink="/home">
                       <IonIcon icon={home}></IonIcon>
                       <IonLabel>Home Page</IonLabel>
                     </IonItem>
-                    <IonItem routerLink="/home">
+                    <IonItem routerLink="/login">
+                      <IonIcon icon={lock}></IonIcon>
+                      <IonLabel>Login</IonLabel>
+                    </IonItem>
+                    {/* <IonItem routerLink="/home">
                       <IonIcon icon={home}></IonIcon>
                       <IonLabel>Home</IonLabel>
                     </IonItem>
                     <IonItem routerLink="/list">
                       <IonIcon icon={list}></IonIcon>
                       <IonLabel>List</IonLabel>
+                    </IonItem> */}
+                    <IonItem routerLink="/test">
+                      <IonLabel>Test</IonLabel>
                     </IonItem>
                   </IonMenuToggle>
                 </IonList>
@@ -66,10 +75,13 @@ class App extends React.Component {
             </IonMenu>
 
             <IonRouterOutlet id="main">
-              <Route path="/homepage" component={HomePage} />
-              <Route path="/home" component={Home} />
-              <Route path="/list" component={List} />
-              <Route path="/" component={Home} exact />
+              <Route path="/home" component={HomePage} />
+              <Route path="/login" component={LoginPage} />
+              <Route path="/article/:slug" component={ArticlePage} />
+              {/* <Route path="/home" component={Home} />
+              <Route path="/list" component={List} /> */}
+              <Route path="/test" component={TestPage} />
+              <Route path="/" component={HomePage} exact />
             </IonRouterOutlet>
           </IonSplitPane>
         </IonReactRouter>
