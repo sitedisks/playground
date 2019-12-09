@@ -9,14 +9,14 @@ using webApiDB.Data;
 namespace webApiDB.Migrations
 {
     [DbContext(typeof(WebAPIDbContext))]
-    [Migration("20191121230544_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20191209024430_CreateInit")]
+    partial class CreateInit
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.0.0")
+                .HasAnnotation("ProductVersion", "3.1.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("webApiDB.Model.Prodcut", b =>

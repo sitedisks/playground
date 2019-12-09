@@ -14,7 +14,7 @@ namespace webApiDB.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.0.0")
+                .HasAnnotation("ProductVersion", "3.1.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("webApiDB.Model.Prodcut", b =>

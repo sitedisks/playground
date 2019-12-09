@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace webApiDB.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class CreateInit : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

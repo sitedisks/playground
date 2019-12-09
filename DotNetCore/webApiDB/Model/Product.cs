@@ -7,5 +7,6 @@ namespace webApiDB.Model
         public string Name { get; set; } 
         public int SerNo { get; set; }
         public string Description { get; set; }
+        public MySqlGeometry Location { get; set; }
     }
 }
