@@ -8,7 +8,8 @@ import {
     IonImg,
     IonFab,
     IonFabButton,
-    IonIcon
+    IonIcon,
+    IonLabel
 } from '@ionic/react';
 
 import { add, pin, share } from 'ionicons/icons';
@@ -20,7 +21,7 @@ const { Camera, Geolocation, Share, Modals } = Plugins;
 class Tab1 extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { photo: null };
+        this.state = { photo: 'https://via.placeholder.com/300x400' };
     }
 
     async getLocation() {
@@ -63,13 +64,13 @@ class Tab1 extends React.Component {
         return (
             <IonPage>
                 <IonHeader>
-                    <IonToolbar>
-                        <IonTitle>Ionic Native</IonTitle>
+                    <IonToolbar color="primary">
+                        <IonTitle>Camera</IonTitle>
                     </IonToolbar>
                 </IonHeader>
                 <IonContent>
-                    {photo &&
-                        <IonImg src={photo} style={{ 'border': '1px solid black', 'minHeight': '100px' }} />
+                    {photo == null ? <IonLabel>Photo Display Here</IonLabel>:
+                        <IonImg src={photo} style={{ 'minHeight': '100px' }} />
                     }
 
                     <IonFab vertical="bottom" horizontal="end" slot="fixed">
@@ -77,11 +78,11 @@ class Tab1 extends React.Component {
                             <IonIcon icon={add} />
                         </IonFabButton>
                     </IonFab>
-                    <IonFab vertical="top" horizontal="end" slot="fixed">
+                    {/* <IonFab vertical="top" horizontal="end" slot="fixed">
                         <IonFabButton color="danger" onClick={() => this.getLocation()}>
                             <IonIcon icon={pin} />
                         </IonFabButton>
-                    </IonFab>
+                    </IonFab> */}
                     <IonFab vertical="bottom" horizontal="start" slot="fixed">
                         <IonFabButton color="dark" onClick={() => this.shareMe()}>
                             <IonIcon icon={share} />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { IonBackButton, IonButtons, IonHeader, IonPage, IonToolbar, IonTitle, IonContent } from '@ionic/react';
 
-class Details extends React.Component {
+class Details2 extends React.Component {
     render() {
         return (
             <IonPage>
@@ -14,7 +14,7 @@ class Details extends React.Component {
                     </IonToolbar>
                 </IonHeader>
                 <IonContent>
-                    <p>Details</p>
+                    <p>Tab 2 Details</p>
                 </IonContent>
             </IonPage>
         );
@@ -22,4 +22,4 @@ class Details extends React.Component {
     }
 }
 
-export default Details;
+export default Details2;

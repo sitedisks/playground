@@ -7,11 +7,21 @@ import {
     IonPage,
     IonIcon,
     IonList,
-    IonItem, IonLabel, IonCard, IonCardTitle, IonCardContent, IonCardSubtitle, IonCardHeader
+    IonItem, 
+    IonLabel, 
+    IonCard, 
+    IonCardTitle, 
+    IonCardContent, 
+    IonCardSubtitle, 
+    IonCardHeader,
+    IonSkeletonText
 } from '@ionic/react';
-import { Plugins } from '@capacitor/core';
+
+import CardPlaceholder from './CardPlaceholder';
+import { Plugins, LocalNotifications } from '@capacitor/core';
 import { config } from '@ionic/core';
 import { CONFIG } from '../constants';
+import {apps} from 'ionicons/icons'
 
 const { Browser } = Plugins;
 
@@ -40,6 +50,25 @@ class Tab2 extends React.Component {
             );
     }
 
+    renderCards() {
+        return (
+
+            this.state.news.map((article, index) =>
+                        <IonCard key={index} onClick={async ()=>{await Browser.open({ url: article.url })}}>
+                            <img src={article.urlToImage} />
+                            <IonCardHeader>
+                                <IonCardSubtitle>{article.publishedAt}</IonCardSubtitle>
+                                <IonCardTitle>{article.title}</IonCardTitle>
+                            </IonCardHeader>
+                            <IonCardContent>
+                                {article.description}
+                            </IonCardContent>
+                        </IonCard>
+                    )
+        );
+
+    }
+
     render() {
         return (
             <IonPage>
@@ -49,15 +78,12 @@ class Tab2 extends React.Component {
                     </IonToolbar>
                 </IonHeader>
                 <IonContent>
-
-                    <IonList>
-                        <IonItem routerLink="/tab2/details">
-                            <IonIcon name="wifi" slot="start" />
-                            <IonLabel>Go to detail</IonLabel>
-                        </IonItem>
-                    </IonList>
-
-                    {this.state.news.map((article, index) =>
+        {this.state.news.length==0? 
+        <>
+            <CardPlaceholder />
+            <CardPlaceholder />
+            <CardPlaceholder /></>
+            :this.state.news.map((article, index) =>
                         <IonCard key={index} onClick={async ()=>{await Browser.open({ url: article.url })}}>
                             <img src={article.urlToImage} />
                             <IonCardHeader>

@@ -11,10 +11,11 @@ import {
 } from '@ionic/react';
 import Tab1 from './pages/Tab1/Tab1';
 import Tab2 from './pages/Tab2/Tab2';
-import Details from './pages/Tab2/Details';
 import Tab3 from './pages/Tab3/Tab3';
+import Details2 from './pages/Tab2/Details';
+import Details3 from './pages/Tab3/Details';
 import { IonReactRouter } from '@ionic/react-router'
-import { apps, flash, send } from 'ionicons/icons';
+import { apps, flash, send, aperture, paper, person} from 'ionicons/icons';
 import logo from './logo.svg';
 
 /* Core CSS required for Ionic components to work properly */
@@ -31,24 +32,25 @@ class App extends React.Component {
         <IonReactRouter>
           <IonTabs>
             <IonRouterOutlet>
-              <Route path="/" exact component={Tab1}></Route>
+              <Route path="/" exact component={Tab2}></Route>
               <Route path="/tab1" component={Tab1}></Route>
               <Route path="/tab2" exact component={Tab2}></Route>
-              <Route path="/tab2/details" component={Details}></Route>
-              <Route path="/tab3" component={Tab3}></Route>
+              <Route path="/tab2/details" component={Details2}></Route>
+              <Route path="/tab3" exact component={Tab3}></Route>
+              <Route path="/tab3/details" component={Details3}></Route>
             </IonRouterOutlet>
             <IonTabBar slot="bottom">
               <IonTabButton tab="tab1" href="/tab1">
-                <IonIcon icon={apps} />
-                <IonLabel>Tab One</IonLabel>
+                <IonIcon icon={aperture} />
+                <IonLabel>Camera</IonLabel>
               </IonTabButton>
               <IonTabButton tab="tab2" href="/tab2">
-                <IonIcon icon={flash} />
-                <IonLabel>Tab Two</IonLabel>
+                <IonIcon icon={paper} />
+                <IonLabel>News</IonLabel>
               </IonTabButton>
               <IonTabButton tab="tab3" href="/tab3">
-                <IonIcon icon={send} />
-                <IonLabel>Tab Three</IonLabel>
+                <IonIcon icon={person} />
+                <IonLabel>Me</IonLabel>
               </IonTabButton>
             </IonTabBar>
           </IonTabs>
