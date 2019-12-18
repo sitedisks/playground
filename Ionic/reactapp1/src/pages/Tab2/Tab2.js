@@ -26,7 +26,7 @@ class Tab2 extends React.Component {
 
     componentDidMount() {
         // example: https://newsapi.org/v2/top-headlines?country=cn&category=technology&page=2&apiKey=60b923e5e58c4b9d88122c0a9d2ad60b
-        fetch(CONFIG.API_ENDPOINT + '?country=cn&category=technology&page=1&apiKey=' + CONFIG.API_KEY)
+        fetch(CONFIG.API_ENDPOINT + '?country=au&category=technology&page=1&apiKey=' + CONFIG.API_KEY)
             .then(res => res.json())
             .then(
                 (res) => {
