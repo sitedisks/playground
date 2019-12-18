@@ -29,11 +29,11 @@ class Tab2 extends React.Component {
         this.state = {
             news: []
         };
-        this.doRefresh = this.doRefresh.bind(this);
+        // this.doRefresh = this.doRefresh.bind(this);
     }
 
     componentDidMount() {
-        // example: https://newsapi.org/v2/top-headlines?country=cn&category=technology&page=2&apiKey=60b923e5e58c4b9d88122c0a9d2ad60b
+        // example: https://newsapi.org/v2/top-headlines?country=au&category=technology&page=2&apiKey=60b923e5e58c4b9d88122c0a9d2ad60b
         fetch(CONFIG.API_ENDPOINT + '?country=au&category=technology&page=1&apiKey=' + CONFIG.API_KEY)
             .then(res => res.json())
             .then(
@@ -48,25 +48,24 @@ class Tab2 extends React.Component {
             );
     }
 
-    renderCards() {
-        return (
+    renderCards = () => {
+        return (    
             this.state.news.map((article, index) =>
-                        <IonCard key={index} onClick={async ()=>{await Browser.open({ url: article.url })}}>
-                            <img src={article.urlToImage} />
-                            <IonCardHeader>
-                                <IonCardSubtitle>{article.publishedAt}</IonCardSubtitle>
-                                <IonCardTitle>{article.title}</IonCardTitle>
-                            </IonCardHeader>
-                            <IonCardContent>
-                                {article.description}
-                            </IonCardContent>
-                        </IonCard>
-                    )
-        );
-
+            <IonCard key={index} onClick={async ()=>{await Browser.open({ url: article.url })}}>
+                <img src={article.urlToImage} />
+                <IonCardHeader>
+                    <IonCardSubtitle>{article.publishedAt}</IonCardSubtitle>
+                    <IonCardTitle>{article.title}</IonCardTitle>
+                </IonCardHeader>
+                <IonCardContent>
+                    {article.description}
+                </IonCardContent>
+            </IonCard>
+            )
+        )
     }
 
-    doRefresh(event){
+    doRefresh=(event)=>{
         fetch(CONFIG.API_ENDPOINT + '?country=au&category=technology&page=1&apiKey=' + CONFIG.API_KEY)
         .then(res => res.json())
         .then(
@@ -97,25 +96,8 @@ class Tab2 extends React.Component {
                 </IonRefresher>
 
         {this.state.news.length==0? 
-        <>
-            <CardPlaceholder />
-            <CardPlaceholder />
-            <CardPlaceholder /></>
-            :this.state.news.map((article, index) =>
-                        <IonCard key={index} onClick={async ()=>{await Browser.open({ url: article.url })}}>
-                            <img src={article.urlToImage} />
-                            <IonCardHeader>
-                                <IonCardSubtitle>{article.publishedAt}</IonCardSubtitle>
-                                <IonCardTitle>{article.title}</IonCardTitle>
-                            </IonCardHeader>
-                            <IonCardContent>
-                                {article.description}
-                            </IonCardContent>
-                        </IonCard>
-                    )
-                    }
-
-
+        <><CardPlaceholder /><CardPlaceholder /><CardPlaceholder /></>
+            : this.renderCards()}
                 </IonContent>
             </IonPage>
         );
