@@ -5,16 +5,13 @@ import {
     IonTitle,
     IonHeader,
     IonPage,
-    IonIcon,
-    IonList,
-    IonItem, 
-    IonLabel, 
     IonCard, 
     IonCardTitle, 
     IonCardContent, 
     IonCardSubtitle, 
     IonCardHeader,
-    IonSkeletonText
+    IonRefresher,
+    IonRefresherContent
 } from '@ionic/react';
 
 import CardPlaceholder from './CardPlaceholder';
@@ -32,6 +29,7 @@ class Tab2 extends React.Component {
         this.state = {
             news: []
         };
+        this.doRefresh = this.doRefresh.bind(this);
     }
 
     componentDidMount() {
@@ -52,7 +50,6 @@ class Tab2 extends React.Component {
 
     renderCards() {
         return (
-
             this.state.news.map((article, index) =>
                         <IonCard key={index} onClick={async ()=>{await Browser.open({ url: article.url })}}>
                             <img src={article.urlToImage} />
@@ -69,6 +66,23 @@ class Tab2 extends React.Component {
 
     }
 
+    doRefresh(event){
+        fetch(CONFIG.API_ENDPOINT + '?country=au&category=technology&page=1&apiKey=' + CONFIG.API_KEY)
+        .then(res => res.json())
+        .then(
+            (res) => {
+                this.setState({
+                    news: res.articles
+                });
+                console.log('Reload the news!');
+                event.detail.complete();
+            },
+            (err) => {
+                console.error(err);
+            }
+        );
+    }
+
     render() {
         return (
             <IonPage>
@@ -78,6 +92,10 @@ class Tab2 extends React.Component {
                     </IonToolbar>
                 </IonHeader>
                 <IonContent>
+                <IonRefresher slot="fixed" onIonRefresh={this.doRefresh}>
+                    <IonRefresherContent></IonRefresherContent>
+                </IonRefresher>
+
         {this.state.news.length==0? 
         <>
             <CardPlaceholder />
@@ -96,6 +114,8 @@ class Tab2 extends React.Component {
                         </IonCard>
                     )
                     }
+
+
                 </IonContent>
             </IonPage>
         );
