@@ -3,6 +3,7 @@ import { IonAvatar, IonItem, IonIcon, IonLabel, IonGrid, IonCol, IonRow, IonItem
 
 import { Link } from 'react-router-dom';
 import { CONFIG } from '../constants';
+import { add, remove} from 'ionicons/icons';
 
 class ArticleCard extends React.Component {
     constructor(props) {

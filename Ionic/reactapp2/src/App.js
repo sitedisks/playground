@@ -29,13 +29,25 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import ArticlePage from './pages/ArticlePage';
 import TestPage from './pages/TestPage';
+import ProfilePage from './pages/ProfilePage';
+import SettingsPage from './pages/Settings';
 
-import { home, list, lock } from 'ionicons/icons';
+import { home, list, lock, person } from 'ionicons/icons';
 
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoggedIn: localStorage.getItem("isLogin") ? localStorage.getItem("isLogin") : "false",
+      username: localStorage.getItem("username")? localStorage.getItem("username"): "anonymous"
+    };
+  }
+
   render() {
+    let profileLink = "/profile/" + this.state.username;
+
     return (
       <IonApp>
         <IonReactRouter>
@@ -43,6 +55,8 @@ class App extends React.Component {
 
             <IonMenu contentId="main" type="reveal">
               <IonHeader>
+
+
                 <IonToolbar>
                   <IonTitle>Menu</IonTitle>
                 </IonToolbar>
@@ -54,6 +68,12 @@ class App extends React.Component {
                       <IonIcon icon={home}></IonIcon>
                       <IonLabel>Home Page</IonLabel>
                     </IonItem>
+                    {this.state.isLoggedIn === "true" ?
+                      <IonItem routerLink={profileLink}>
+                        <IonIcon icon={person}></IonIcon>
+                        <IonLabel>Profile</IonLabel>
+                      </IonItem> : <></>}
+
                     <IonItem routerLink="/login">
                       <IonIcon icon={lock}></IonIcon>
                       <IonLabel>Login</IonLabel>
@@ -78,8 +98,10 @@ class App extends React.Component {
               <Route path="/home" component={HomePage} />
               <Route path="/login" component={LoginPage} />
               <Route path="/article/:slug" component={ArticlePage} />
+              <Route path="/profile/:authorname" component={ProfilePage} />
               {/* <Route path="/home" component={Home} />
               <Route path="/list" component={List} /> */}
+              <Route path="/settings" component={SettingsPage} />
               <Route path="/test" component={TestPage} />
               <Route path="/" component={HomePage} exact />
             </IonRouterOutlet>
