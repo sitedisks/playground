@@ -35,7 +35,8 @@ function Square(props) {
 
 class Board extends React.Component {
   renderSquare(i) {
-    return <Square pValue={this.props.sValue[i]} peterClick={() => this.props.theClick(i)} />;
+    return <Square pValue={this.props.sValue[i]}
+      peterClick={() => this.props.theClick(i)} />;
   }
 
   render() {
