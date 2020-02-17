@@ -101,7 +101,7 @@ class LoginPage extends React.Component {
     }
 
     componentDidMount() {
-        alert("enter login page");
+        // alert("enter login page");
         this.clearCredentials();
         this.props.history.listen((location, action) => {
             // history.listen??

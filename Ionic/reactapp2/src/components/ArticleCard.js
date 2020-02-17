@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonAvatar, IonItem, IonIcon, IonLabel, IonGrid, IonCol, IonRow, IonItemSliding, IonItemOptions, IonItemOption } from '@ionic/react'
+import { IonAvatar, IonItem, IonLabel, IonGrid, IonCol, IonRow, IonItemSliding } from '@ionic/react'
 
 import { Link } from 'react-router-dom';
 import { CONFIG } from '../constants';

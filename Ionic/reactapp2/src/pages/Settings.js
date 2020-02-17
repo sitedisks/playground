@@ -17,7 +17,6 @@ class SettingsPage extends React.Component {
     }
 
     updateUserName = (e) => {
-        // console.log(this.state);
         this.setState({ username: e.detail.value });
     }
 

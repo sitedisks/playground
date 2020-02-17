@@ -41,11 +41,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       isLoggedIn: localStorage.getItem("isLogin") ? localStorage.getItem("isLogin") : "false",
-      username: localStorage.getItem("username")? localStorage.getItem("username"): "anonymous"
+      username: localStorage.getItem("username") ? localStorage.getItem("username") : "anonymous"
     };
   }
 
   render() {
+    console.log("isLoggedIn: " + this.state.isLoggedIn);
+
     let profileLink = "/profile/" + this.state.username;
 
     return (
@@ -74,10 +76,12 @@ class App extends React.Component {
                         <IonLabel>Profile</IonLabel>
                       </IonItem> : <></>}
 
-                    <IonItem routerLink="/login">
-                      <IonIcon icon={lock}></IonIcon>
-                      <IonLabel>Login</IonLabel>
-                    </IonItem>
+                    {this.state.isLoggedIn != "true" ?
+                      <IonItem routerLink="/login">
+                        <IonIcon icon={lock}></IonIcon>
+                        <IonLabel>Login</IonLabel>
+                      </IonItem> : <></>}
+
                     {/* <IonItem routerLink="/home">
                       <IonIcon icon={home}></IonIcon>
                       <IonLabel>Home</IonLabel>
