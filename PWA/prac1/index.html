@@ -1,0 +1,21 @@
+<head>
+    <title>Minimal PWA</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script>
+        if(navigator.serviceWorker!=null){
+            navigator.serviceWorker.register('sw.js')
+            .then(reg =>{
+                console.log('Registered event at scope: ', reg.scope);
+            }).catch(err=>{
+                console.log('Registration failed with ' + err);
+            });
+
+        }
+        
+    </script>
+</head>
+<body>
+    <h3>Revision 233423</h3>
+    <div class="main-text">Minimal PWA, open console for more ~~</div>
+</body>
