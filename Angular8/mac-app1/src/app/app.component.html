@@ -1,14 +1,18 @@
+<app-header></app-header>
+
 <div class="content" role="main">
 
-  <app-header></app-header>
   <h3>Test</h3>
-  Welcome to {{title}}!
+  Welcome to {{title}}! {{parentData}}
   <app-test></app-test>
 
   <nav>
     <a routerLink="/departments" routerLinkActive="active">Departments</a>
     <a routerLink="/employees" routerLinkActive="active">Employees</a>
   </nav>
+
 </div>
 
 <router-outlet></router-outlet>
+
+<app-footer [data]='parentData'></app-footer>

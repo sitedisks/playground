@@ -1,19 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-employee-list',
   template: `
-    <p>
-      employee-list works!
-    </p>
+    <h3>
+      Employee List
+    </h3>
+    <ul *ngFor="let e of employees">
+      <li>{{e.name}}</li>
+    </ul>
   `,
   styles: []
 })
 export class EmployeeListComponent implements OnInit {
 
-  constructor() { }
+  employees = [];
+
+  constructor(private _employeeService: EmployeeService) { }
 
   ngOnInit(): void {
+    this._employeeService.getEmployees()
+      .subscribe(data=>this.employees = data);
   }
 
 }

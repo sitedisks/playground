@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'PIP';
+
+  parentData: string = "parent data from AppComponent";
+  constructor() {}
 }
