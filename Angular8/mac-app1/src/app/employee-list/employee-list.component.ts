@@ -7,8 +7,8 @@ import { EmployeeService } from '../employee.service';
     <h3>
       Employee List
     </h3>
-    <ul *ngFor="let e of employees">
-      <li>{{e.name}}</li>
+    <ul class="list-group" *ngFor="let e of employees">
+      <li class="list-group-item">{{e.name}}</li>
     </ul>
   `,
   styles: []
