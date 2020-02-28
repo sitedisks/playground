@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mac-app1';
+  title: string = 'PIP';
+
+  parentData: string = "parent data from AppComponent";
+  constructor() {}
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf 8">
+    <base href="/">
+    <script src="https://code.angularjs.org/1.7.9/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.7.9/angular-route.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <title>MMMM</title>
+</head>
+
+<body id="app">
+    <h1>AngularJS</h1>
+    <div ng-controller="TestCtrl">
+        {{message}}
+    </div>
+
+    <ul><li><a href="add"> Add New Component</a></li>
+        <li><a href="show"> Display Component</a></li>
+    </ul>
+    <div ng-view>
+
+    </div>
+</body>
+<script>
+    angular.element(_ => {
+        angular.bootstrap($('#app'), ['app_angularJS']);
+    }
+    );
+
+</script>
+<script src="/app.js"></script>
+<script src="/app.config.js"></script>
+<script src="/controller.test.js"></script>
+<script src="/component/add/addCtrl.js"></script>
+<script src="/component//show//showCtrl.js"></script>
+
+</html>
