@@ -1,8 +1,8 @@
-import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular'; // from Ionic official
+import { RouterModule } from '@angular/router'; // from Angular official
+import { NgModule } from '@angular/core'; // from Angular official
+import { CommonModule } from '@angular/common'; // from Angular official
+import { FormsModule } from '@angular/forms'; // from Angular official
 import { Tab2Page } from './tab2.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
