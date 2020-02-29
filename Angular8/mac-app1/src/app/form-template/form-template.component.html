@@ -1,15 +1,19 @@
 <div class="container-fluid">
     <h1>Bootcamp Enrollment Form</h1>
-    <form #userForm="ngForm">
-        <!-- {{userForm.value | json}}
+    <form #userForm="ngForm" (ngSubmit)="submitForm(userForm);" novalidate>
+        userForm value: {{userForm.value | json}}
         <hr />
-        {{userModel |json}} -->
+        userModel from controller: {{userModel |json}}
+
+
         <div class="form-group">
             <label>Name</label>
-            <input type="text" class="form-control" [class.is-invalid]="name.invalid" required #name name="username" [(ngModel)]="userModel.name">
+            <input type="text" required #uuu="ngModel" [class.is-invalid]="uuu.invalid && uuu.touched"
+                class="form-control" name="name" [(ngModel)]="userModel.name" (blur)="showName(uuu, userForm);">
+                <small class="text-danger" [class.d-none]="uuu.valid || uuu.untouched">Name is required</small>
         </div>
 
-        {{name.className}}
+        >>> uuu valid: {{uuu.valid}}
 
         <div class="form-group">
             <label>Email</label>
@@ -17,19 +21,21 @@
         </div>
         <div class="form-group">
             <label>Phone</label>
-            <input type="tel" class="form-control" name="phone" [(ngModel)]="userModel.phone">
+            <input type="tel" #ppp="ngModel" pattern="^\d{10}$" [class.is-invalid]="ppp.invalid && ppp.touched"
+                class="form-control" name="phone" [(ngModel)]="userModel.phone">
         </div>
         <div class="form-group">
-            <select class="custom-select" name="topic" [(ngModel)]="userModel.topic">
-                <option value="">I am interested in</option>
+            <select (blur)="validateTopic(ttt.value)" (change)="validateTopic(ttt.value)" required #ttt="ngModel" [class.is-invalid]="topicHasError && ttt.touched" class="custom-select" name="topic" [(ngModel)]="userModel.topic">
+                <option value="default">I am interested in</option>
                 <option *ngFor="let topic of topics">{{topic}}</option>
             </select>
+            <small class="text-danger" [class.d-none]="!topicHasError || ttt.untouched">Please choose a value</small>
         </div>
 
         <div ngModelGroup="address">
             <div class="form-group">
                 <label>Street</label>
-                <input type="text" class="form-control" name="street" ngModel >
+                <input type="text" class="form-control" name="street" ngModel>
             </div>
             <div class="form-group">
                 <label>City</label>
@@ -48,11 +54,13 @@
         <div class="mb-3">
             <label>Time preference</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="timePreference" [(ngModel)]="userModel.timePreference" value="morning">
+                <input class="form-check-input" type="radio" name="timePreference"
+                    [(ngModel)]="userModel.timePreference" value="morning">
                 <label class="form-check-label">Morning (9am - 12pm)</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="timePreference" [(ngModel)]="userModel.timePreference" value="evening">
+                <input class="form-check-input" type="radio" name="timePreference"
+                    [(ngModel)]="userModel.timePreference" value="evening">
                 <label class="form-check-label">Evening (5pm - 9pm)</label>
             </div>
         </div>
@@ -62,6 +70,6 @@
             <label class="form-check-label">Send me promotional offers</label>
         </div>
 
-        <button class="btn btn-primary" type="submit">submit form</button>
+        <button class="btn btn-primary" [disabled]="userForm.form.invalid || topicHasError" type="submit">submit form</button>
     </form>
 </div>

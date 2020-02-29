@@ -7,7 +7,7 @@ import { HeaderModule } from './modules/header/header.module';
 import { FooterModule } from './modules/footer/footer.module';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // components
 import { AppComponent } from './app.component';
@@ -41,6 +41,7 @@ import { EmployeeService } from './employee.service';
     FooterModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [EmployeeService],

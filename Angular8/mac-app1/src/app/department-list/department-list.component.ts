@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-department-list',
@@ -12,6 +13,11 @@ import { Route, Router } from '@angular/router';
         <span class="badge">{{department.id}}</span> {{department.name}}
       </li>
     </ul>
+    {{rForm.value |json}}
+    <form [formGroup]="rForm" (ngSubmit)="onSubmit()">
+      <input formControlName="user">
+      <button type="submit">submit</button>
+    </form>
   `,
   styles: []
 })
@@ -25,7 +31,11 @@ export class DepartmentListComponent implements OnInit {
     { "id": 5, "name": "Bootstrap" },
   ];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private fb: FormBuilder) { }
+
+  rForm = this.fb.group({
+    user: ['Peter']
+  });
 
   ngOnInit(): void {
   }
@@ -34,4 +44,8 @@ export class DepartmentListComponent implements OnInit {
     this.router.navigate(['/departments', department.id]);
   }
 
+  onSubmit() {
+    console.log('submit!');
+    console.log(this.rForm.value);
+  }
 }
