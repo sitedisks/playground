@@ -21,6 +21,8 @@ import { FormReactiveComponent } from './form-reactive/form-reactive.component';
 
 // services
 import { EmployeeService } from './employee.service';
+import { AppHighlightDirective } from './app-highlight.directive';
+import { AppNotDirective } from './app-not.directive';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { EmployeeService } from './employee.service';
     PageNotFoundComponent,
     DepartmentDetailComponent,
     FormTemplateComponent,
-    FormReactiveComponent
+    FormReactiveComponent,
+    AppHighlightDirective,
+    AppNotDirective
   ],
   imports: [
     BrowserModule,

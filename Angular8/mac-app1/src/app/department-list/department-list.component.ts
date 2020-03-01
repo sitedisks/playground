@@ -5,7 +5,7 @@ import { FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-department-list',
   template: `
-    <h3>
+    <h3 appAppHighlight>
       Department List: 
     </h3>
     <ul class="items">
