@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'PIP';
+  isShow: boolean = true;
 
   parentData: string = "parent data from AppComponent";
   constructor() {}
+
+  switchDirective() {
+    this.isShow = !this.isShow;
+  }
 }
