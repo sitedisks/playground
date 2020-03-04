@@ -1,0 +1,29 @@
+<html ng-app="app">
+
+<head>
+    <title>Jasmine angularJS unit test</title>
+
+    <link href="node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+    <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+    <script src="node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/jasmine/2.0.0/jasmine.css" />
+    <script src="//cdn.jsdelivr.net/jasmine/2.0.0/jasmine.js"></script>
+    <script src="//cdn.jsdelivr.net/jasmine/2.0.0/jasmine-html.js"></script>
+    <script src="//cdn.jsdelivr.net/jasmine/2.0.0/boot.js"></script> -->
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-mocks/angular-mocks.js"></script>
+
+</head>
+
+<body ng-controller="TestController as vm">
+    <div>
+        {{vm.message}}
+    </div>
+    <script src="TestCrl.js"></script>
+    <script src="TestSpecs.js"></script>
+</body>
+
+</html>

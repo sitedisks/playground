@@ -4,11 +4,14 @@
 <head>
     <meta charset="utf 8">
     <base href="/">
-    <script src="https://code.angularjs.org/1.7.9/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.7.9/angular-route.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <title>MMMM</title>
+    <!-- <script src="https://code.angularjs.org/1.7.9/angular.min.js"></script> -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <!-- <script src="https://code.angularjs.org/1.7.9/angular-route.min.js"></script> -->
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <title>AngularJS and Jasmine and Karma Unit Test</title>
 </head>
 
 <body id="app">
@@ -25,10 +28,7 @@
     </div>
 </body>
 <script>
-    angular.element(_ => {
-        angular.bootstrap($('#app'), ['app_angularJS']);
-    }
-    );
+ 
 
 </script>
 <script src="/app.js"></script>
