@@ -1,16 +1,15 @@
 describe('Same test', function () {
 
-
-    beforeEach(module('app_angularJS'));
-
     var $controller;
-
-    beforeEach(inject(function(_$controller_){
-              $controller = _$controller_;
+    beforeEach(module('app'));
+    beforeEach(inject(function (_$controller_) {
+        $controller = _$controller_;
     }));
 
 
     it('Condition is true', function () {
-        expect('AngularJS').toBe('AngularJS');
+        var $scope = {};
+        var controller = $controller('TestCtrl', {$scope: $scope});
+        expect($scope.message).toBe('Hello world!');
     })
 })

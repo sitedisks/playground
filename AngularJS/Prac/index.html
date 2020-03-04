@@ -4,37 +4,39 @@
 <head>
     <meta charset="utf 8">
     <base href="/">
-    <!-- <script src="https://code.angularjs.org/1.7.9/angular.min.js"></script> -->
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jasmine/2.0.0/jasmine.css" />
+    <script src="//cdn.jsdelivr.net/jasmine/2.0.0/jasmine.js"></script>
+    <script src="//cdn.jsdelivr.net/jasmine/2.0.0/jasmine-html.js"></script>
+    <script src="//cdn.jsdelivr.net/jasmine/2.0.0/boot.js"></script>
+
     <script src="node_modules/angular/angular.min.js"></script>
-    <!-- <script src="https://code.angularjs.org/1.7.9/angular-route.min.js"></script> -->
     <script src="node_modules/angular-route/angular-route.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/angular-mocks/angular-mocks.js"></script>
+
     <title>AngularJS and Jasmine and Karma Unit Test</title>
 </head>
 
-<body id="app">
+<body ng-app="app">
     <h1>AngularJS</h1>
     <div ng-controller="TestCtrl">
         {{message}}
     </div>
 
-    <ul><li><a href="add"> Add New Component</a></li>
+    <ul>
+        <li><a href="add"> Add New Component</a></li>
         <li><a href="show"> Display Component</a></li>
     </ul>
     <div ng-view>
 
     </div>
 </body>
-<script>
- 
-
-</script>
 <script src="/app.js"></script>
 <script src="/app.config.js"></script>
 <script src="/controller.test.js"></script>
 <script src="/component/add/addCtrl.js"></script>
-<script src="/component//show//showCtrl.js"></script>
+<script src="/component/show/showCtrl.js"></script>
+
+<script src="test.js"></script>
 
 </html>
