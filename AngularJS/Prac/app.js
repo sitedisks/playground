@@ -1,9 +1,4 @@
-angular.element(_ => {
-  angular.bootstrap($('#app'), ['app_angularJS']);
-}
-);
-
-var app = angular.module('app_angularJS', ['ngRoute']);
+var app = angular.module('app', ['ngRoute']);
 
 function countItems(arr, item) {
   // Write the code that goes here
