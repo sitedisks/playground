@@ -10,9 +10,17 @@ export class AppComponent {
   isShow: boolean = true;
 
   parentData: string = "parent data from AppComponent";
-  constructor() {}
+
+  myCount: number = 10;
+
+
+  constructor() { }
 
   switchDirective() {
     this.isShow = !this.isShow;
+  }
+
+  countChange(event) {
+    this.myCount = event;
   }
 }

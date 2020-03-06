@@ -23,6 +23,7 @@ import { FormReactiveComponent } from './form-reactive/form-reactive.component';
 import { EmployeeService } from './employee.service';
 import { AppHighlightDirective } from './app-highlight.directive';
 import { AppNotDirective } from './app-not.directive';
+import { CounterComponent } from './counter/counter.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AppNotDirective } from './app-not.directive';
     FormTemplateComponent,
     FormReactiveComponent,
     AppHighlightDirective,
-    AppNotDirective
+    AppNotDirective,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
