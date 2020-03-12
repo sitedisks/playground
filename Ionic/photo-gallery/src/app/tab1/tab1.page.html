@@ -13,5 +13,15 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-list *ngIf="todo">
+    <ion-item *ngFor="let item of todo">
+     
+      <ion-label>
+    
+        <p>{{item.title}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button color="success" (click)="firstClick()">Success</ion-button>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>
