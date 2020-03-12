@@ -66,11 +66,10 @@ export class TodoService {
 
   // GET /todos
   getTodos(): Observable<Todo[]> {
-    return this.http.get<Todo[]>(this.api_url)
-      .pipe(
-        tap(_ => console.log('fetched data')),
-        catchError(this.handleError<Todo[]>('getTodos'))
-      );
+    return this.http.get<Todo[]>(this.api_url).pipe(
+      tap(() => console.log('fetched data')),
+      catchError(this.handleError<Todo[]>('getTodos'))
+    );
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
