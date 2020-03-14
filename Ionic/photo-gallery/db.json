@@ -2,13 +2,13 @@
   "todos": [
     {
       "title": "Read SitePoint article",
-      "complete": false,
+      "complete": true,
       "id": 1
     },
     {
       "id": 3,
       "title": "Make restaurant reservation",
-      "complete": false
+      "complete": true
     },
     {
       "title": "I love OnlyOne",
@@ -26,19 +26,14 @@
       "id": 6
     },
     {
-      "title": "Very nice",
+      "title": "Buy something",
       "complete": false,
-      "id": 7
+      "id": 12
     },
     {
-      "title": "New",
+      "title": "This gonna be the new item",
       "complete": true,
-      "id": 8
-    },
-    {
-      "title": "dsfs",
-      "complete": false,
-      "id": 9
+      "id": 13
     }
   ]
 }
