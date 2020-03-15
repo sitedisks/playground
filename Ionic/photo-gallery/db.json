@@ -17,12 +17,12 @@
     },
     {
       "title": "Tell me about it",
-      "complete": false,
+      "complete": true,
       "id": 5
     },
     {
       "title": "Who is your best lover",
-      "complete": false,
+      "complete": true,
       "id": 6
     },
     {
@@ -34,6 +34,11 @@
       "title": "This gonna be the new item",
       "complete": true,
       "id": 13
+    },
+    {
+      "title": "Deep Spring",
+      "complete": false,
+      "id": 14
     }
   ]
 }
