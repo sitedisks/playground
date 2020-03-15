@@ -12,12 +12,12 @@
     },
     {
       "title": "I love OnlyOne",
-      "complete": true,
+      "complete": false,
       "id": 4
     },
     {
       "title": "Tell me about it",
-      "complete": true,
+      "complete": false,
       "id": 5
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "title": "Buy something",
-      "complete": false,
+      "complete": true,
       "id": 12
     },
     {
@@ -37,7 +37,7 @@
     },
     {
       "title": "Deep Spring",
-      "complete": false,
+      "complete": true,
       "id": 14
     }
   ]
