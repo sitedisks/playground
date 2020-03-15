@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from '../news.service';
 
 @Component({
   selector: 'app-news',
@@ -7,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
-  // load news: https://newsapi.org/v2/top-headlines?country=au&category=technology&page=2&apiKey=60b923e5e58c4b9d88122c0a9d2ad60b
-  constructor() { }
+  newsData;
+  constructor(public newsSrv: NewsService) { }
 
   ngOnInit(): void {
+    this.newsSrv.getNews().subscribe(
+      data=>{
+        
+        console.log(data);
+        this.newsData = data;
+
+      }
+    );
   }
 
 }
