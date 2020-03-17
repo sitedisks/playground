@@ -1,6 +1,6 @@
 using System;
 
-namespace webApiDB
+namespace Quantum.API
 {
     public class WeatherForecast
     {

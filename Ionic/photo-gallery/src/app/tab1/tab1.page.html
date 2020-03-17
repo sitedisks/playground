@@ -18,8 +18,9 @@
      
       <ion-label>
     
-        <p>{{item.title}}</p>
+        {{item.title}}
       </ion-label>
+      <ion-checkbox slot="start" [(ngModel)]="item.complete"></ion-checkbox>
     </ion-item>
   </ion-list>
   <ion-button color="success" (click)="firstClick()">Success</ion-button>

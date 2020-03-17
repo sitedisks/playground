@@ -11,7 +11,7 @@ export class Tab1Page {
   constructor(private data: DataService) { }
 
   firstClick() {
-    this.data.getUsers().subscribe(
+    this.data.getTodos().subscribe(
       data => {
         this.todo = data;
         console.log(this.todo);
