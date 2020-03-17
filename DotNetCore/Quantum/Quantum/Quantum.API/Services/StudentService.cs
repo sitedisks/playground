@@ -23,6 +23,11 @@ namespace Quantum.API.Services
             return query.ToList();
         }
 
+        public IEnumerable<Student> StudentsInClass(int classId) {
+            var query = _dbContext.Students.Where(x => x.ClassId == classId && !x.Deleted).OrderBy(x=>x.StudentName);
+            return query.ToList();
+        }
+
         public Student GetStudent(int id)
         {
             return _dbContext.Students.FirstOrDefault(x => x.Id == id);

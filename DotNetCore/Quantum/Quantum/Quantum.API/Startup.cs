@@ -28,6 +28,7 @@ namespace Quantum.API
                 options.UseSqlServer(Configuration.GetConnectionString("LocalDBConnection")));
 
             services.AddTransient<IClassService, ClassService>();
+            services.AddTransient<IStudentService, StudentService>();
             services.AddControllers();
 
 
