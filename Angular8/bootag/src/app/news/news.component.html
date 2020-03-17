@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card" *ngFor="let item of newsData.articles" style="margin-bottom: 1em;">
+            <!-- {{item | json}} -->
+            <img [src]="item.urlToImage" class="card-img-top" alt="img">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.content}}</p>
+                <a [href]="item.url" target="_blank" class="btn btn-primary">More...</a>
+            </div>
+        </div>
+    </div>
+</div>

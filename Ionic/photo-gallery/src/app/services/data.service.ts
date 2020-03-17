@@ -19,11 +19,19 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  public getTodos() {
+  getData() {
     return this.http.get(this.API_URL, this.httpOptions);
   }
 
-  public createTodo(todo) {
-    return this.http.post(this.API_URL, todo);
+  addData(todo) {
+    return this.http.post(this.API_URL, todo, this.httpOptions);
+  }
+
+  updateData(todo) {
+    return this.http.put(this.API_URL + '/' + todo.id, todo);
+  }
+
+  removeData(todo) {
+    return this.http.delete(this.API_URL + '/' + todo.id);
   }
 }
