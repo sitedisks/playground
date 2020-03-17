@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using Quantum.API.Data;
 using Quantum.API.Interfaces;
 using Quantum.API.Services;
-using Microsoft.OpenApi.Models;
 
 namespace Quantum.API
 {
@@ -26,19 +26,21 @@ namespace Quantum.API
 
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("LocalDBConnection")));
+
             services.AddTransient<IClassService, ClassService>();
             services.AddControllers();
 
+
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Quantum API", Version = "v1", Description="Quantum RESTFul WebAPI" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Quantum API", Version = "v1", Description = "Quantum RESTFul WebAPI" });
             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            
+
 
             if (env.IsDevelopment())
             {
