@@ -10,7 +10,7 @@ namespace Quantum.API.Models
         public int Age { get; set; }
         public double GPA { get; set; }
         public int ClassId { get; set; }
-
+        public bool Deleted { get; set; }
         public virtual Class Class { get; set; }
 
         public class Configuration : IEntityTypeConfiguration<Student>

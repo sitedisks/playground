@@ -10,6 +10,7 @@ namespace Quantum.API.Models
         public string ClassName { get; set; }
         public string Location { get; set; }
         public string Teacher { get; set; }
+        public bool Deleted { get; set; }
 
         public virtual IEnumerable<Student> Students { get; set; }
 
