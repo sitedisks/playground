@@ -7,5 +7,8 @@ namespace Quantum.API.Interfaces
     {
         IEnumerable<Class> AllClasses();
         Class GetClass(int id);
+        int AddClass(Class c);
+        void DeleteClass(int id);
+        Class UpdateClass(Class c);
     }
 }

@@ -31,5 +31,24 @@ namespace Quantum.API.Controllers
 
             return Ok(item);
         }
+
+        [HttpPost]
+        public ActionResult<Class> AddClass(Class c) {
+            int newId = _serviceClass.AddClass(c);
+            var newClass = _serviceClass.GetClass(newId);
+            return Ok(newClass);
+        }
+
+        [HttpDelete]
+        public ActionResult RemoveClass(int id) {
+            _serviceClass.DeleteClass(id);
+            return Ok();
+        }
+
+        [HttpPut]
+        public ActionResult<Class> UpdateClass(Class c) {
+            var updatedClass = _serviceClass.UpdateClass(c);
+            return Ok(updatedClass);
+        }
     }
 }
