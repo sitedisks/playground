@@ -10,8 +10,8 @@ import { Class } from './model/class';
 export class AppComponent implements OnInit {
 
   classes;
- 
-  modalClass: Class = new Class(0, '','','');
+
+  modalClass: Class = new Class(0, '', '', '');
 
   constructor(private data: DataService) { }
 
@@ -24,30 +24,45 @@ export class AppComponent implements OnInit {
     );
   }
 
-  newClass(){
-    this.modalClass = new Class(0, '','','');
+  newClass() {
+    this.modalClass = new Class(0, '', '', '');
   }
 
   editClass(item: Class) {
     this.modalClass = item;
+    this.data.editClass(item).subscribe(
+      data => {
+        console.log('data updated: ' + data);
+      }
+    );
   }
 
   submitClassForm(value) {
     console.log(value);
-    if(value.id==0){
+    if (value.id == 0) {
       console.log('new');
       this.data.addClass(value).subscribe(
-        data=>{
+        data => {
           this.classes.push(data);
-          this.modalClass = new Class(0, '','','');
+          this.modalClass = new Class(0, '', '', '');
         }
       );
-    }else {
+    } else {
       console.log('edit');
+      this.data.editClass(value).subscribe(
+        data=> {
+          console.log('class updated: ' + JSON.stringify(data));
+        }
+      );
     }
   }
 
-  deleteClass(id){
+  deleteClass(id) {
     console.log('Class: ' + id + ' deleted');
+    this.data.deleteClass(id).subscribe(
+      _=>{
+        this.classes = this.classes.filter(t=>t.id!==id);
+      }
+    );
   }
 }

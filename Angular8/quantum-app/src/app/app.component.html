@@ -20,16 +20,16 @@
           <form #classForm="ngForm" (ngSubmit)="submitClassForm(classForm.value)" novalidate>
             <div class="form-group">
               <label>Class name</label>
-              <input type="text" class="form-control" name="className" [ngModel]="modalClass.className" required>
+              <input type="text" class="form-control" name="className" [(ngModel)]="modalClass.className" required>
             </div>
             <div class="form-group">
               <label>Location</label>
-              <input type="text" class="form-control" name="location" [ngModel]="modalClass.location" required>
+              <input type="text" class="form-control" name="location" [(ngModel)]="modalClass.location" required>
             </div>
 
             <div class="form-group">
               <label>Teacher</label>
-              <input type="text" class="form-control" name="teacher" [ngModel]="modalClass.teacher" required>
+              <input type="text" class="form-control" name="teacher" [(ngModel)]="modalClass.teacher" required>
             </div>
 
             <input name="id" [ngModel]="modalClass.id" style="display: none;">
