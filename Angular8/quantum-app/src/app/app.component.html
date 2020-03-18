@@ -1,33 +1,32 @@
-<h1>Quantum Uni</h1>
-<h2>Class</h2>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-<router-outlet></router-outlet>
+<div class="container">
+  <h1>Quantum Uni</h1>
+  <h4>Class <button type="button" class="btn btn-outline-success btn-sm">Add</button></h4>
+  <div *ngIf="classes">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Class Name</th>
+          <th scope="col">Location</th>
+          <th scope="col">Teacher Name</th>
+          <th scope="col">Op</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let class of classes">
+
+          <td><a routerLink="/student/{{class.id}}">{{class.className}}</a></td>
+          <td>{{class.location}}</td>
+          <td>{{class.teacher}}</td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-primary btn-sm">Edit</button>
+              <button type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <router-outlet></router-outlet>
+</div>

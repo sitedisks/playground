@@ -1,9 +1,28 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor() { }
+  APIURL: string = environment.apiurl;
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  };
+
+  constructor(private http: HttpClient) { }
+
+  getClasses() {
+    return this.http.get(this.APIURL + 'class', this.httpOptions);
+  }
+
+
+  getStudentByClass(id:number){
+    return this.http.get(this.APIURL + 'student/class/' + id, this.httpOptions);
+  }
 }
