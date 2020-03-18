@@ -1,6 +1,9 @@
 
 <div *ngIf="students?.length > 0">
-    <h4>Student</h4>
+    <h4>Student <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#studentModal"
+        (click)="newStudent()">
+        New
+      </button></h4>
     <table class="table">
         <thead>
             <tr>
@@ -13,13 +16,14 @@
         <tbody>
             <tr *ngFor="let student of students">
 
-                <td>{{student.studentName}}</td>
+                <td><span [class.text-success]="student.gpa>3.2">{{student.studentName}}</span></td>
                 <td>{{student.age}}</td>
                 <td>{{student.gpa}}</td>
                 <td>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-outline-primary btn-sm">Edit</button>
-                        <button type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm" 
+                            data-toggle="modal" data-target="#studentModal" (click)="editStudent(student)">Edit</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm" (click)="deleteStudent(student.id)">Delete</button>
                     </div>
                 </td>
             </tr>
@@ -27,3 +31,45 @@
         </tbody>
     </table>
 </div>
+<div *ngIf="students?.length <= 0">
+    <p>No students under the current Class</p>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="studentModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" *ngIf="modalStudent.id==0">New Student</h5>
+          <h5 class="modal-title" *ngIf="modalStudent.id!=0">Edit Class</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form #studentForm="ngForm" (ngSubmit)="submitStudentForm(studentForm.value)" novalidate>
+            <div class="form-group">
+              <label>Student name</label>
+              <input type="text" class="form-control" name="studentName" [(ngModel)]="modalStudent.studentName" required>
+            </div>
+            <div class="form-group">
+              <label>Age</label>
+              <input type="number" class="form-control" name="age" [(ngModel)]="modalStudent.age" required>
+            </div>
+
+            <div class="form-group">
+              <label>GPA</label>
+              <input type="text" class="form-control" name="gpa" [(ngModel)]="modalStudent.gpa" required>
+            </div>
+
+            <input name="id" [ngModel]="modalStudent.id" style="display: none;">
+            <input name="classId" [ngModel]="modalStudent.classId" style="display: none;">
+
+            <button type="submit" class="btn btn-outline-success btn-sm" onclick="$('#studentModal').modal('hide')">Save</button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>

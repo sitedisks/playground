@@ -54,7 +54,7 @@ namespace Quantum.API.Controllers
             return Ok(result);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public ActionResult RemoveStudent(int id)
         {
             _serviceStudent.DeleteStudent(id);

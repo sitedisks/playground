@@ -29,11 +29,23 @@ export class DataService {
     return this.http.put(this.APIURL + 'class', item);
   }
 
-  deleteClass(id){
+  deleteClass(id) {
     return this.http.delete(this.APIURL + 'class/' + id);
   }
 
-  getStudentByClass(id:number){
+  getStudentByClass(id: number) {
     return this.http.get(this.APIURL + 'student/class/' + id, this.httpOptions);
+  }
+
+  addStudent(item) {
+    return this.http.post(this.APIURL + 'student', item);
+  }
+
+  editStudent(item) {
+    return this.http.put(this.APIURL + 'student', item);
+  }
+
+  deleteStudent(id) {
+    return this.http.delete(this.APIURL + 'student/' + id);
   }
 }

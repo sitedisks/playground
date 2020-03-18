@@ -4,5 +4,5 @@ export class Class {
         public className: string,
         public location: string,
         public teacher: string
-      ) {  }
+    ) { }
 }

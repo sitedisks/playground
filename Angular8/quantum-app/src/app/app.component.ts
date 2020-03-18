@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
   submitClassForm(value) {
     console.log(value);
     if (value.id == 0) {
-      console.log('new');
+      console.log('new class');
       this.data.addClass(value).subscribe(
         data => {
           this.classes.push(data);
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
         }
       );
     } else {
-      console.log('edit');
+      console.log('edit class');
       this.data.editClass(value).subscribe(
         data=> {
           console.log('class updated: ' + JSON.stringify(data));

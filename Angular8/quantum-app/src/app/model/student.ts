@@ -1,7 +1,10 @@
-export class Student{
-    id:number;
-    studentName: string;
-    age: number;
-    gpa: number;
-    classId: number;
+export class Student {
+    constructor(
+        public id: number,
+        public studentName: string,
+        public age: number,
+        public gpa: number,
+        public classId: number
+    ) { }
+
 }
