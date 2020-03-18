@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,8 @@ namespace Quantum.API
 
             services.AddTransient<IClassService, ClassService>();
             services.AddTransient<IStudentService, StudentService>();
+
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
 
 
