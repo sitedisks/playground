@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Quantum Uni</h1>
+  <h1><a href="/">Quantum Uni</a></h1>
   <h4>Class <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#classModal"
       (click)="newClass()">
       New
@@ -26,7 +26,6 @@
               <label>Location</label>
               <input type="text" class="form-control" name="location" [(ngModel)]="modalClass.location" required>
             </div>
-
             <div class="form-group">
               <label>Teacher</label>
               <input type="text" class="form-control" name="teacher" [(ngModel)]="modalClass.teacher" required>
@@ -54,9 +53,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let class of classes">
+        <tr *ngFor="let class of classes" [class.bg-info]="class.id == currentClassId">
 
-          <td><a routerLink="/student/{{class.id}}">{{class.className}}</a></td>
+          <td><a routerLink="/student/{{class.id}}" (click)="pickCurrentClass(class.id)">{{class.className}}</a></td>
           <td>{{class.location}}</td>
           <td>{{class.teacher}}</td>
           <td>

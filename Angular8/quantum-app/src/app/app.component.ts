@@ -9,6 +9,7 @@ import { Class } from './model/class';
 })
 export class AppComponent implements OnInit {
 
+  currentClassId: number = 0;
   classes;
 
   modalClass: Class = new Class(0, '', '', '');
@@ -22,6 +23,10 @@ export class AppComponent implements OnInit {
         console.log(data);
       }
     );
+  }
+
+  pickCurrentClass(id){
+    this.currentClassId = id;
   }
 
   newClass() {

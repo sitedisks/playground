@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../data.service';
 import { Student } from '../model/student';
+import { Class } from '../model/class';
 
 @Component({
   selector: 'app-student',
@@ -11,6 +12,7 @@ import { Student } from '../model/student';
 export class StudentComponent implements OnInit {
 
   classId: number;
+  currentClass;
   students;
   private sub: any;
   modalStudent: Student = new Student(0, '', 0, 0, 0);
@@ -24,6 +26,12 @@ export class StudentComponent implements OnInit {
         data => {
           this.students = data;
           console.log(data);
+        }
+      );
+
+      this.data.getClass(this.classId).subscribe(
+        data => {
+          this.currentClass = data;
         }
       );
     });
@@ -71,5 +79,10 @@ export class StudentComponent implements OnInit {
 
   deleteStudent(id) {
     console.log('Student: ' + id + ' deleted');
+    this.data.deleteStudent(id).subscribe(
+      _=>{
+        this.students= this.students.filter(t=>t.id!==id);
+      }
+    );
   }
 }

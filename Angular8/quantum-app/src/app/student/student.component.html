@@ -1,6 +1,6 @@
 
 <div *ngIf="students?.length > 0">
-    <h4>Student <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#studentModal"
+    <h4>Students at {{currentClass.className}} <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#studentModal"
         (click)="newStudent()">
         New
       </button></h4>
@@ -32,7 +32,10 @@
     </table>
 </div>
 <div *ngIf="students?.length <= 0">
-    <p>No students under the current Class</p>
+    <p>No students in the current Class. <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#studentModal"
+        (click)="newStudent()">
+        New
+      </button></p>
 </div>
 
 <!-- Modal -->
@@ -41,7 +44,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" *ngIf="modalStudent.id==0">New Student</h5>
-          <h5 class="modal-title" *ngIf="modalStudent.id!=0">Edit Class</h5>
+          <h5 class="modal-title" *ngIf="modalStudent.id!=0">Edit Student</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>

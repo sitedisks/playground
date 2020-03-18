@@ -21,6 +21,10 @@ export class DataService {
     return this.http.get(this.APIURL + 'class', this.httpOptions);
   }
 
+  getClass(id) {
+    return this.http.get(this.APIURL + 'class/' + id);
+  }
+
   addClass(item) {
     return this.http.post(this.APIURL + 'class', item);
   }
