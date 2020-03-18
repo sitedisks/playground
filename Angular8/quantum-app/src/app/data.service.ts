@@ -21,6 +21,9 @@ export class DataService {
     return this.http.get(this.APIURL + 'class', this.httpOptions);
   }
 
+  addClass(item) {
+    return this.http.post(this.APIURL + 'class', item);
+  }
 
   getStudentByClass(id:number){
     return this.http.get(this.APIURL + 'student/class/' + id, this.httpOptions);
