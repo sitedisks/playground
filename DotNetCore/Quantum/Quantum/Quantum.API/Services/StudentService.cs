@@ -19,13 +19,13 @@ namespace Quantum.API.Services
 
         public IEnumerable<Student> AllStudents()
         {
-            var query = _dbContext.Students.Where(x => !x.Deleted).OrderBy(x => x.StudentName);
+            var query = _dbContext.Students.Where(x => !x.Deleted);
             return query.ToList();
         }
 
         public IEnumerable<Student> StudentsInClass(int classId)
         {
-            var query = _dbContext.Students.Where(x => x.ClassId == classId && !x.Deleted).OrderBy(x => x.StudentName);
+            var query = _dbContext.Students.Where(x => x.ClassId == classId && !x.Deleted);
             return query.ToList();
         }
 
@@ -63,7 +63,8 @@ namespace Quantum.API.Services
         {
             var record = GetStudent(s.Id);
 
-            record.StudentName = s.StudentName;
+            record.FName = s.FName;
+            record.LName = s.LName;
             record.Age = s.Age;
             record.GPA = s.GPA;
             _dbContext.SaveChanges();

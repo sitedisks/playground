@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Quantum.API.Data.Migrations
+namespace Quantum.API.Migrations
 {
     public partial class Initial : Migration
     {
@@ -11,10 +11,11 @@ namespace Quantum.API.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     ClassName = table.Column<string>(nullable: true),
                     Location = table.Column<string>(nullable: true),
-                    Teacher = table.Column<string>(nullable: true)
+                    Teacher = table.Column<string>(nullable: true),
+                    Deleted = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -26,11 +27,13 @@ namespace Quantum.API.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    StudentName = table.Column<string>(nullable: true),
+                        .Annotation("Sqlite:Autoincrement", true),
+                    FName = table.Column<string>(nullable: true),
+                    LName = table.Column<string>(nullable: true),
                     Age = table.Column<int>(nullable: false),
                     GPA = table.Column<double>(nullable: false),
-                    ClassId = table.Column<int>(nullable: false)
+                    ClassId = table.Column<int>(nullable: false),
+                    Deleted = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -47,6 +50,12 @@ namespace Quantum.API.Data.Migrations
                 name: "IX_Students_ClassId",
                 table: "Students",
                 column: "ClassId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Students_LName",
+                table: "Students",
+                column: "LName",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

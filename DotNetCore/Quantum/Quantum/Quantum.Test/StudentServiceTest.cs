@@ -16,7 +16,7 @@ namespace Quantum.Test
         public StudentServiceTest()
         {
             data = new DataFeed();
-            testStudent = new Student { Id = 1, StudentName = "Beta", Age = 20, GPA = 5.0 };
+            testStudent = new Student { Id = 1, FName = "Beta", LName = "Alpha", Age = 20, GPA = 5.0 };
         }
 
         [Fact]
@@ -37,7 +37,7 @@ namespace Quantum.Test
             var context = CreateDbContext();
             var service = new StudentService(context.Object);
             var result = service.GetStudent(1);
-            Assert.Equal("Stu1", result.StudentName);
+            Assert.Equal("Stu1", result.FName);
         }
 
         [Fact]
@@ -66,7 +66,7 @@ namespace Quantum.Test
             var context = CreateDbContext();
             var service = new StudentService(context.Object);
             var result = service.UpdateStudent(testStudent);
-            Assert.Equal("Beta", result.StudentName);
+            Assert.Equal("Beta", result.FName);
         }
 
         private Mock<AppDbContext> CreateDbContext()

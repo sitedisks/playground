@@ -17,9 +17,9 @@ namespace Quantum.Test
         {
             return new List<Student>
             {
-                new Student { Id= 1, StudentName="Stu1", Age=21, GPA=3.1, ClassId=1 },
-                new Student { Id= 2, StudentName="Stu2", Age=22, GPA=3.2, ClassId=1 },
-                new Student { Id= 3, StudentName="Stu3", Age=23, GPA=3.3, ClassId=1 },
+                new Student { Id= 1, FName="Stu1", LName="Alpha1", Age=21, GPA=3.1, ClassId=1 },
+                new Student { Id= 2, FName="Stu2", LName="Alpha2", Age=22, GPA=3.2, ClassId=1 },
+                new Student { Id= 3, FName="Stu3", LName="Alpha3",Age=23, GPA=3.3, ClassId=1 },
             };
         }
     }
