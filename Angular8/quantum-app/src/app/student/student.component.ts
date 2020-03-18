@@ -12,8 +12,8 @@ import { Class } from '../model/class';
 export class StudentComponent implements OnInit {
 
   classId: number;
-  currentClass;
-  students;
+  currentClass: Class;
+  students: Student[] = [];
   private sub: any;
   modalStudent: Student = new Student(0, '', 0, 0, 0);
 

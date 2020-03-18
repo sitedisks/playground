@@ -10,7 +10,7 @@ import { Class } from './model/class';
 export class AppComponent implements OnInit {
 
   currentClassId: number = 0;
-  classes;
+  classes: Class[] = [];
 
   modalClass: Class = new Class(0, '', '', '');
 
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
     );
   }
 
-  pickCurrentClass(id){
+  pickCurrentClass(id) {
     this.currentClassId = id;
   }
 
@@ -35,11 +35,6 @@ export class AppComponent implements OnInit {
 
   editClass(item: Class) {
     this.modalClass = item;
-    this.data.editClass(item).subscribe(
-      data => {
-        console.log('data updated: ' + data);
-      }
-    );
   }
 
   submitClassForm(value) {
@@ -55,7 +50,7 @@ export class AppComponent implements OnInit {
     } else {
       console.log('edit class');
       this.data.editClass(value).subscribe(
-        data=> {
+        data => {
           console.log('class updated: ' + JSON.stringify(data));
         }
       );
@@ -65,8 +60,8 @@ export class AppComponent implements OnInit {
   deleteClass(id) {
     console.log('Class: ' + id + ' deleted');
     this.data.deleteClass(id).subscribe(
-      _=>{
-        this.classes = this.classes.filter(t=>t.id!==id);
+      _ => {
+        this.classes = this.classes.filter(t => t.id !== id);
       }
     );
   }

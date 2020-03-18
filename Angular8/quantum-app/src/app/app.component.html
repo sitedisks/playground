@@ -53,7 +53,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let class of classes" [class.bg-info]="class.id == currentClassId">
+        <tr *ngFor="let class of classes" [class.bg-warning]="class.id == currentClassId">
 
           <td><a routerLink="/student/{{class.id}}" (click)="pickCurrentClass(class.id)">{{class.className}}</a></td>
           <td>{{class.location}}</td>
