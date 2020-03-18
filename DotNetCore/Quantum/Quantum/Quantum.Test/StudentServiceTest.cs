@@ -13,13 +13,15 @@ namespace Quantum.Test
         private readonly DataFeed data;
         private readonly Student testStudent;
 
-        public StudentServiceTest() {
+        public StudentServiceTest()
+        {
             data = new DataFeed();
             testStudent = new Student { Id = 1, StudentName = "Beta", Age = 20, GPA = 5.0 };
         }
 
         [Fact]
-        public void ShouldReturnStudentFromClass1() {
+        public void ShouldReturnStudentFromClass1()
+        {
             var context = CreateDbContext();
             var service = new StudentService(context.Object);
 
@@ -30,7 +32,8 @@ namespace Quantum.Test
         }
 
         [Fact]
-        public void ShouldReturnStudent1() {
+        public void ShouldReturnStudent1()
+        {
             var context = CreateDbContext();
             var service = new StudentService(context.Object);
             var result = service.GetStudent(1);
@@ -38,7 +41,8 @@ namespace Quantum.Test
         }
 
         [Fact]
-        public void ShouldAddNewStudent() {
+        public void ShouldAddNewStudent()
+        {
             var context = CreateDbContext();
             var service = new StudentService(context.Object);
             var result = service.AddStudent(testStudent);
@@ -47,7 +51,8 @@ namespace Quantum.Test
         }
 
         [Fact]
-        public void ShouldRemoveStudent() {
+        public void ShouldRemoveStudent()
+        {
             var context = CreateDbContext();
             var service = new StudentService(context.Object);
             service.DeleteStudent(1);
@@ -56,7 +61,8 @@ namespace Quantum.Test
         }
 
         [Fact]
-        public void ShouldUpdateStudent() {
+        public void ShouldUpdateStudent()
+        {
             var context = CreateDbContext();
             var service = new StudentService(context.Object);
             var result = service.UpdateStudent(testStudent);

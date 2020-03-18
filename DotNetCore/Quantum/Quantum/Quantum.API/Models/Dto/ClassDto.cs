@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Quantum.API.Models.Dto
+﻿namespace Quantum.API.Models.Dto
 {
     public class ClassDto
     {

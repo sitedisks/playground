@@ -4,9 +4,10 @@ using Quantum.API.Models.Dto;
 
 namespace Quantum.API
 {
-    public class MapperProfile:Profile
+    public class MapperProfile : Profile
     {
-        public MapperProfile() {
+        public MapperProfile()
+        {
             CreateMap<Class, ClassDto>();
             CreateMap<ClassDto, Class>();
             CreateMap<Student, StudentDto>();
