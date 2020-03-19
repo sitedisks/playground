@@ -19,7 +19,7 @@ namespace Quantum.API.Models
             public void Configure(EntityTypeBuilder<Student> builder)
             {
                 builder.HasKey(k => k.Id);
-                builder.HasIndex(l => l.LName).IsUnique();
+                builder.HasIndex(l => new { l.LName, l.ClassId }).IsUnique();
                 builder.HasOne(p => p.Class).WithMany(p => p.Students);
             }
         }

@@ -52,9 +52,9 @@ namespace Quantum.API.Migrations
                 column: "ClassId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Students_LName",
+                name: "IX_Students_LName_ClassId",
                 table: "Students",
-                column: "LName",
+                columns: new[] { "LName", "ClassId" },
                 unique: true);
         }
 

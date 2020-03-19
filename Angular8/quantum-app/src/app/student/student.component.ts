@@ -15,7 +15,7 @@ export class StudentComponent implements OnInit {
   currentClass: Class;
   students: Student[] = [];
   private sub: any;
-  modalStudent: Student = new Student(0, '', 0, 0, 0);
+  modalStudent: Student = new Student(0, '', '', 0, 0, 0);
 
   constructor(private route: ActivatedRoute, private data: DataService) { }
 
@@ -42,7 +42,7 @@ export class StudentComponent implements OnInit {
   }
 
   newStudent() {
-    this.modalStudent = new Student(0, '', 0, 0, 0);
+    this.modalStudent = new Student(0, '', '', 0, 0, 0);
   }
 
   editStudent(item: Student){
@@ -63,7 +63,7 @@ export class StudentComponent implements OnInit {
       this.data.addStudent(value).subscribe(
         data=> {
           this.students.push(data);
-          this.modalStudent = new Student(0, '', 0, 0, 0);
+          this.modalStudent = new Student(0, '', '', 0, 0, 0);
         }
       );
 

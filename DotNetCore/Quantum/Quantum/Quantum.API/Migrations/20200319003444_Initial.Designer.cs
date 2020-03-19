@@ -8,7 +8,7 @@ using Quantum.API.Data;
 namespace Quantum.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200318234838_Initial")]
+    [Migration("20200319003444_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -68,7 +68,7 @@ namespace Quantum.API.Migrations
 
                     b.HasIndex("ClassId");
 
-                    b.HasIndex("LName")
+                    b.HasIndex("LName", "ClassId")
                         .IsUnique();
 
                     b.ToTable("Students");

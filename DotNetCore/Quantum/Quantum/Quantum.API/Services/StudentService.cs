@@ -19,26 +19,55 @@ namespace Quantum.API.Services
 
         public IEnumerable<Student> AllStudents()
         {
-            var query = _dbContext.Students.Where(x => !x.Deleted);
-            return query.ToList();
+            try
+            {
+                var query = _dbContext.Students.Where(x => !x.Deleted);
+                return query.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
         public IEnumerable<Student> StudentsInClass(int classId)
         {
-            var query = _dbContext.Students.Where(x => x.ClassId == classId && !x.Deleted);
-            return query.ToList();
+            try
+            {
+                var query = _dbContext.Students.Where(x => x.ClassId == classId && !x.Deleted);
+                return query.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
         public Student GetStudent(int id)
         {
-            return _dbContext.Students.FirstOrDefault(x => x.Id == id);
+            try { return _dbContext.Students.FirstOrDefault(x => x.Id == id); }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
         public int AddStudent(Student s)
         {
-            _dbContext.Students.Add(s);
-            _dbContext.SaveChanges();
-            return s.Id;
+            try
+            {
+                _dbContext.Students.Add(s);
+                _dbContext.SaveChanges();
+                return s.Id;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
         public void DeleteStudent(int id)
@@ -61,14 +90,22 @@ namespace Quantum.API.Services
 
         public Student UpdateStudent(Student s)
         {
-            var record = GetStudent(s.Id);
+            try
+            {
+                var record = GetStudent(s.Id);
 
-            record.FName = s.FName;
-            record.LName = s.LName;
-            record.Age = s.Age;
-            record.GPA = s.GPA;
-            _dbContext.SaveChanges();
-            return record;
+                record.FName = s.FName;
+                record.LName = s.LName;
+                record.Age = s.Age;
+                record.GPA = s.GPA;
+                _dbContext.SaveChanges();
+                return record;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
     }
 }

@@ -16,7 +16,7 @@
         <tbody>
             <tr *ngFor="let student of students">
 
-                <td><span [class.text-success]="student.gpa>3.2">{{student.studentName}}</span></td>
+                <td><span [class.text-success]="student.gpa>3.2">{{student.fName}} {{student.lName}}</span></td>
                 <td>{{student.age}}</td>
                 <td>{{student.gpa}}</td>
                 <td>
@@ -52,8 +52,12 @@
         <div class="modal-body">
           <form #studentForm="ngForm" (ngSubmit)="submitStudentForm(studentForm.value)" novalidate>
             <div class="form-group">
-              <label>Student name</label>
-              <input type="text" class="form-control" name="studentName" [(ngModel)]="modalStudent.studentName" required>
+              <label>First Name</label>
+              <input type="text" class="form-control" name="fName" [(ngModel)]="modalStudent.fName" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" class="form-control" name="lName" [(ngModel)]="modalStudent.lName" required>
             </div>
             <div class="form-group">
               <label>Age</label>

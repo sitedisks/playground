@@ -66,7 +66,7 @@ namespace Quantum.API.Migrations
 
                     b.HasIndex("ClassId");
 
-                    b.HasIndex("LName")
+                    b.HasIndex("LName", "ClassId")
                         .IsUnique();
 
                     b.ToTable("Students");
