@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Badge } from 'reactstrap';
 import { BookContext } from '../contexts/BookContext';
 
 const Navbar = () => {
@@ -6,7 +7,7 @@ const Navbar = () => {
     return (
         <div>
             <h1>Ninja Reading List</h1>
-            <p>Currently you have {books.length} books to get through...</p>
+            <p>Currently you have <Badge color="primary" pill>{books.length}</Badge> books to get through...</p>
         </div>
     )
 }

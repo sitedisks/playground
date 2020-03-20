@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 import { BookContext } from '../contexts/BookContext';
 
 const BookDetails = ({ book, param }) => {
@@ -6,10 +7,10 @@ const BookDetails = ({ book, param }) => {
     console.log('Param:' + param);
 
     return (
-        <li onClick={()=>{ removeBook(book.id)}}>
+        <ListGroupItem onClick={()=>{ removeBook(book.id)}}>
             <div className="title">{book.title}</div>
             <small className="author">{book.author}</small>
-        </li>
+        </ListGroupItem>
     )
 }
 
