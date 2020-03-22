@@ -85,7 +85,9 @@ function App() {
       .then(res => res.json())
       .then(
         result => {
-          
+          let returnClasses = [...data.classes];
+          returnClasses[data.classes.findIndex(x => x.id == opts.id)] = opts;
+          setData({ classes: returnClasses, students: [] });
         }
       );
   }
