@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 import { BookContext } from '../contexts/BookContext';
 import BookDetails from './BookDetails';
 
@@ -7,14 +8,14 @@ const BookList = () => {
 
     return books.length ? (
         <div className="book-list">
-            <ul>
+            <ListGroup>
                 {books.map(book => {
                     return (
 
                         <BookDetails book={book} param="OnlyOne" key={book.id} />
                     )
                 })}
-            </ul>
+            </ListGroup>
 
         </div>
     ) : (

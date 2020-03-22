@@ -1,0 +1,74 @@
+<div class="container">
+  <h1><a href="/">Quantum Uni</a></h1>
+  <h4>Class <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#classModal"
+      (click)="newClass()">
+      New
+    </button></h4>
+
+  <!-- Modal -->
+  <div class="modal fade" id="classModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" *ngIf="modalClass.id==0">New Class</h5>
+          <h5 class="modal-title" *ngIf="modalClass.id!=0">Edit Class</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form #classForm="ngForm" (ngSubmit)="submitClassForm(classForm.value)" novalidate>
+            <div class="form-group">
+              <label>Class name</label>
+              <input type="text" class="form-control" name="className" [(ngModel)]="modalClass.className" required>
+            </div>
+            <div class="form-group">
+              <label>Location</label>
+              <input type="text" class="form-control" name="location" [(ngModel)]="modalClass.location" required>
+            </div>
+            <div class="form-group">
+              <label>Teacher</label>
+              <input type="text" class="form-control" name="teacher" [(ngModel)]="modalClass.teacher" required>
+            </div>
+
+            <input name="id" [ngModel]="modalClass.id" style="display: none;">
+
+            <button type="submit" class="btn btn-outline-success btn-sm" onclick="$('#classModal').modal('hide')">Save</button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="classes">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Class Name</th>
+          <th scope="col">Location</th>
+          <th scope="col">Teacher Name</th>
+          <th scope="col">Op</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let class of classes" [class.bg-warning]="class.id == currentClassId">
+
+          <td><a routerLink="/student/{{class.id}}" (click)="pickCurrentClass(class.id)">{{class.className}}</a></td>
+          <td>{{class.location}}</td>
+          <td>{{class.teacher}}</td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#classModal"
+                (click)="editClass(class)">Edit</button>
+              <button type="button" class="btn btn-outline-danger btn-sm" (click)="deleteClass(class.id)">Delete</button>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <router-outlet></router-outlet>
+</div>
