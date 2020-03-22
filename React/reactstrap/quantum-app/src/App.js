@@ -1,19 +1,69 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Button } from 'reactstrap';
+import { ButtonGroup, Button, Table } from 'reactstrap';
 
 function App() {
+
+  const [data, setData] = useState({ classes: [], students: [] });
+
+  useEffect(() => {
+    fetch('https://quantumit.azurewebsites.net/class')
+      .then(res => res.json())
+      .then(
+        result => {
+          setData({ classes: result, students: [] });
+        }
+      );
+  }, []);
+
+
+
+  const handleEdit = (e) => {
+    e.preventDefault();
+    console.log('The edit was clicked.');
+  }
+
+  function handleDelete(id) {
+    console.log('The delete was clicked.' + id);
+  }
+
+  // const handleDelete = (id) => {
+  //   console.log('The delete was clicked.' + id);
+  // }
+
+
   return (
-    <div className="App">
-      <h2>Test</h2>
+    <div className="container">
+      <h2>Class</h2>
       <div>
-        <Button color="primary">primary</Button>{' '}
-        <Button color="secondary">secondary</Button>{' '}
-        <Button color="success">success</Button>{' '}
-        <Button color="info">info</Button>{' '}
-        <Button color="warning">warning</Button>{' '}
-        <Button color="danger">danger</Button>{' '}
-        <Button color="link">link</Button>
+        <Table>
+          <thead>
+            <tr>
+              <th>Class name</th>
+              <th>Location</th>
+              <th>Teacher Name</th>
+              <th>Op</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.classes.map(item => (
+              <tr key={item.id}>
+                <th scope="row">{item.className}</th>
+                <td>{item.location}</td>
+                <td>{item.teacher}</td>
+                <td><ButtonGroup>
+                  <Button color="info" onClick={handleEdit}>Edit</Button>
+                  {/* <Button color="danger" onClick={(e) => { e.preventDefault(); handleDelete(item.id) }}>Delete</Button> */}
+                  <Button color="danger" onClick={() => handleDelete(item.id)}>Delete</Button>
+                  {/* <Button color="danger" onClick={handleDelete}>Delete</Button> */}
+
+                </ButtonGroup></td>
+              </tr>
+            ))}
+
+
+          </tbody>
+        </Table>
       </div>
     </div>
   );
