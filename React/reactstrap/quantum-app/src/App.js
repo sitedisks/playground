@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Student from './components/Student';
 import './App.css';
 import {
   ButtonGroup, Button, Table, Modal,
@@ -11,6 +12,7 @@ function App() {
   const [modal, setModal] = useState(false);
   const [data, setData] = useState({ classes: [], students: [] });
 
+  const [selectedClass, setSelectedClass] = useState({ id: 0, name: '' });
   const [id, setId] = useState(0);
   const [classname, setClassname] = useState('');
   const [location, setLocation] = useState('');
@@ -109,6 +111,17 @@ function App() {
       );
   }
 
+  const RenderStudent = () => {
+    if (selectedClass.id != 0) {
+      return <div>
+        <h2>{selectedClass.name} Students</h2>
+        <Student classId={selectedClass.id} />
+      </div>
+    } else {
+      return <div>No class selected</div>
+    }
+  }
+
   return (
     <div className="container">
       <h2>Class <Button color="outline-primary" className="btn-sm" onClick={handleAdd}>Add</Button></h2>
@@ -125,7 +138,7 @@ function App() {
         <tbody>
           {data.classes.map(item => (
             <tr key={item.id}>
-              <th scope="row">{item.className}</th>
+              <th scope="row" onClick={() => setSelectedClass({ id: item.id, name: item.className })}>{item.className}</th>
               <td>{item.location}</td>
               <td>{item.teacher}</td>
               <td><ButtonGroup>
@@ -138,6 +151,8 @@ function App() {
           ))}
         </tbody>
       </Table>
+
+      <RenderStudent />
 
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Edit Class</ModalHeader>
