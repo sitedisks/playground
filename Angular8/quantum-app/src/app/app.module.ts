@@ -6,11 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentComponent } from './student/student.component';
+import { AutoListComponent } from './auto-list/auto-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentComponent
+    StudentComponent,
+    AutoListComponent
   ],
   imports: [
     BrowserModule,
