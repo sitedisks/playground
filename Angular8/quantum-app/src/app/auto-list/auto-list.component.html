@@ -1,1 +1,23 @@
 <p>auto-list works!</p>
+
+<h4>ngFor directive</h4>
+<ul class="cars-list">
+    <li *ngFor="let car of cars">
+        <!-- <a routerLink="{{car.id}}">{{car.name}}</a> -->
+        <a [routerLink]="[car.id]">{{car.name}}</a>
+    </li>
+</ul>
+
+<h4>ngIf directive</h4>
+<div *ngIf="cars.length" id="carLength">
+    <p>You have {{cars.length}} vehicles</p>
+</div>
+
+<h4>ngSwitch directive</h4>
+<div [ngSwitch]="tab" class="data-tab">
+    <p>This is ngSwitch example</p>
+    <div *ngSwitchCase="1">Case 1</div>
+    <div *ngSwitchCase="2">Case 2</div>
+</div>
+
+<button class="btn btn-primary" (click)="findAuto()">click it</button>

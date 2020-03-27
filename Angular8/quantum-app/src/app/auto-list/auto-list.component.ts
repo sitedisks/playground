@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DealersService } from '../services/dealers.service';
+import { Dealer} from '../model/dealer';
 
 @Component({
   selector: 'app-auto-list',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AutoListComponent implements OnInit {
 
-  constructor() { }
+  cars = [
+    { 'id': '1', 'name': 'BMW' },
+    { 'id': '2', 'name': 'Force Moters' },
+    { 'id': '3', 'name': 'Audi' }
+  ];
+
+  tab = '1';
+
+  dealers: Dealer[] = [];
+
+  constructor(private _dealerService: DealersService) { }
 
   ngOnInit(): void {
   }
 
+  findAuto() {
+    console.log("Method findAuto has been called");
+    return 'find auto';
+  }
+
+  findDealers(){
+    this.dealers = this._dealerService.getDealers();
+    return this.dealers;
+  }
 }

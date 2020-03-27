@@ -9,6 +9,7 @@ import { Class } from './model/class';
 })
 export class AppComponent implements OnInit {
 
+  title: string = 'AutoStop';
   currentClassId: number = 0;
   classes: Class[] = [];
 
