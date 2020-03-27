@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DealersService } from '../services/dealers.service';
-import { Dealer} from '../model/dealer';
+import { Dealer } from '../model/dealer';
 
 @Component({
   selector: 'app-auto-list',
@@ -29,8 +29,14 @@ export class AutoListComponent implements OnInit {
     return 'find auto';
   }
 
-  findDealers(){
+  findDealers() {
     this.dealers = this._dealerService.getDealers();
     return this.dealers;
   }
+
+  findRemoteDealers() {
+    let results = this._dealerService.getRemoteDealers();
+  }
+
+
 }
