@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiurl: 'https://localhost:5001/'
+  // apiurl: 'https://localhost:5001/',
+  apiurl: 'https://quantumit.azurewebsites.net/'
 };
 
 /*

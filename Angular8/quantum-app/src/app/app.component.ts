@@ -13,7 +13,14 @@ export class AppComponent implements OnInit {
   currentClassId: number = 0;
   classes: Class[] = [];
 
-  modalClass: Class = new Class(0, '', '', '');
+  // const dummyPosts: Post[] = [
+  //   { userId: '1', id: 1, body: 'Hello World', title: 'Testing Angular' },
+  //   { userId: '1', id: 2, body: 'Hello World 2', title: 'Testing Angular 2' }
+  // ];
+
+  m: Class = { id: 0, userId: '', body: '', title: '' };
+  modalClass: Class = this.m;
+
 
   constructor(private data: DataService) { }
 
@@ -31,7 +38,8 @@ export class AppComponent implements OnInit {
   }
 
   newClass() {
-    this.modalClass = new Class(0, '', '', '');
+    // this.modalClass = new Class(0, '', '', '');
+    this.modalClass = this.m;
   }
 
   editClass(item: Class) {
@@ -45,7 +53,8 @@ export class AppComponent implements OnInit {
       this.data.addClass(value).subscribe(
         data => {
           this.classes.push(data);
-          this.modalClass = new Class(0, '', '', '');
+          // this.modalClass = new Class(0, '', '', '');
+          this.modalClass = this.m;
         }
       );
     } else {

@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "quantum-app": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "quantum-app"
+    }
+  },
+  "defaultProject": "quantum-app",
+  "cli": {
+    "analytics": "56dda1c3-214d-4dc3-b1f0-4d3f6fe627b9"
+  }
 }

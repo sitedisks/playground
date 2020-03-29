@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Dealer } from '../model/dealer';
+import { Post } from '../model/post.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DealersService {
 
-  readonly REST_ENDPOINT = 'https://jsonplaceholder.typicode.com/users';
-  readonly DEALER_REST_ENDPOINT = 'https://jsonplaceholder.typicode.com/users/1';
+  public REST_ENDPOINT = 'https://jsonplaceholder.typicode.com/';
+
   private _carurl = 'http://localhost:3000/cars';
 
   dealers: any;
@@ -29,12 +30,16 @@ export class DealersService {
   }
 
   getRemoteDealers() {
-    return this.http.get(this.REST_ENDPOINT);
+    return this.http.get(this.REST_ENDPOINT + 'users');
   }
 
   getRemoteDealerById() {
     let params = new HttpParams().set('id', '1');
-    return this.http.get(this.REST_ENDPOINT, { params });
+    return this.http.get(this.REST_ENDPOINT + 'users', { params });
+  }
+
+  getRemotePosts() {
+    return this.http.get<Post[]>(this.REST_ENDPOINT + 'posts');
   }
 
   getCarList() {
