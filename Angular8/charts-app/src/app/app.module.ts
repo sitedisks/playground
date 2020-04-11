@@ -6,6 +6,7 @@ import { ShareModule } from '@ngx-share/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StatusComponent } from './status/status.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { StatusComponent } from './status/status.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FontAwesomeModule,
     ShareModule
   ],
   providers: [],

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ShareService } from '@ngx-share/core';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'charts-app';
 
-  constructor() { }
+  faFacebook = faFacebook;
+
+  constructor(public share: ShareService) { }
 
   ngOnInit() {
 
