@@ -1,1 +1,18 @@
-<p>orders works!</p>
+<button class="waves-effect waves-light btn col s4" *ngFor="let coffee of coffees" (click)="addCoffee(coffee)">
+    {{coffee}}
+</button>
+
+<ul class="collection">
+    <li *ngFor="let coffee of coffeeOrder">
+        <span class="col s11">{{coffee}}</span>
+        <a class="col s1" (click)="removecoffee(coffee)">x</a>
+    </li>
+</ul>
+
+<form [formGroup]="this.ordersService.form" (ngSubmit)="onSubmit()">
+    <input type="text" class="input-field col s12" placeholder="Order Number" formControlName="orderNumber">
+    <input type="text" class="input-field col s12" placeholder="Customer Name" formControlName="customerName">
+    <!-- <input type="submit" value="Submit Simple"> -->
+    <button class="waves-effect waves-light btn col s12">Submit</button>
+
+</form>
