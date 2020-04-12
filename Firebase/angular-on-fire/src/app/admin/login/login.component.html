@@ -1,0 +1,31 @@
+<div class="container pt-3">
+    <div class="row justify-content-sm-center">
+        <div class="col-sm-10 col-md-6">
+            <div class="card border-info">
+                <div class="card-header">Login</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="https://placeimg.com/128/128/nature">
+                        </div>
+                        <div class="col-md-8">
+                            userForm value: {{userForm.value | json}}
+                            <!-- name and ngModel -->
+                            <form #userForm="ngForm" (ngSubmit)="submitForm(userForm);">
+                                <input type="text" name="email" class="form-control mb-2" placeholder="Email" ngModel required>
+                                <input type="password" name="password" class="form-control mb-2" placeholder="Password" ngModel required>
+                                <button class="btn btn-lg btn-primary btn-block mb-1">Login</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-lg" (click)="googleLogin()">Google Login</button>
+            <button class="btn btn-lg" (click)="facebookLogin()">Facebook Login</button>
+            <button class="btn btn-lg" (click)="logoutMe()">Logout</button>
+            <hr>
+            <button class="btn btn-lg" (click)="resetPassword()">Forgot password</button>
+        </div>
+    </div>
+</div>

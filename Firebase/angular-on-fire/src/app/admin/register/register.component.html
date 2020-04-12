@@ -1,0 +1,6 @@
+<p>register works!</p>
+<form #newuserForm="ngForm" (ngSubmit)="submitForm(newuserForm)">
+    <input type="text" name="email" class="form-control mb-2" placeholder="Email" ngModel required>
+    <input type="password" name="password" class="form-control mb-2" placeholder="Password" ngModel required>
+    <button class="btn btn-lg btn-primary btn-block mb-1">Create</button>
+</form>
