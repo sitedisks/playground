@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "play-sitedisks": {
+      "hosting": {
+        "angular-on-fire": [
+          "play-sitedisks"
+        ]
+      }
+    }
+  }
+}
