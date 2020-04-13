@@ -4,6 +4,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from "@angular/fire/auth";
+import {
+  AngularFireStorageModule,
+  AngularFireStorageReference,
+  AngularFireUploadTask
+} from '@angular/fire/storage';
 
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +21,7 @@ import { RegisterComponent } from './admin/register/register.component';
 import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './admin/verify-email/verify-email.component';
 import { ProjectComponent } from './admin/project/project.component';
+import { UploadComponent } from './upload/upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,8 @@ import { ProjectComponent } from './admin/project/project.component';
     RegisterComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
-    ProjectComponent
+    ProjectComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,8 @@ import { ProjectComponent } from './admin/project/project.component';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

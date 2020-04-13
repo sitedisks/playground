@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
+// import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
+// import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-forgot-password',
