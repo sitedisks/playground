@@ -1,5 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import {
+  AngularFireStorageModule,
+  BUCKET, // customise the storage bucket
+  AngularFireStorageReference, // ?
+  AngularFireUploadTask // ?
+} from '@angular/fire/storage';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,9 +18,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule
   ],
-  providers: [],
+  providers: [
+    // { provide: BUCKET, useValue: 'my-bucket' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

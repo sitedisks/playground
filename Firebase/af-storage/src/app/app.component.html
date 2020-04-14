@@ -1,1 +1,17 @@
 <h2>Angular Firebase Storage!</h2>
+
+<p>
+  put(data: Blob, metadata?: storage.UploadMetadata): AngularFireUploadTask
+</p>
+<input type="file" (change)="filePut($event)">
+
+<p>
+  putString(data: string, format?: StringFormat, metadata?: UploadMetadata): AngularFireUploadTask
+</p>
+
+<input type="file" (change)="filePutString($event)">
+
+<p>
+  upload(path: string, data: StringFormat, metadata?: UploadMetadata): AngularFireUploadTask
+</p>
+<input type="file" (change)="fileUpload($event)">
