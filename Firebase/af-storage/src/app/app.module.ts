@@ -12,10 +12,12 @@ import {
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FileComponent } from './file/file.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FileComponent
   ],
   imports: [
     BrowserModule,
