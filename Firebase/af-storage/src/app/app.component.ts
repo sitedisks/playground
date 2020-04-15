@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { finalize } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -54,15 +56,64 @@ export class AppComponent {
     // );
   }
 
+  uploadPercent: Observable<number>;
+  downloadURL: Observable<string>;
   fileUpload(event) {
     const file = event.target.files[0];
     const filePath = 'upload/' + file.name;
-    const task = this.storage.upload(filePath, file).then(
-      res => {
-        console.log(res);
-      }, err => {
-        console.log(err);
-      }
-    );;
+    const fileRef = this.storage.ref(filePath);
+    const task = this.storage.upload(filePath, file);
+
+    // observe percentage changes
+    this.uploadPercent = task.percentageChanges();
+    task.snapshotChanges().pipe(
+      finalize(() => {
+        this.downloadURL = fileRef.getDownloadURL();
+      })
+    ).subscribe();
   }
+
+  devFileSelected(event) {
+    let n = Date.now();
+    const file = event.target.files[0];
+    const filePath = `dev/${n}`;
+    const fileRef = this.storage.ref(filePath);
+    const task = this.storage.upload(filePath, file);
+
+    task.snapshotChanges().pipe(
+      finalize(() => {
+        this.downloadURL = fileRef.getDownloadURL();
+        this.downloadURL.subscribe(url => {
+          console.log(url);
+        });
+      })
+    ).subscribe(url => {
+      if (url)
+        console.log(url);
+    });
+  }
+
+
+  selectedImage: any = null;
+  url: string;
+  id: string;
+
+  mediumShow(event) {
+    this.selectedImage = event.target.files[0];
+  }
+
+  mediumUpload() {
+    let file = this.selectedImage;
+    const filePath = 'medium/' + file.name;
+    const fileRef = this.storage.ref(filePath);
+    const task = this.storage.upload(filePath, file);
+    task.snapshotChanges().pipe(
+      finalize(() => {
+        fileRef.getDownloadURL().subscribe((url) => {
+          this.url = url;
+        })
+      })
+    ).subscribe();
+  }
+
 }
