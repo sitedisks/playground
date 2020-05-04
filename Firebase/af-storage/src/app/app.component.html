@@ -23,6 +23,7 @@
 <a [href]="downloadURL | async">{{ downloadURL | async }}</a>
 
 <p>dev.to/favouremma18/uploading-an-image-to-firebase-cloud-storage-with-angular-2aeh</p>
+<samll>Just another upload()</samll>
 <input type="file" (change)="devFileSelected($event)">
 
 <h3>File Upload</h3>
@@ -35,4 +36,4 @@
 
 <p>File View</p>
 <input type="text" [(ngModel)]="file" placeholder="Enter Unique Search Key">
-<button (click)="mediumView">View</button>
+<button (click)="mediumView()">View</button>

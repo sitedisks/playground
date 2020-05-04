@@ -97,6 +97,7 @@ export class AppComponent {
   selectedImage: any = null;
   url: string;
   id: string;
+  file: string;
 
   mediumShow(event) {
     this.selectedImage = event.target.files[0];
@@ -116,4 +117,7 @@ export class AppComponent {
     ).subscribe();
   }
 
+  mediumView() {
+    
+  }
 }

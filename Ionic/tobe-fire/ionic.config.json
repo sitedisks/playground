@@ -1,0 +1,7 @@
+{
+  "name": "tobe-fire",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
