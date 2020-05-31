@@ -2,11 +2,13 @@ Bestong:
 
 categories:
 
+华人超市 4
 医疗保健 Medical & Healthcare 5
 华人医生 Family Doctors 6
 牙医诊所 Denture & Dentists 7
 美容美体 Beauty & Skin 11
 成人服务 Adults Services 15
+餐馆用具 Restaurant Equipments 63
 中医诊所 Traditional Chinese Therapy 64
 中医药材 Traditional Chinese Medicine 65
 

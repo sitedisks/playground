@@ -19,3 +19,21 @@ class DoubanMovieItem(scrapy.Item):
     score = scrapy.Field()
 
     score_num = scrapy.Field()
+
+    biz_id = scrapy.Field()
+
+    biz_name = scrapy.Field()
+
+    biz_address1 = scrapy.Field()
+
+    biz_suburb = scrapy.Field()
+
+    biz_state = scrapy.Field()
+
+    biz_postcode: scrapy.Field()
+
+    biz_tel: scrapy.Field()
+
+    biz_email: scrapy.Field()
+
+    biz_website: scrapy.Field()
