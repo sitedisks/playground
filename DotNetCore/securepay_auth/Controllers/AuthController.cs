@@ -1,16 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using securepay_auth.Model;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using Microsoft.Extensions.Configuration;
-using Microsoft.AspNetCore.Cors;
-using securepay_auth.Model;
 using System.Text;
-using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 namespace securepay_auth.Controllers
 {
@@ -20,11 +17,12 @@ namespace securepay_auth.Controllers
     {
         private IConfiguration configuration;
         private static readonly HttpClient client = new HttpClient();
-        public AuthController(IConfiguration iconfig) {
+        public AuthController(IConfiguration iconfig)
+        {
             configuration = iconfig;
         }
 
-        [HttpGet] 
+        [HttpGet]
         public async Task<ActionResult> Index()
         {
             String authendpoint = configuration.GetValue<string>("SecurePay:AuthEndpoint");
@@ -42,7 +40,7 @@ namespace securepay_auth.Controllers
 
             var content = new FormUrlEncodedContent(values);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
-  
+
             var response = await client.PostAsync(authendpoint, content);
 
             var responseString = await response.Content.ReadAsStringAsync();
@@ -50,7 +48,8 @@ namespace securepay_auth.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Payment(Payment payment) {
+        public async Task<ActionResult> Payment(Payment payment)
+        {
 
             //var userIp = HttpContext.Request.Host;
             var _IP = "RemoteIp:" + Request.HttpContext.Connection.RemoteIpAddress.ToString() + " - LocalIpAddress:" +
@@ -58,9 +57,9 @@ namespace securepay_auth.Controllers
 
             String payendpoint = configuration.GetValue<string>("SecurePay:Endpoint") + configuration.GetValue<string>("SecurePay:PayAPI");
             String merchantcode = configuration.GetValue<string>("SecurePay:MerchantCode");
-           
+
             var authValue = new AuthenticationHeaderValue("Bearer", payment.AccessToken);
-            
+
             var authValueString = authValue.ToString();
 
             var IdempotencyKey = Guid.NewGuid();
@@ -69,7 +68,8 @@ namespace securepay_auth.Controllers
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             client.DefaultRequestHeaders.Add("Idempotency-Key", IdempotencyKey.ToString());
 
-            var payModel = new PayModel {
+            var payModel = new PayModel
+            {
                 merchantCode = merchantcode,
                 amount = payment.Amount,
                 token = payment.Token,
@@ -83,5 +83,6 @@ namespace securepay_auth.Controllers
 
             return Ok(responseString);
         }
+
     }
 }

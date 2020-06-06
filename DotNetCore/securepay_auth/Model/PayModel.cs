@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace securepay_auth.Model
+﻿namespace securepay_auth.Model
 {
     public class PayModel
     {
