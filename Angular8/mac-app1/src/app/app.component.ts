@@ -20,7 +20,7 @@ export class AppComponent {
     this.isShow = !this.isShow;
   }
 
-  countChange(event) {
-    this.myCount = event;
+  countChange(c:number) {
+    this.myCount = c;
   }
 }

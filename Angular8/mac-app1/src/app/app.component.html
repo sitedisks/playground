@@ -13,21 +13,20 @@
     <a class="btn btn-primary" routerLink="/reactiveform" routerLinkActive="active">Reative</a>
   </nav>
 
- 
+
   <h3 *ngIf="isShow">Show me</h3>
   <button class="btn btn-primary" (click)="switchDirective()">Switch the show</button>
 
-
+  <h3>Input and outpu</h3>
   <div>
     Parent: {{ myCount }}
-    <app-counter
-      [count]="myCount"
-      (change)="countChange($event)">
+    <app-counter [count]=myCount (change)="countChange($event)">
     </app-counter>
   </div>
 
 </div>
 <hr>
+<h3>Router outlet</h3>
 <router-outlet></router-outlet>
 
 <app-footer [data]='parentData'></app-footer>
