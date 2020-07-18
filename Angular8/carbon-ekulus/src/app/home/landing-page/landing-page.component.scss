@@ -1,0 +1,20 @@
+@import "~carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family";
+@import "~carbon-components/scss/globals/scss/typography";
+.landing-page{
+    background-color: $ui-02;
+    padding: unset;    
+    height: 88vh;
+
+    [ibmcol]{
+        border: 1px solid #F3F3F3;
+        border-collapse: collapse;
+        padding: 1rem;  
+    }
+}
+
+.landing-page__r1.bx--row,
+.landing-page__r2.bx--row, 
+.landing-page__r3.bx--row,
+.landing-page__r4.bx--row{
+    height: 20%;
+}
