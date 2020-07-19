@@ -1,4 +1,57 @@
-<p>about works!</p>
-<button ibmButton="primary" size="field">Button</button>
-<button ibmButton="secondary">A secondary button</button>
-
+<div ibmGrid class="about-you">
+    <div ibmRow>
+        <div ibmCol [columnNumbers]="{'lg': 12}" class="application-details">
+            <h2>John Smith - Application</h2>
+            <h1>20 Denham Way, Thornlie 6108 WA</h1>
+        </div>
+    </div>
+    <div ibmRow>
+        <div ibmCol [columnNumbers]="{'lg': 3}">
+            {{stepName}}
+        </div>
+        <div ibmCol [columnNumbers]="{'lg': 6}">
+            <ibm-tabs [followFocus]="followFocus" [isNavigation]="isNavigation" [cacheActive]="cacheActive">
+                <ibm-tab heading="John Smith"></ibm-tab>
+                <ibm-tab heading="Helen Smith"></ibm-tab>
+            </ibm-tabs>
+            <ibm-overflow-menu [offset]="offset">
+                <ibm-overflow-menu-option>
+                    Karen Smith
+                </ibm-overflow-menu-option>
+                <ibm-overflow-menu-option>
+                    Timothy Smith
+                </ibm-overflow-menu-option>
+                <ibm-overflow-menu-option>
+                    Peter Smith
+                </ibm-overflow-menu-option>
+            </ibm-overflow-menu>
+        </div>
+        <div ibmCol [columnNumbers]="{'lg': 3}">
+            <button ibmButton="primary">
+                Add applicant <svg icon ibmIconAdd16 class="bx--btn__icon"></svg>
+            </button>
+        </div>
+    </div>
+    <div ibmRow>
+        <div ibmCol [columnNumbers]="{'lg': 3}">
+            <ibm-progress-indicator orientation="vertical" [steps]='[
+            {text: "About you", state: ["current"]},
+            {text: "Your goals", state: ["incomplete"]},
+            {text: "Financial position", state: ["incomplete"]},
+            {text: "Documents", state: ["incomplete"]},
+            {text: "Select a product", state: ["incomplete"]}
+            ]' [current]="currentStep" (stepSelected)="stepSelected($event)">
+            </ibm-progress-indicator>
+        </div>
+        <div ibmCol [columnNumbers]="{'lg': 9}">
+            <div ibmRow>
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    First Name
+                </div>
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    Last Name
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

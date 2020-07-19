@@ -4,7 +4,7 @@
         <div ibmCol [columnNumbers]="{'lg': 16}">
             <ibm-breadcrumb noTrailingSlash="true">
                 <ibm-breadcrumb-item href="/">
-                    Getting started
+                    Getting started {{message}}
                 </ibm-breadcrumb-item>
             </ibm-breadcrumb>
             <h1 class="landing-page__heading">
@@ -77,13 +77,16 @@
     </div>
 
     <div ibmRow class="landing-page__r4">
-        <div ibmCol [columnNumbers]="{'lg': 2, 'md':1, 'sm':0}">2</div>
-        <div ibmCol [columnNumbers]="{'lg': 2, 'md':1, 'sm':0}">2</div>
-        <div ibmCol [columnNumbers]="{'lg': 2, 'md':1, 'sm':0}">2</div>
-        <div ibmCol [columnNumbers]="{'lg': 2, 'md':1, 'sm':0}">2</div>
-        <div ibmCol [columnNumbers]="{'lg': 2, 'md':1, 'sm':0}">2</div>
-        <div ibmCol [columnNumbers]="{'lg': 2, 'md':1, 'sm':0}">2</div>
-        <div ibmCol [columnNumbers]="{'lg': 2, 'md':1, 'sm':0}">2</div>
-        <div ibmCol [columnNumbers]="{'lg': 2, 'md':1, 'sm':0}">2</div>
+        <div ibmCol [columnNumbers]="{'lg': 9}">
+
+            <div ibmRow>
+                <div ibmCol [columnNumbers]="{'lg': 8}">
+                    First Name
+                </div>
+                <div ibmCol [columnNumbers]="{'lg': 8}">
+                    Last Name
+                </div>
+            </div>
+        </div>
     </div>
 </div>
