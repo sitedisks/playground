@@ -14,7 +14,7 @@
                 <ibm-tab heading="John Smith"></ibm-tab>
                 <ibm-tab heading="Helen Smith"></ibm-tab>
             </ibm-tabs>
-            <ibm-overflow-menu [offset]="offset">
+            <!-- <ibm-overflow-menu [offset]="offset">
                 <ibm-overflow-menu-option>
                     Karen Smith
                 </ibm-overflow-menu-option>
@@ -24,7 +24,7 @@
                 <ibm-overflow-menu-option>
                     Peter Smith
                 </ibm-overflow-menu-option>
-            </ibm-overflow-menu>
+            </ibm-overflow-menu> -->
         </div>
         <div ibmCol [columnNumbers]="{'lg': 3}">
             <button ibmButton="primary">
@@ -44,14 +44,83 @@
             </ibm-progress-indicator>
         </div>
         <div ibmCol [columnNumbers]="{'lg': 9}">
-            <div ibmRow>
+            <div ibmRow class="ibmRow-mb">
                 <div ibmCol [columnNumbers]="{'lg': 7}">
-                    First Name
+                    <ibm-label [invalid]="false" invalidText="invalidText">
+                        First Name
+                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                            placeholder="Placeholder text" [autocomplete]="false">
+                    </ibm-label>
                 </div>
                 <div ibmCol [columnNumbers]="{'lg': 7}">
-                    Last Name
+                    <ibm-label [invalid]="false" invalidText="invalidText">
+                        Surname
+                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                            placeholder="Placeholder text" [autocomplete]="false">
+                    </ibm-label>
+                </div>
+            </div>
+            <div ibmRow class="ibmRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-select label="Residency status" display="default">
+                        <option value="" disabled selected hidden>Please select</option>
+                        <option value="non-resident">Non Resident</option>
+                        <option value="permanently">Permanently in Australia</option>
+                        <option value="temporarily">Temporarily in Australia</option>
+                    </ibm-select>
+                </div>
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-select label="Principle foreign residence" display="default">
+                        <option value="" disabled selected hidden>Please select</option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </ibm-select>
+                </div>
+            </div>
+            <div ibmRow class="ibmRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 14}">
+                    <ibm-select label="Citizenship" display="default">
+                        <option value="" disabled selected hidden>Please select</option>
+                        <option value="option1">AD</option>
+                        <option value="option2">AE</option>
+                        <option value="option3">AF</option>
+                        <option value="option4">AG</option>
+                        <option value="option5">AI</option>
+                        <option value="option6">AL</option>
+                        <option value="option7">AM</option>
+                        <option value="option8">AO</option>
+                    </ibm-select>
+                </div>
+            </div>
+            <hr>
+            <div ibmRow class="ibmRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 14}">
+                    <ibm-select label="Marital status" display="default">
+                        <option value="op1">De Facto</option>
+                        <option value="op2">Divorced</option>
+                        <option value="op3">Married</option>
+                        <option value="op4">Separated</option>
+                        <option value="op5">Single</option>
+                        <option value="op6">Unknown</option>
+                        <option value="op7">Windowed</option>
+                    </ibm-select>
+                </div>
+            </div>
+            <div ibmRow class="ibmRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-select label="Spouse/Partner/Defacto" display="default">
+                        <option value="op1">Non Loan Party</option>
+                    </ibm-select>
+                </div>
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-select label="Customer type" display="default">
+                        <option value="option1">Third party</option>
+                    </ibm-select>
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>
