@@ -6,16 +6,19 @@ import {
 	BreadcrumbModule, 
 	ComboBoxModule, 
 	DropdownModule,  
-	TableModule, 
+	TableModule,
 	ModalModule, 
 	InputModule, 
+	StructuredListModule,
 	NotificationModule,
+	SearchModule,
 	TilesModule,
 	DialogModule,
 	PlaceholderModule,
 	PaginationModule,
 	RadioModule,
 	SelectModule,
+	CheckboxModule,
 	DatePickerModule,
 	ProgressIndicatorModule,
 	TabsModule
@@ -27,7 +30,8 @@ import { AboutComponent } from './about/about.component';
 import { Add16Module } from '@carbon/icons-angular/lib/add/16';
 import { RadioButton16Module } from '@carbon/icons-angular/lib/radio-button/16';
 import { DotMark16Module } from '@carbon/icons-angular/lib/dot-mark/16';
-import { Edit16Module } from '@carbon/icons-angular/lib/edit/16';
+import { Edit16Module } from '@carbon/icons-angular/lib/edit/16'; //<TrashCan32 />
+import { Delete16Module } from '@carbon/icons-angular/lib/delete/16';
 import { EditOff16Module } from '@carbon/icons-angular/lib/edit--off/16';
 import { CheckmarkFilled16Module } from '@carbon/icons-angular/lib/checkmark--filled/16';
 import { StarFilled16Module } from '@carbon/icons-angular/lib/star--filled/16';
@@ -43,16 +47,19 @@ import { StarFilled16Module } from '@carbon/icons-angular/lib/star--filled/16';
 		BreadcrumbModule, 
 		ComboBoxModule, 
 		DropdownModule,  
-		TableModule, 
+		TableModule,
 		ModalModule, 
 		InputModule, 
+		StructuredListModule,
 		NotificationModule,
+		SearchModule,
 		TilesModule,
 		DialogModule,
 		PlaceholderModule,
 		PaginationModule,
 		RadioModule,
 		SelectModule,
+		CheckboxModule,
 		DatePickerModule,
 		ProgressIndicatorModule,
 		TabsModule,
@@ -60,6 +67,7 @@ import { StarFilled16Module } from '@carbon/icons-angular/lib/star--filled/16';
 		RadioButton16Module,
 		DotMark16Module,
 		Edit16Module,
+		Delete16Module,
 		EditOff16Module,
 		CheckmarkFilled16Module,
 		StarFilled16Module

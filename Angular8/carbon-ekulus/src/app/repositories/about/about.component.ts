@@ -25,4 +25,8 @@ export class AboutComponent implements OnInit {
 		this.stepName = event.step.text;
 	}
 
+	takeResidenceHandler = (e) => {
+		console.log('Taking residence');
+	}
+
 }

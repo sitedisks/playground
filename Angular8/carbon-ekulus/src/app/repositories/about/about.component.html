@@ -119,8 +119,167 @@
                     </ibm-select>
                 </div>
             </div>
-        </div>
+            <hr>
 
+            <p>Phone number section</p>
+            <div ibmRow class="ibmRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-select label="Phone number type">
+                        <option value="mobile">Mobile</option>
+                        <option value="workphone">Work Phone</option>
+                        <option value="homephone">Home Phone</option>
+                    </ibm-select>
+                </div>
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-label [invalid]="false" invalidText="invalidText">
+                        Mobile number
+                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                            placeholder="Placeholder text" [autocomplete]="false">
+                    </ibm-label>
+                </div>
+            </div>
+            <div ibmRow class="ibRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <button ibmButton="Tertiary">
+                        Save number <svg icon ibmIconAdd16 class="bx--btn__icon"></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div ibmRow class="ibRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 12}">
+                    <ibm-structured-list [border]="true" [condensed]="false" [nowrap]="true">
+
+                        <ibm-list-row>
+                            <ibm-list-column>Phone</ibm-list-column>
+                            <ibm-list-column nowrap="true">0412543876</ibm-list-column>
+                            <ibm-list-column>
+                                <svg icon ibmIconDelete16 class="bx--btn__icon"></svg>
+                                <svg icon ibmIconEdit16 class="bx--btn__icon"></svg>
+                            </ibm-list-column>
+                        </ibm-list-row>
+                        <ibm-list-row>
+                            <ibm-list-column>Work Phone</ibm-list-column>
+                            <ibm-list-column nowrap="true">08 9123 4567</ibm-list-column>
+                            <ibm-list-column>
+                                <svg icon ibmIconDelete16 class="bx--btn__icon"></svg>
+                                <svg icon ibmIconEdit16 class="bx--btn__icon"></svg>
+                            </ibm-list-column>
+                        </ibm-list-row>
+                    </ibm-structured-list>
+                </div>
+            </div>
+            <div ibmRow class="ibmRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-label [invalid]="false" invalidText="invalidText">
+                        Primary email address
+                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                            placeholder="enter email address" [autocomplete]="false">
+                    </ibm-label>
+                </div>
+            </div>
+            <div ibmRow class="ibRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <button ibmButton="Tertiary">
+                        Add email address <svg icon ibmIconAdd16 class="bx--btn__icon"></svg>
+                    </button>
+                </div>
+            </div>
+            <div ibmRow class="ibRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 12}">
+                    <ibm-structured-list [border]="true" [condensed]="false" [nowrap]="true">
+                        <!-- <ibm-list-header>
+                            <ibm-list-column nowrap="true">Column 1</ibm-list-column>
+                            <ibm-list-column nowrap="true">Column 2</ibm-list-column>
+                            <ibm-list-column>Column 3</ibm-list-column>
+                        </ibm-list-header> -->
+                        <ibm-list-row>
+                            <ibm-list-column>Email</ibm-list-column>
+                            <ibm-list-column nowrap="true">john.smith@mail.com</ibm-list-column>
+                            <ibm-list-column>
+                                <svg icon ibmIconDelete16 class="bx--btn__icon"></svg>
+                                <svg icon ibmIconEdit16 class="bx--btn__icon"></svg>
+                            </ibm-list-column>
+                        </ibm-list-row>
+                        <ibm-list-row>
+                            <ibm-list-column>Email</ibm-list-column>
+                            <ibm-list-column nowrap="true">helen.smith@mail.com</ibm-list-column>
+                            <ibm-list-column>
+                                <svg icon ibmIconDelete16 class="bx--btn__icon"></svg>
+                                <svg icon ibmIconEdit16 class="bx--btn__icon"></svg>
+                            </ibm-list-column>
+                        </ibm-list-row>
+                    </ibm-structured-list>
+                </div>
+            </div>
+
+            <p>Residential address</p>
+            <div ibmRow class="ibmRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 14}">
+                    <ibm-search></ibm-search>
+                </div>
+            </div>
+            <div ibmRow class="ibmRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-label [invalid]="false" invalidText="invalidText">
+                        Address 1
+                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark" placeholder="Required field">
+                    </ibm-label>
+                </div>
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-label [invalid]="false" invalidText="invalidText">
+                        Address 2 (optional)
+                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                            placeholder="Unit #, Apt, Suite">
+                    </ibm-label>
+                </div>
+            </div>
+            <div ibmRow class="ibmRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-select label="State">
+                        <option value="" disabled selected hidden>Please select</option>
+                        <option value="act">Australian Capital Territory</option>
+                        <option value="nsw">New South Wales</option>
+                        <option value="nt">Northern Territory</option>
+                        <option value="qld">Queensland</option>
+                        <option value="sa">South Australia</option>
+                        <option value="tas">Tasmania</option>
+                        <option value="vic">Victoria</option>
+                        <option value="wa">Western Australia</option>
+                    </ibm-select>
+                </div>
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-label [invalid]="false" invalidText="invalidText">
+                        Postcode
+                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                            placeholder="Enter 4 digit postcode">
+                    </ibm-label>
+                </div>
+            </div>
+            <div ibmRow class="ibmRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-date-picker width=100% label="Date of birth" placeholder="dd/mm/yyyy" language="en"
+                        [theme]="dark" [disabled]=false [invalid]=false invalidText="Incorrect date" dateFormat="d/m/y">
+                    </ibm-date-picker>
+                </div>
+                <div ibmCol [columnNumbers]="{'lg': 7}">
+                    <ibm-checkbox checked="false" hideLabel="taking" (change)="takeResidenceHandler($event)">
+                        Taking residence
+                    </ibm-checkbox>
+                </div>
+            </div>
+            <div ibmRow class="ibmRow-mb">
+                <div ibmCol [columnNumbers]="{'lg': 14}">
+                    <ibm-notification [notificationObj]="{
+                        type: 'error',
+                        title: 'Sample notification',
+                        message: 'Sample error message',
+                        showClose: showClose,
+                        lowContrast: lowContrast}">
+                    </ibm-notification>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
