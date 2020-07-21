@@ -15,6 +15,9 @@ export class AboutComponent implements OnInit {
 	cacheActive = false;
 	offset = { x: -175, y: 0 };
 
+	phone_no = '';
+	phone_no_list = [];
+
 	constructor() { }
 
 	ngOnInit() {
@@ -29,4 +32,12 @@ export class AboutComponent implements OnInit {
 		console.log('Taking residence');
 	}
 
+	savePHNumberHandler = () => {
+		this.phone_no_list.push(this.phone_no);
+		this.phone_no = '';
+	};
+
+	removePHNumberHandler = () => { 
+		console.log('remove phone number');
+	};
 }

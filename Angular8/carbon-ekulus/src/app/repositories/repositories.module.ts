@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import {
 	GridModule,
@@ -40,6 +41,7 @@ import { StarFilled16Module } from '@carbon/icons-angular/lib/star--filled/16';
 @NgModule({
 	declarations: [RepoPageComponent, AboutComponent],
 	imports: [
+		FormsModule,
 		CommonModule,
 		RepositoriesRoutingModule,
 		GridModule,
