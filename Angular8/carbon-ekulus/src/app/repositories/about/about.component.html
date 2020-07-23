@@ -253,7 +253,7 @@
                     </ibm-date-picker>
                 </div>
                 <div ibmCol [columnNumbers]="{'lg': 7}">
-                    
+
                     <ibm-checkbox class="prefered-contact-check-box" (change)="takeResidenceHandler($event)">
                         Taking residence
                     </ibm-checkbox>
@@ -332,6 +332,39 @@
                             placeholder="Enter 4 digit postcode">
                     </ibm-label>
                 </div>
+            </div>
+
+            <div ibmRow class="ibmRow-mb">
+                <ibm-table-container>
+                    <ibm-table [model]="table_model" [stickyHeader]="false" [skeleton]="false" [showSelectionColumn]="false" [striped]="false"
+                        [sortable]="false" [isDataGrid]="false">
+                    </ibm-table>
+                </ibm-table-container>
+                <ng-template #linkTemplate let-data="data">
+                    {{data.id}}
+                    <svg icon ibmIconDelete16 class="bx--btn__icon"></svg> 
+                    <svg icon ibmIconEdit16 class="bx--btn__icon"></svg>
+                    <!-- <div>
+                        <ibm-overflow-menu>
+                            <ibm-overflow-menu-option>
+                                <svg icon ibmIconReply16></svg>            
+                                <p>Review</p>
+                            </ibm-overflow-menu-option>
+                            <ibm-overflow-menu-option>
+                                <svg icon ibmIconAddComment16></svg>            
+                                <p>Comment</p>
+                            </ibm-overflow-menu-option>
+                            <ibm-overflow-menu-option>
+                                <svg icon ibmIconFlag16></svg>            
+                                <p>Flag</p>
+                            </ibm-overflow-menu-option>
+                            <ibm-overflow-menu-option>
+                                <svg icon ibmIconOverflowMenuVertical16></svg>            
+                                <p>Schedule</p>
+                            </ibm-overflow-menu-option>
+                        </ibm-overflow-menu>
+                    </div> -->
+                </ng-template>
             </div>
 
         </div>

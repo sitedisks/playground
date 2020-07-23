@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit, TemplateRef } from '@angular/core';
+import { TableModel, TableItem, TableHeaderItem } from 'carbon-components-angular';
 
 @Component({
 	selector: 'app-about',
@@ -18,9 +19,35 @@ export class AboutComponent implements OnInit {
 	phone_no = '';
 	phone_no_list = [];
 
+	table_model = new TableModel();
+	@ViewChild('linkTemplate', { static: true })
+	protected linkTemplate: TemplateRef<any>;
+
 	constructor() { }
 
 	ngOnInit() {
+		this.table_model.data = [
+			[
+				new TableItem({ data: "asdf" }),
+				new TableItem({ data: { id: "1" }, template: this.linkTemplate }),
+			],
+			[
+				new TableItem({ data: "csdf" }), 
+				new TableItem({ data: { id: "2" }, template: this.linkTemplate }),
+			],
+			[
+				new TableItem({ data: "bsdf" }), 
+				new TableItem({ data: { id: "3" }, template: this.linkTemplate }),
+			],
+			[
+				new TableItem({ data: "csdf" }), 
+				new TableItem({ data: { id: "4" }, template: this.linkTemplate }),
+			],
+		];
+		this.table_model.header = [
+			new TableHeaderItem({ data: 'Next Step' }),
+			new TableHeaderItem({ data: 'Select' })
+		];
 	}
 
 	stepSelected(event) {
@@ -37,7 +64,7 @@ export class AboutComponent implements OnInit {
 		this.phone_no = '';
 	};
 
-	removePHNumberHandler = () => { 
+	removePHNumberHandler = () => {
 		console.log('remove phone number');
 	};
 }
