@@ -1,0 +1,858 @@
+{
+    "PartyId": 300000053167314,
+    "PartyNumber": "165097",
+    "SourceSystem": null,
+    "SourceSystemReferenceValue": null,
+    "AccountPartyId": null,
+    "AccountPartyNumber": null,
+    "AccountSourceSystem": null,
+    "AccountSourceSystemReferenceValue": null,
+    "AccountName": null,
+    "PersonProfileId": 300000053167314,
+    "FirstName": "Diahann1",
+    "LastName": "Radnedge",
+    "LastNamePrefix": null,
+    "MiddleName": "Radnedge",
+    "UniqueNameSuffix": null,
+    "ContactName": "Diahann1 Radnedge Radnedge",
+    "PreviousLastName": null,
+    "SecondLastName": null,
+    "OwnerPartyId": 300000053195456,
+    "OwnerPartyNumber": "266288",
+    "OwnerEmailAddress": "DSS.Integration.User@dummy.com",
+    "OwnerName": "DSS Integration User",
+    "SalesProfileNumber": "101040",
+    "Type": "ZCA_CONTACT",
+    "ExistingCustomerFlag": false,
+    "ExistingCustomerFlagLastUpdateDate": null,
+    "NamedFlag": false,
+    "LastAssignmentDate": null,
+    "AssignmentExceptionFlag": false,
+    "SalesProfileStatus": "ACTIVE",
+    "TaxpayerIdentificationNumber": null,
+    "DateOfBirth": null,
+    "PlaceOfBirth": null,
+    "DateOfDeath": null,
+    "DeceasedFlag": false,
+    "Gender": null,
+    "MaritalStatus": null,
+    "MaritalStatusEffectiveDate": null,
+    "DeclaredEthnicity": null,
+    "PreferredFunctionalCurrency": null,
+    "PersonalIncomeAmount": null,
+    "HeadOfHouseholdFlag": false,
+    "HouseholdIncomeAmount": null,
+    "HouseholdSize": null,
+    "Salutation": null,
+    "SalutoryIntroduction": null,
+    "Title": null,
+    "AcademicTitle": null,
+    "Initials": null,
+    "RentOrOwnIndicator": null,
+    "CertificationLevel": null,
+    "CertificationReasonCode": null,
+    "Comments": null,
+    "PreferredContactMethod": null,
+    "FavoriteContactFlag": "false",
+    "Department": null,
+    "DepartmentCode": null,
+    "DoNotCallFlag": false,
+    "DoNotContactFlag": false,
+    "DoNotEmailFlag": false,
+    "DoNotMailFlag": false,
+    "JobTitle": null,
+    "JobTitleCode": null,
+    "LastContactDate": null,
+    "SalesAffinityCode": null,
+    "SalesBuyingRoleCode": null,
+    "CurrencyCode": "USD",
+    "DataCloudStatus": null,
+    "LastEnrichmentDate": null,
+    "PartyStatus": "A",
+    "PartyType": "PERSON",
+    "CreatedByModule": "HZ_WS",
+    "CreatedBy": "Portal.Integration.User",
+    "CreationDate": "2019-08-29T09:07:16.002+00:00",
+    "LastUpdateDate": "2020-07-24T03:18:42.169+00:00",
+    "LastUpdateLogin": "A6925672C8182DC2E053847F770A2BA6",
+    "LastUpdatedBy": "jatin.kumar",
+    "WorkPhoneContactPointType": "PHONE",
+    "WorkPhoneCountryCode": "1",
+    "WorkPhoneAreaCode": null,
+    "WorkPhoneNumber": "(436) 6543093",
+    "WorkPhoneExtension": null,
+    "FormattedWorkPhoneNumber": "+1 (436) 654-3093",
+    "RawWorkPhoneNumber": "1-(436) 6543093",
+    "MobileContactPointType": "PHONE",
+    "MobileCountryCode": "1",
+    "MobileAreaCode": null,
+    "MobileNumber": "(436) 6543093",
+    "MobileExtension": null,
+    "FormattedMobileNumber": "+1 (436) 654-3093",
+    "RawMobileNumber": "1-(436) 6543093",
+    "FaxContactPointType": null,
+    "FaxCountryCode": null,
+    "FaxAreaCode": null,
+    "FaxNumber": null,
+    "FaxExtension": null,
+    "FormattedFaxNumber": null,
+    "RawFaxNumber": null,
+    "HomePhoneContactPointType": null,
+    "HomePhoneCountryCode": null,
+    "HomePhoneAreaCode": null,
+    "HomePhoneNumber": null,
+    "FormattedHomePhoneNumber": null,
+    "RawHomePhoneNumber": null,
+    "EmailContactPointType": "EMAIL",
+    "EmailFormat": null,
+    "EmailAddress": "tradnedge13@hexun.com",
+    "PrimaryAddressId": null,
+    "PartyNumberKey": "165097",
+    "SellToPartySiteId": null,
+    "ClassificationCategory": null,
+    "ClassificationCode": null,
+    "ContactIsPrimaryForAccount": null,
+    "NameSuffix": null,
+    "ContactUniqueName": "Diahann1 Radnedge Radnedge",
+    "RecordSet": null,
+    "SourceObjectType": "SALES_PARTY_CONTACT",
+    "ContactRole": null,
+    "RegistrationStatus": null,
+    "UpdateFlag": false,
+    "DeleteFlag": false,
+    "AddressNumber": null,
+    "AddressElementAttribute1": null,
+    "AddressElementAttribute2": null,
+    "AddressElementAttribute3": null,
+    "AddressElementAttribute4": null,
+    "AddressElementAttribute5": null,
+    "AddressLine1": null,
+    "AddressLine2": null,
+    "AddressLine3": null,
+    "AddressLine4": null,
+    "Building": null,
+    "City": null,
+    "Country": null,
+    "County": null,
+    "FloorNumber": null,
+    "PostalCode": null,
+    "PostalPlus4Code": null,
+    "Province": null,
+    "State": null,
+    "Mailstop": null,
+    "AddressLinesPhonetic": null,
+    "AddressType": null,
+    "OverallPrimaryFormattedPhoneNumber": "+1 (436) 654-3093",
+    "OverallPrimaryPhoneContactPtId": 300000059298877,
+    "TimezoneCode": null,
+    "ConflictId": 0,
+    "PersonDEO_FlexID_c": null,
+    "PersonDEO_UserID_c": null,
+    "PersonDEO_PreferredName_c": null,
+    "PersonDEO_Facebook_c": null,
+    "PersonDEO_Twitter_c": null,
+    "PersonDEO_Linkedin_c": null,
+    "PersonDEO_PartyID_c": 300000053167314,
+    "PersonDEO_PartyID2_c": "300000053167314",
+    "PersonDEO_GoldenID_c": null,
+    "PersonDEO_GoldenIDFormula_c": null,
+    "PersonDEO_FlexIDFormula_c": null,
+    "PersonDEO_PreviousNameExists_c": null,
+    "PersonDEO_PreviousFirstName_c": null,
+    "PersonDEO_PreviousMiddleName_c": null,
+    "PersonDEO_PreviousNameTitle_c": null,
+    "PersonDEO_AllowConductCreditCheck_c": null,
+    "PersonDEO_AustralianResidentialStatus_c": null,
+    "PersonDEO_CountryOfCitizenship_Id_c": null,
+    "PersonDEO_CountryOfCitizenship_c": null,
+    "PersonDEO_CountryOfResidence_Id_c": null,
+    "PersonDEO_CountryOfResidence_c": null,
+    "PersonDEO_LastPublishedToDSS_c": "2019-10-13 23:38:27.288",
+    "PersonDEO_DSS_Status_c": "200",
+    "PersonDEO_LastResponseFromDSS_c": null,
+    "PersonDEO_DriverLicense_c": null,
+    "PersonDEO_PreviousName_c": null,
+    "PersonDEO_SelfEmployed_c": null,
+    "PersonDEO_Occupation_c": null,
+    "PersonDEO_ResponsibilityLoanWriter_c": null,
+    "PersonDEO_ResponsibilityMasterAgent_c": null,
+    "PersonDEO_ResponsibilityMASubOrg_c": null,
+    "PersonDEO_SSOEmail_c": null,
+    "PersonDEO_PostSettlementStatus_c": null,
+    "PersonDEO_ServicabilityGuarantor_c": null,
+    "PersonDEO_SecurityGuarantor_c": null,
+    "PersonDEO_BasisOfEmployment_c": null,
+    "PersonDEO_FlexUserName_c": null,
+    "PersonDEO_OrgId_c": null,
+    "PersonDEO_ParentApplicantId_c": null,
+    "PersonDEO_DriverLicense2_c": null,
+    "PersonDEO_HousingStatus_c": null,
+    "PersonDEO_ActiveDate_c": null,
+    "PersonDEO_EndDate_c": null,
+    "PersonDEO_OnlyOneTaxReturnIsAvailable_c": null,
+    "PersonDEO_NoTaxReturnFinancialStatementsAvailable_c": null,
+    "PersonDEO_DSSErrorLog_c": null,
+    "PersonDEO_DSSResponse_c": null,
+    "PersonDEO_EloquaContactId_c": null,
+    "PersonDEO_MemberType_c": null,
+    "PersonDEO_SecondaryAddressLine1_c": null,
+    "PersonDEO_SecondaryAddressLine2_c": null,
+    "PersonDEO_SecondaryAddressCity_c": null,
+    "PersonDEO_SecondaryAddressState_c": null,
+    "PersonDEO_SecondaryAddressCountry_Id_c": null,
+    "PersonDEO_SecondaryAddressCountry_c": null,
+    "PersonDEO_SecondaryAddressFlexId_c": null,
+    "PersonDEO_SecondaryAddressOECId_c": null,
+    "PersonDEO_Company_c": null,
+    "PersonDEO_SecondaryAddressPostalCode_c": null,
+    "PersonDEO_ContactAge_c": null,
+    "PersonDEO_FlexIntegrationID_c": null,
+    "PersonDEO_TakingResidence_c": null,
+    "PersonDEO_MailingAddressSameAsCurrent_c": null,
+    "PersonDEO_SecondaryAddressGNAFId_c": null,
+    "PersonDEO_PrimaryAddressGNAFId_c": null,
+    "PersonDEO_Availability_c": null,
+    "PersonDEO_PositionType_c": null,
+    "PersonDEO_ContactTeam_c": null,
+    "PersonDEO_BDM_c": null,
+    "PersonDEO_BDMState_c": null,
+    "PersonDEO_BRM_c": null,
+    "PersonDEO_RM_c": null,
+    "PersonDEO_CBDM_c": null,
+    "PersonDEO_PilotUser_c": null,
+    "PersonDEO_Region_c": null,
+    "PersonDEO_Timezone_c": null,
+    "PersonDEO_RetainedTrial_c": null,
+    "PersonDEO_AutherisedToReceiveCommunications_c": null,
+    "PersonDEO_AutherisedForCommissionQueries_c": null,
+    "PersonDEO_CommissionsEmail_c": null,
+    "PersonDEO_PrefferedComm_c": null,
+    "PersonDEO_DriversLicenseExpiry_c": null,
+    "PersonDEO_DrivesLicenseState_c": null,
+    "PersonDEO_BirthCity_c": null,
+    "PersonDEO_BirthCountry_Id_c": null,
+    "PersonDEO_BirthCountry_c": null,
+    "PersonDEO_BirthState_c": null,
+    "PersonDEO_DoNotEmailComplianceReports_c": null,
+    "PersonDEO_LeadAllocatedFlag_c": null,
+    "PersonDEO_TotalAccessStarts_c": null,
+    "PersonDEO_TotalAccessEnds_c": null,
+    "PersonDEO_SmartphoneSync_c": null,
+    "PersonDEO_SmartphoneSyncDisabledReason_c": null,
+    "PersonDEO_SalesTools_c": null,
+    "PersonDEO_SalesToolsDisabledReason_c": null,
+    "PersonDEO_SessionCounter_c": null,
+    "PersonDEO_FLEXTrainedDate_c": null,
+    "PersonDEO_ContractedLW_c": null,
+    "PersonDEO_ACNOfLicensee_c": null,
+    "PersonDEO_EDRScheme_c": null,
+    "PersonDEO_PM_c": null,
+    "PersonDEO_BRMText_c": null,
+    "PersonDEO_RMText_c": null,
+    "PersonDEO_CBDMText_c": null,
+    "PersonDEO_HomePhone_c": null,
+    "PersonDEO_Fax_c": null,
+    "PersonDEO_Position_c": null,
+    "PersonDEO_Responsibility_c": null,
+    "PersonDEO_OrgTradingName_c": null,
+    "PersonDEO_ParentOrgName_c": null,
+    "PersonDEO_PersonalAddress_c": null,
+    "PersonDEO_Suburb_c": null,
+    "PersonDEO_State_c": null,
+    "PersonDEO_PostCode_c": null,
+    "PersonDEO_BrandingOrg_Id_c": null,
+    "PersonDEO_BrandingOrg_c": null,
+    "PersonDEO_BrandingOrgName_c": null,
+    "PersonDEO_EmployedBy_c": null,
+    "PersonDEO_AuthorisedBy_c": null,
+    "PersonDEO_LicenceOption_c": null,
+    "PersonDEO_Licence_c": null,
+    "PersonDEO_LicenseStatus_c": null,
+    "PersonDEO_LicenceEntityName_c": null,
+    "PersonDEO_ACR_c": null,
+    "PersonDEO_AFGAuthorizationDate_c": null,
+    "PersonDEO_WorkAddress_c": null,
+    "PersonDEO_AddressPersonalAddress_c": null,
+    "PersonDEO_ComplaintsOfficerName_c": null,
+    "PersonDEO_ComplaintsOfficerEmail_c": null,
+    "PersonDEO_ComplaintsOfficerPhone_c": null,
+    "PersonDEO_ComplaintsOfficerAddress_c": null,
+    "PersonDEO_ApplicantType_c": null,
+    "PersonDEO_ActingOnBehalfOfATrust_c": null,
+    "PersonDEO_SpousePartnerDeFacto_c": null,
+    "PersonDEO_ForeignTaxResident_c": null,
+    "PersonDEO_ReferenceId_c": null,
+    "PersonDEO_BirthStateNew_c": null,
+    "PersonDEO_DriverLicenseState_c": null,
+    "PersonDEO_UserType_c": null,
+    "PersonDEO_OccupationNew_c": null,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097",
+            "name": "contacts",
+            "kind": "item",
+            "properties": {
+                "changeIndicator": "ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000005770400000005737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000067371007E0002000000097371007E0002000000057372001B6F7261636C652E6A626F2E646F6D61696E2E4E756C6C56616C75655899C1C58DAABEEB02000149000A6D53514C54797065496478700000000C71007E000878"
+            }
+        },
+        {
+            "rel": "canonical",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097",
+            "name": "contacts",
+            "kind": "item"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_CountryOfCitizenship_c",
+            "name": "PersonDEO_LOVVA_For_CountryOfCitizenship_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_OnlyOneTaxReturnIsAvailable_c",
+            "name": "PersonDEO_LOVVA_For_OnlyOneTaxReturnIsAvailable_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_FK_LOVVA_For_SecondaryAddressCountry_c",
+            "name": "PersonDEO_FK_LOVVA_For_SecondaryAddressCountry_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/JobTitleCodeLookupLOV",
+            "name": "JobTitleCodeLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_BrandingOrg_c",
+            "name": "PersonDEO_LOVVA_For_BrandingOrg_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_BasisOfEmployment_c",
+            "name": "PersonDEO_LOVVA_For_BasisOfEmployment_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_Company_c",
+            "name": "PersonDEO_LOVVA_For_Company_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/SalesProfileTypeLookupLOV",
+            "name": "SalesProfileTypeLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/HomePhoneCountryCodeLOV",
+            "name": "HomePhoneCountryCodeLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_AllowConductCreditCheck_c",
+            "name": "PersonDEO_LOVVA_For_AllowConductCreditCheck_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_BirthStateNew_c",
+            "name": "PersonDEO_LOVVA_For_BirthStateNew_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/SalesBuyingRoleCodeLookupLOV",
+            "name": "SalesBuyingRoleCodeLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_ForeignTaxResident_c",
+            "name": "PersonDEO_LOVVA_For_ForeignTaxResident_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_SmartphoneSyncDisabledReason_c",
+            "name": "PersonDEO_LOVVA_For_SmartphoneSyncDisabledReason_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/CertificationLevelLookupLOV",
+            "name": "CertificationLevelLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_FK_LOVVA_For_CountryOfResidence_c",
+            "name": "PersonDEO_FK_LOVVA_For_CountryOfResidence_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_Availability_c",
+            "name": "PersonDEO_LOVVA_For_Availability_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_MailingAddressSameAsCurrent_c",
+            "name": "PersonDEO_LOVVA_For_MailingAddressSameAsCurrent_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_DriverLicenseState_c",
+            "name": "PersonDEO_LOVVA_For_DriverLicenseState_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_AutherisedForCommissionQueries_c",
+            "name": "PersonDEO_LOVVA_For_AutherisedForCommissionQueries_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/CurrenciesLOV",
+            "name": "CurrenciesLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_SalesToolsDisabledReason_c",
+            "name": "PersonDEO_LOVVA_For_SalesToolsDisabledReason_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_UserType_c",
+            "name": "PersonDEO_LOVVA_For_UserType_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/DepartmentCodeLookupLOV",
+            "name": "DepartmentCodeLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_ServicabilityGuarantor_c",
+            "name": "PersonDEO_LOVVA_For_ServicabilityGuarantor_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_ResponsibilityMASubOrg_c",
+            "name": "PersonDEO_LOVVA_For_ResponsibilityMASubOrg_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_FK_LOVVA_For_BirthCountry_c",
+            "name": "PersonDEO_FK_LOVVA_For_BirthCountry_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_EDRScheme_c",
+            "name": "PersonDEO_LOVVA_For_EDRScheme_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/RegistrationStatusLookupLOV",
+            "name": "RegistrationStatusLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_LeadAllocatedFlag_c",
+            "name": "PersonDEO_LOVVA_For_LeadAllocatedFlag_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_SecurityGuarantor_c",
+            "name": "PersonDEO_LOVVA_For_SecurityGuarantor_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/TimezoneVA",
+            "name": "TimezoneVA",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/SalesProfileStatusLookupLOV",
+            "name": "SalesProfileStatusLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/StatusLOV",
+            "name": "StatusLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/RentOwnIndLookupLOV",
+            "name": "RentOwnIndLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_NoTaxReturnFinancialStatementsAvailable_c",
+            "name": "PersonDEO_LOVVA_For_NoTaxReturnFinancialStatementsAvailable_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonPreNameAdjunctLookupVO",
+            "name": "PersonPreNameAdjunctLookupVO",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/DoNotMailFlagLookupLOV",
+            "name": "DoNotMailFlagLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/SalesAffinityCodeLookupLOV",
+            "name": "SalesAffinityCodeLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_FK_LOVVA_For_CountryOfCitizenship_c",
+            "name": "PersonDEO_FK_LOVVA_For_CountryOfCitizenship_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_SelfEmployed_c",
+            "name": "PersonDEO_LOVVA_For_SelfEmployed_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_ContractedLW_c",
+            "name": "PersonDEO_LOVVA_For_ContractedLW_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_SpousePartnerDeFacto_c",
+            "name": "PersonDEO_LOVVA_For_SpousePartnerDeFacto_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/FaxCountryCodeLOV",
+            "name": "FaxCountryCodeLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_PrefferedComm_c",
+            "name": "PersonDEO_LOVVA_For_PrefferedComm_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/CountriesLOV",
+            "name": "CountriesLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_SmartphoneSync_c",
+            "name": "PersonDEO_LOVVA_For_SmartphoneSync_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/WorkPhoneCountryCodeLOV",
+            "name": "WorkPhoneCountryCodeLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/DoNotEmailFlagLookupLOV",
+            "name": "DoNotEmailFlagLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_ActingOnBehalfOfATrust_c",
+            "name": "PersonDEO_LOVVA_For_ActingOnBehalfOfATrust_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_OccupationNew_c",
+            "name": "PersonDEO_LOVVA_For_OccupationNew_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_AutherisedToReceiveCommunications_c",
+            "name": "PersonDEO_LOVVA_For_AutherisedToReceiveCommunications_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_ResponsibilityLoanWriter_c",
+            "name": "PersonDEO_LOVVA_For_ResponsibilityLoanWriter_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_ApplicantType_c",
+            "name": "PersonDEO_LOVVA_For_ApplicantType_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_PreviousNameExists_c",
+            "name": "PersonDEO_LOVVA_For_PreviousNameExists_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_AustralianResidentialStatus_c",
+            "name": "PersonDEO_LOVVA_For_AustralianResidentialStatus_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_SecondaryAddressCountry_c",
+            "name": "PersonDEO_LOVVA_For_SecondaryAddressCountry_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/GenderLookupLOV",
+            "name": "GenderLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/MobileCountryCodeLOV",
+            "name": "MobileCountryCodeLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_FK_LOVVA_For_BrandingOrg_c",
+            "name": "PersonDEO_FK_LOVVA_For_BrandingOrg_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_DoNotEmailComplianceReports_c",
+            "name": "PersonDEO_LOVVA_For_DoNotEmailComplianceReports_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/DoNotContactFlagLookupLOV",
+            "name": "DoNotContactFlagLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/CertificationReasonCodeLookupLOV",
+            "name": "CertificationReasonCodeLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_RetainedTrial_c",
+            "name": "PersonDEO_LOVVA_For_RetainedTrial_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/DoNotCallFlagLookupLOV",
+            "name": "DoNotCallFlagLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_ResponsibilityMasterAgent_c",
+            "name": "PersonDEO_LOVVA_For_ResponsibilityMasterAgent_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_PilotUser_c",
+            "name": "PersonDEO_LOVVA_For_PilotUser_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/DataCloudStatusLookupLOV",
+            "name": "DataCloudStatusLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/MaritalStatusLookupLOV",
+            "name": "MaritalStatusLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_SalesTools_c",
+            "name": "PersonDEO_LOVVA_For_SalesTools_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_BirthCountry_c",
+            "name": "PersonDEO_LOVVA_For_BirthCountry_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PreferredContactMethodLOV",
+            "name": "PreferredContactMethodLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/PersonDEO_LOVVA_For_CountryOfResidence_c",
+            "name": "PersonDEO_LOVVA_For_CountryOfResidence_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/RatedCurrenciesLOV",
+            "name": "RatedCurrenciesLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/ContactRoleLookupLOV",
+            "name": "ContactRoleLookupLOV",
+            "kind": "collection"
+        },
+        {
+            "rel": "lov",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/lov/SearchFilters",
+            "name": "SearchFilters",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/AdditionalIdentifier",
+            "name": "AdditionalIdentifier",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/AdditionalName",
+            "name": "AdditionalName",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/Address",
+            "name": "Address",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/Attachment",
+            "name": "Attachment",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/ContactPoint",
+            "name": "ContactPoint",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/CustomerClassification",
+            "name": "CustomerClassification",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/Note",
+            "name": "Note",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/PersonDEO_EmploymentHistory_ContactToEmploymentHistory_Tgt",
+            "name": "PersonDEO_EmploymentHistory_ContactToEmploymentHistory_Tgt",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/PersonDEO_PartnerContactAddressCollection_c",
+            "name": "PersonDEO_PartnerContactAddressCollection_c",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/PictureAttachment",
+            "name": "PictureAttachment",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/PrimaryAddress",
+            "name": "PrimaryAddress",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/Relationship",
+            "name": "Relationship",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/SalesTeamMember",
+            "name": "SalesTeamMember",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/SourceSystemReference",
+            "name": "SourceSystemReference",
+            "kind": "collection"
+        },
+        {
+            "rel": "child",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/child/smartActions",
+            "name": "smartActions",
+            "kind": "collection"
+        },
+        {
+            "rel": "enclosure",
+            "href": "https://bry-dev3.fa.ap1.oraclecloud.com:443/crmRestApi/resources/11.13.18.05/contacts/165097/enclosure/PersonDEO_Notes_c",
+            "name": "PersonDEO_Notes_c",
+            "kind": "other"
+        }
+    ]
+}
