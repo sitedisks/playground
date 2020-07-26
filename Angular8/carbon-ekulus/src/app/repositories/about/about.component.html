@@ -28,7 +28,7 @@
         </div>
         <div ibmCol [columnNumbers]="{'lg': 3}">
             <button ibmButton="primary">
-                Add applicant <svg icon ibmIconAdd16 class="bx--btn__icon"></svg>
+                Add applicant <svg icon ibmIconAdd size="16" class="bx--btn__icon"></svg>
             </button>
         </div>
     </div>
@@ -48,15 +48,15 @@
                 <div ibmCol [columnNumbers]="{'lg': 7}">
                     <ibm-label [invalid]="false" invalidText="invalidText">
                         First Name
-                        <input ibmText [invalid]="false" [disabled]="false" theme="dark"
-                            placeholder="Placeholder text" [autocomplete]="false">
+                        <input ibmText [invalid]="false" [disabled]="false" theme="dark" placeholder="Placeholder text"
+                            [autocomplete]="false">
                     </ibm-label>
                 </div>
                 <div ibmCol [columnNumbers]="{'lg': 7}">
                     <ibm-label [invalid]="false" invalidText="invalidText">
                         Surname
-                        <input ibmText [invalid]="false" [disabled]="false" theme="dark"
-                            placeholder="Placeholder text" [autocomplete]="false">
+                        <input ibmText [invalid]="false" [disabled]="false" theme="dark" placeholder="Placeholder text"
+                            [autocomplete]="false">
                     </ibm-label>
                 </div>
             </div>
@@ -139,8 +139,8 @@
             </div>
             <div ibmRow class="ibRow-mb">
                 <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <button ibmButton="Tertiary" (click)="savePHNumberHandler()">
-                        Save number <svg icon ibmIconAdd16 class="bx--btn__icon"></svg>
+                    <button ibmButton="tertiary" (click)="savePHNumberHandler()">
+                        Save number <svg icon ibmIconAdd size="16" class="bx--btn__icon"></svg>
                     </button>
                 </div>
             </div>
@@ -151,8 +151,9 @@
                             <ibm-list-column>Phone</ibm-list-column>
                             <ibm-list-column nowrap="true">{{item}}</ibm-list-column>
                             <ibm-list-column>
-                                <svg icon ibmIconDelete16 class="bx--btn__icon" (click)="removePHNumberHandler()"></svg>
-                                <svg icon ibmIconEdit16 class="bx--btn__icon"></svg>
+                                <svg icon ibmIconDelete size="16" class="bx--btn__icon"
+                                    (click)="removePHNumberHandler()"></svg>
+                                <svg icon ibmIconEdit size="16" class="bx--btn__icon"></svg>
                             </ibm-list-column>
                         </ibm-list-row>
 
@@ -170,8 +171,8 @@
             </div>
             <div ibmRow class="ibRow-mb">
                 <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <button ibmButton="Tertiary">
-                        Add email address <svg icon ibmIconAdd16 class="bx--btn__icon"></svg>
+                    <button ibmButton="tertiary">
+                        Add email address <svg icon ibmIconAdd size="16" class="bx--btn__icon"></svg>
                     </button>
                 </div>
             </div>
@@ -187,16 +188,16 @@
                             <ibm-list-column>Email</ibm-list-column>
                             <ibm-list-column nowrap="true">john.smith@mail.com</ibm-list-column>
                             <ibm-list-column>
-                                <svg icon ibmIconDelete16 class="bx--btn__icon"></svg>
-                                <svg icon ibmIconEdit16 class="bx--btn__icon"></svg>
+                                <svg icon ibmIconDelete size="16" class="bx--btn__icon"></svg>
+                                <svg icon ibmIconEdit size="16" class="bx--btn__icon"></svg>
                             </ibm-list-column>
                         </ibm-list-row>
                         <ibm-list-row>
                             <ibm-list-column>Email</ibm-list-column>
                             <ibm-list-column nowrap="true">helen.smith@mail.com</ibm-list-column>
                             <ibm-list-column>
-                                <svg icon ibmIconDelete16 class="bx--btn__icon"></svg>
-                                <svg icon ibmIconEdit16 class="bx--btn__icon"></svg>
+                                <svg icon ibmIconDelete size="16" class="bx--btn__icon"></svg>
+                                <svg icon ibmIconEdit size="16" class="bx--btn__icon"></svg>
                             </ibm-list-column>
                         </ibm-list-row>
                     </ibm-structured-list>
@@ -273,8 +274,8 @@
 
             <div ibmRow class="ibmRow-mb">
                 <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <button ibmButton="Tertiary">
-                        Add additional history <svg icon ibmIconAdd16 class="bx--btn__icon"></svg>
+                    <button ibmButton="tertiary">
+                        Add additional history <svg icon ibmIconAdd size="16" class="bx--btn__icon"></svg>
                     </button>
                 </div>
             </div>
@@ -336,30 +337,31 @@
 
             <div ibmRow class="ibmRow-mb">
                 <ibm-table-container>
-                    <ibm-table [model]="table_model" [stickyHeader]="false" [skeleton]="false" [showSelectionColumn]="false" [striped]="false"
-                        [sortable]="false" [isDataGrid]="false">
+                    <ibm-table [model]="table_model" [stickyHeader]="false" [skeleton]="false"
+                        [showSelectionColumn]="false" [striped]="false" [sortable]="false" [isDataGrid]="false">
                     </ibm-table>
                 </ibm-table-container>
                 <ng-template #linkTemplate let-data="data">
                     {{data.id}}
-                    <svg icon ibmIconDelete16 class="bx--btn__icon"></svg> 
-                    <svg icon ibmIconEdit16 class="bx--btn__icon"></svg>
+                    
+                    <svg icon ibmIconDelete size="16" class="bx--btn__icon"></svg>
+                    <svg icon ibmIconEdit size="16" class="bx--btn__icon"></svg>
                     <!-- <div>
                         <ibm-overflow-menu>
                             <ibm-overflow-menu-option>
-                                <svg icon ibmIconReply16></svg>            
+                                <svg icon ibmIconReply size="16"></svg>            
                                 <p>Review</p>
                             </ibm-overflow-menu-option>
                             <ibm-overflow-menu-option>
-                                <svg icon ibmIconAddComment16></svg>            
+                                <svg icon ibmIconAddComment size="16"></svg>            
                                 <p>Comment</p>
                             </ibm-overflow-menu-option>
                             <ibm-overflow-menu-option>
-                                <svg icon ibmIconFlag16></svg>            
+                                <svg icon ibmIconFlag size="16"></svg>            
                                 <p>Flag</p>
                             </ibm-overflow-menu-option>
                             <ibm-overflow-menu-option>
-                                <svg icon ibmIconOverflowMenuVertical16></svg>            
+                                <svg icon ibmIconOverflowMenuVertical size="16"></svg>            
                                 <p>Schedule</p>
                             </ibm-overflow-menu-option>
                         </ibm-overflow-menu>
