@@ -8,6 +8,7 @@ import { TableModel, TableItem, TableHeaderItem } from 'carbon-components-angula
 })
 export class AboutComponent implements OnInit {
 	message = "Contact Us";
+	dark = "dark";
 	ibmButton = "primary";
 	currentStep = 0;
 	stepName = "About you";

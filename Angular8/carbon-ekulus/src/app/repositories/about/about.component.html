@@ -48,14 +48,14 @@
                 <div ibmCol [columnNumbers]="{'lg': 7}">
                     <ibm-label [invalid]="false" invalidText="invalidText">
                         First Name
-                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                        <input ibmText [invalid]="false" [disabled]="false" theme="dark"
                             placeholder="Placeholder text" [autocomplete]="false">
                     </ibm-label>
                 </div>
                 <div ibmCol [columnNumbers]="{'lg': 7}">
                     <ibm-label [invalid]="false" invalidText="invalidText">
                         Surname
-                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                        <input ibmText [invalid]="false" [disabled]="false" theme="dark"
                             placeholder="Placeholder text" [autocomplete]="false">
                     </ibm-label>
                 </div>
@@ -265,8 +265,8 @@
                         type: 'error',
                         title: '2yr history required',
                         message: 'You must provide at least 2yrs of residential history. Press add below to include more residential history.',
-                        showClose: showClose,
-                        lowContrast: lowContrast}">
+                        showClose: true,
+                        lowContrast: true}">
                     </ibm-notification>
                 </div>
             </div>
