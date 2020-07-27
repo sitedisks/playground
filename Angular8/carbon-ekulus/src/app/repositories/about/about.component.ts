@@ -1,5 +1,6 @@
 import { Component, ViewChild, OnInit, TemplateRef } from '@angular/core';
 import { TableModel, TableItem, TableHeaderItem } from 'carbon-components-angular';
+import { FormBuilder, Form, Validators } from '@angular/forms';
 
 @Component({
 	selector: 'app-about',
@@ -24,7 +25,11 @@ export class AboutComponent implements OnInit {
 	@ViewChild('linkTemplate', { static: true })
 	protected linkTemplate: TemplateRef<any>;
 
-	constructor() { }
+	constructor(private fb: FormBuilder ) { }
+
+	contactForm = this.fb.group({
+		PersonFirstName: [{ value: '', disabled: false }, [Validators.required, Validators.min(1), Validators.max(50)]],
+	});
 
 	ngOnInit() {
 		this.table_model.data = [
@@ -33,15 +38,15 @@ export class AboutComponent implements OnInit {
 				new TableItem({ data: { id: "1" }, template: this.linkTemplate }),
 			],
 			[
-				new TableItem({ data: "csdf" }), 
+				new TableItem({ data: "csdf" }),
 				new TableItem({ data: { id: "2" }, template: this.linkTemplate }),
 			],
 			[
-				new TableItem({ data: "bsdf" }), 
+				new TableItem({ data: "bsdf" }),
 				new TableItem({ data: { id: "3" }, template: this.linkTemplate }),
 			],
 			[
-				new TableItem({ data: "csdf" }), 
+				new TableItem({ data: "csdf" }),
 				new TableItem({ data: { id: "4" }, template: this.linkTemplate }),
 			],
 		];
@@ -68,4 +73,8 @@ export class AboutComponent implements OnInit {
 	removePHNumberHandler = () => {
 		console.log('remove phone number');
 	};
+
+	onContactFormSubmit = () => {
+		console.log('submit');
+	}
 }

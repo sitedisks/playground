@@ -1,375 +1,380 @@
-<div ibmGrid class="about-you">
-    <div ibmRow>
-        <div ibmCol [columnNumbers]="{'lg': 12}" class="application-details">
-            <h2>John Smith - Application</h2>
-            <h1>20 Denham Way, Thornlie 6108 WA</h1>
+<form [formGroup]="contactForm" (ngSubmit)="onContactFormSubmit()">
+    <div ibmGrid class="about-you">
+        <div ibmRow>
+            <div ibmCol [columnNumbers]="{'lg': 12}" class="application-details">
+                <h2>John Smith - Application</h2>
+                <h1>20 Denham Way, Thornlie 6108 WA</h1>
+            </div>
+        </div>
+        <div ibmRow>
+            <div ibmCol [columnNumbers]="{'lg': 3}">
+                {{stepName}}
+            </div>
+            <div ibmCol [columnNumbers]="{'lg': 6}">
+                <ibm-tabs [followFocus]="followFocus" [isNavigation]="isNavigation" [cacheActive]="cacheActive">
+                    <ibm-tab heading="John Smith"></ibm-tab>
+                    <ibm-tab heading="Helen Smith"></ibm-tab>
+                </ibm-tabs>
+                <!-- <ibm-overflow-menu [offset]="offset">
+                    <ibm-overflow-menu-option>
+                        Karen Smith
+                    </ibm-overflow-menu-option>
+                    <ibm-overflow-menu-option>
+                        Timothy Smith
+                    </ibm-overflow-menu-option>
+                    <ibm-overflow-menu-option>
+                        Peter Smith
+                    </ibm-overflow-menu-option>
+                </ibm-overflow-menu> -->
+            </div>
+            <div ibmCol [columnNumbers]="{'lg': 3}">
+                <button ibmButton="primary">
+                    Add applicant <svg icon ibmIconAdd size="16" class="bx--btn__icon"></svg>
+                </button>
+            </div>
+        </div>
+        <div ibmRow>
+            <div ibmCol [columnNumbers]="{'lg': 3}">
+                <ibm-progress-indicator orientation="vertical" [steps]='[
+                {text: "About you", state: ["current"]},
+                {text: "Your goals", state: ["incomplete"]},
+                {text: "Financial position", state: ["incomplete"]},
+                {text: "Documents", state: ["incomplete"]},
+                {text: "Select a product", state: ["incomplete"]}
+                ]' [current]="currentStep" (stepSelected)="stepSelected($event)">
+                </ibm-progress-indicator>
+            </div>
+            <div ibmCol [columnNumbers]="{'lg': 9}">
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-label [invalid]="false" invalidText="invalidText">
+                            First Name
+                            <input ibmText [invalid]="false" [disabled]="false" theme="dark"
+                                placeholder="Placeholder text" [autocomplete]="false">
+                        </ibm-label>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-label [invalid]="false" invalidText="invalidText">
+                            Surname
+                            <input ibmText [invalid]="false" [disabled]="false" theme="dark"
+                                placeholder="Placeholder text" [autocomplete]="false">
+                        </ibm-label>
+                    </div>
+                </div>
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-select label="Residency status" display="default">
+                            <option value="" disabled selected hidden>Please select</option>
+                            <option value="non-resident">Non Resident</option>
+                            <option value="permanently">Permanently in Australia</option>
+                            <option value="temporarily">Temporarily in Australia</option>
+                        </ibm-select>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-select label="Principle foreign residence" display="default">
+                            <option value="" disabled selected hidden>Please select</option>
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                        </ibm-select>
+                    </div>
+                </div>
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 14}">
+                        <ibm-select label="Citizenship" display="default">
+                            <option value="" disabled selected hidden>Please select</option>
+                            <option value="option1">AD</option>
+                            <option value="option2">AE</option>
+                            <option value="option3">AF</option>
+                            <option value="option4">AG</option>
+                            <option value="option5">AI</option>
+                            <option value="option6">AL</option>
+                            <option value="option7">AM</option>
+                            <option value="option8">AO</option>
+                        </ibm-select>
+                    </div>
+                </div>
+                <hr>
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 14}">
+                        <ibm-select label="Marital status" display="default">
+                            <option value="op1">De Facto</option>
+                            <option value="op2">Divorced</option>
+                            <option value="op3">Married</option>
+                            <option value="op4">Separated</option>
+                            <option value="op5">Single</option>
+                            <option value="op6">Unknown</option>
+                            <option value="op7">Windowed</option>
+                        </ibm-select>
+                    </div>
+                </div>
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-select label="Spouse/Partner/Defacto" display="default">
+                            <option value="op1">Non Loan Party</option>
+                        </ibm-select>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-select label="Customer type" display="default">
+                            <option value="option1">Third party</option>
+                        </ibm-select>
+                    </div>
+                </div>
+                <hr>
+
+                <p>Phone number section</p>
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-select label="Phone number type">
+                            <option value="mobile">Mobile</option>
+                            <option value="workphone">Work Phone</option>
+                            <option value="homephone">Home Phone</option>
+                        </ibm-select>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-label [invalid]="false" invalidText="invalidText">
+                            Mobile number
+                            <input ibmText placeholder="Placeholder text" [(ngModel)]="phone_no">
+                        </ibm-label>
+                    </div>
+                </div>
+                <div ibmRow class="ibRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <button ibmButton="tertiary" (click)="savePHNumberHandler()">
+                            Save number <svg icon ibmIconAdd size="16" class="bx--btn__icon"></svg>
+                        </button>
+                    </div>
+                </div>
+                <div ibmRow class="ibRow-mb" *ngIf="phone_no_list.length>0">
+                    <div ibmCol [columnNumbers]="{'lg': 12}">
+                        <ibm-structured-list [border]="false" [condensed]="false" [nowrap]="true">
+                            <ibm-list-row *ngFor="let item of phone_no_list">
+                                <ibm-list-column>Phone</ibm-list-column>
+                                <ibm-list-column nowrap="true">{{item}}</ibm-list-column>
+                                <ibm-list-column>
+                                    <svg icon ibmIconDelete size="16" class="bx--btn__icon"
+                                        (click)="removePHNumberHandler()"></svg>
+                                    <svg icon ibmIconEdit size="16" class="bx--btn__icon"></svg>
+                                </ibm-list-column>
+                            </ibm-list-row>
+
+                        </ibm-structured-list>
+                    </div>
+                </div>
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-label [invalid]="false" invalidText="invalidText">
+                            Primary email address
+                            <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                                placeholder="enter email address" [autocomplete]="false">
+                        </ibm-label>
+                    </div>
+                </div>
+                <div ibmRow class="ibRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <button ibmButton="tertiary">
+                            Add email address <svg icon ibmIconAdd size="16" class="bx--btn__icon"></svg>
+                        </button>
+                    </div>
+                </div>
+                <div ibmRow class="ibRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 12}">
+                        <ibm-structured-list [border]="true" [condensed]="false" [nowrap]="true">
+                            <!-- <ibm-list-header>
+                                <ibm-list-column nowrap="true">Column 1</ibm-list-column>
+                                <ibm-list-column nowrap="true">Column 2</ibm-list-column>
+                                <ibm-list-column>Column 3</ibm-list-column>
+                            </ibm-list-header> -->
+                            <ibm-list-row>
+                                <ibm-list-column>Email</ibm-list-column>
+                                <ibm-list-column nowrap="true">john.smith@mail.com</ibm-list-column>
+                                <ibm-list-column>
+                                    <svg icon ibmIconDelete size="16" class="bx--btn__icon"></svg>
+                                    <svg icon ibmIconEdit size="16" class="bx--btn__icon"></svg>
+                                </ibm-list-column>
+                            </ibm-list-row>
+                            <ibm-list-row>
+                                <ibm-list-column>Email</ibm-list-column>
+                                <ibm-list-column nowrap="true">helen.smith@mail.com</ibm-list-column>
+                                <ibm-list-column>
+                                    <svg icon ibmIconDelete size="16" class="bx--btn__icon"></svg>
+                                    <svg icon ibmIconEdit size="16" class="bx--btn__icon"></svg>
+                                </ibm-list-column>
+                            </ibm-list-row>
+                        </ibm-structured-list>
+                    </div>
+                </div>
+
+                <p>Residential address</p>
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 14}">
+                        <ibm-search></ibm-search>
+                    </div>
+                </div>
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-label [invalid]="false" invalidText="invalidText">
+                            Address 1
+                            <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                                placeholder="Required field">
+                        </ibm-label>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-label [invalid]="false" invalidText="invalidText">
+                            Address 2 (optional)
+                            <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                                placeholder="Unit #, Apt, Suite">
+                        </ibm-label>
+                    </div>
+                </div>
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-select label="State">
+                            <option value="" disabled selected hidden>Please select</option>
+                            <option value="act">Australian Capital Territory</option>
+                            <option value="nsw">New South Wales</option>
+                            <option value="nt">Northern Territory</option>
+                            <option value="qld">Queensland</option>
+                            <option value="sa">South Australia</option>
+                            <option value="tas">Tasmania</option>
+                            <option value="vic">Victoria</option>
+                            <option value="wa">Western Australia</option>
+                        </ibm-select>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-label [invalid]="false" invalidText="invalidText">
+                            Postcode
+                            <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                                placeholder="Enter 4 digit postcode">
+                        </ibm-label>
+                    </div>
+                </div>
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-date-picker width=100% label="Date of birth" placeholder="dd/mm/yyyy" language="en"
+                            [theme]="dark" [disabled]=false [invalid]=false invalidText="Incorrect date"
+                            dateFormat="d/m/y">
+                        </ibm-date-picker>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+
+                        <ibm-checkbox class="prefered-contact-check-box" (change)="takeResidenceHandler($event)">
+                            Taking residence
+                        </ibm-checkbox>
+                    </div>
+                </div>
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 14}">
+                        <ibm-notification [notificationObj]="{
+                            type: 'error',
+                            title: '2yr history required',
+                            message: 'You must provide at least 2yrs of residential history. Press add below to include more residential history.',
+                            showClose: true,
+                            lowContrast: true}">
+                        </ibm-notification>
+                    </div>
+                </div>
+
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <button ibmButton="tertiary">
+                            Add additional history <svg icon ibmIconAdd size="16" class="bx--btn__icon"></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 14}">
+                        <ibm-select label="State">
+                            <option value="" disabled selected hidden>Please select</option>
+
+                        </ibm-select>
+                    </div>
+                </div>
+
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 14}">
+                        <ibm-checkbox class="prefered-contact-check-box">
+                            Same as residential
+                        </ibm-checkbox>
+                    </div>
+                </div>
+
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-label [invalid]="false" invalidText="invalidText">
+                            Address 1
+                            <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                                placeholder="Required field">
+                        </ibm-label>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-label [invalid]="false" invalidText="invalidText">
+                            Address 2 (optional)
+                            <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                                placeholder="Unit #, Apt, Suite">
+                        </ibm-label>
+                    </div>
+                </div>
+                <div ibmRow class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-select label="State">
+                            <option value="" disabled selected hidden>Please select</option>
+                            <option value="act">Australian Capital Territory</option>
+                            <option value="nsw">New South Wales</option>
+                            <option value="nt">Northern Territory</option>
+                            <option value="qld">Queensland</option>
+                            <option value="sa">South Australia</option>
+                            <option value="tas">Tasmania</option>
+                            <option value="vic">Victoria</option>
+                            <option value="wa">Western Australia</option>
+                        </ibm-select>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-label [invalid]="false" invalidText="invalidText">
+                            Postcode
+                            <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
+                                placeholder="Enter 4 digit postcode">
+                        </ibm-label>
+                    </div>
+                </div>
+
+                <div ibmRow class="ibmRow-mb">
+                    <ibm-table-container>
+                        <ibm-table [model]="table_model" [stickyHeader]="false" [skeleton]="false"
+                            [showSelectionColumn]="false" [striped]="false" [sortable]="false" [isDataGrid]="false">
+                        </ibm-table>
+                    </ibm-table-container>
+                    <ng-template #linkTemplate let-data="data">
+                        {{data.id}}
+
+                        <svg icon ibmIconDelete size="16" class="bx--btn__icon"></svg>
+                        <svg icon ibmIconEdit size="16" class="bx--btn__icon"></svg>
+                        <!-- <div>
+                            <ibm-overflow-menu>
+                                <ibm-overflow-menu-option>
+                                    <svg icon ibmIconReply size="16"></svg>            
+                                    <p>Review</p>
+                                </ibm-overflow-menu-option>
+                                <ibm-overflow-menu-option>
+                                    <svg icon ibmIconAddComment size="16"></svg>            
+                                    <p>Comment</p>
+                                </ibm-overflow-menu-option>
+                                <ibm-overflow-menu-option>
+                                    <svg icon ibmIconFlag size="16"></svg>            
+                                    <p>Flag</p>
+                                </ibm-overflow-menu-option>
+                                <ibm-overflow-menu-option>
+                                    <svg icon ibmIconOverflowMenuVertical size="16"></svg>            
+                                    <p>Schedule</p>
+                                </ibm-overflow-menu-option>
+                            </ibm-overflow-menu>
+                        </div> -->
+                    </ng-template>
+                </div>
+
+            </div>
+
         </div>
     </div>
-    <div ibmRow>
-        <div ibmCol [columnNumbers]="{'lg': 3}">
-            {{stepName}}
-        </div>
-        <div ibmCol [columnNumbers]="{'lg': 6}">
-            <ibm-tabs [followFocus]="followFocus" [isNavigation]="isNavigation" [cacheActive]="cacheActive">
-                <ibm-tab heading="John Smith"></ibm-tab>
-                <ibm-tab heading="Helen Smith"></ibm-tab>
-            </ibm-tabs>
-            <!-- <ibm-overflow-menu [offset]="offset">
-                <ibm-overflow-menu-option>
-                    Karen Smith
-                </ibm-overflow-menu-option>
-                <ibm-overflow-menu-option>
-                    Timothy Smith
-                </ibm-overflow-menu-option>
-                <ibm-overflow-menu-option>
-                    Peter Smith
-                </ibm-overflow-menu-option>
-            </ibm-overflow-menu> -->
-        </div>
-        <div ibmCol [columnNumbers]="{'lg': 3}">
-            <button ibmButton="primary">
-                Add applicant <svg icon ibmIconAdd size="16" class="bx--btn__icon"></svg>
-            </button>
-        </div>
-    </div>
-    <div ibmRow>
-        <div ibmCol [columnNumbers]="{'lg': 3}">
-            <ibm-progress-indicator orientation="vertical" [steps]='[
-            {text: "About you", state: ["current"]},
-            {text: "Your goals", state: ["incomplete"]},
-            {text: "Financial position", state: ["incomplete"]},
-            {text: "Documents", state: ["incomplete"]},
-            {text: "Select a product", state: ["incomplete"]}
-            ]' [current]="currentStep" (stepSelected)="stepSelected($event)">
-            </ibm-progress-indicator>
-        </div>
-        <div ibmCol [columnNumbers]="{'lg': 9}">
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-label [invalid]="false" invalidText="invalidText">
-                        First Name
-                        <input ibmText [invalid]="false" [disabled]="false" theme="dark" placeholder="Placeholder text"
-                            [autocomplete]="false">
-                    </ibm-label>
-                </div>
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-label [invalid]="false" invalidText="invalidText">
-                        Surname
-                        <input ibmText [invalid]="false" [disabled]="false" theme="dark" placeholder="Placeholder text"
-                            [autocomplete]="false">
-                    </ibm-label>
-                </div>
-            </div>
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-select label="Residency status" display="default">
-                        <option value="" disabled selected hidden>Please select</option>
-                        <option value="non-resident">Non Resident</option>
-                        <option value="permanently">Permanently in Australia</option>
-                        <option value="temporarily">Temporarily in Australia</option>
-                    </ibm-select>
-                </div>
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-select label="Principle foreign residence" display="default">
-                        <option value="" disabled selected hidden>Please select</option>
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                        <option value="option3">Option 3</option>
-                    </ibm-select>
-                </div>
-            </div>
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 14}">
-                    <ibm-select label="Citizenship" display="default">
-                        <option value="" disabled selected hidden>Please select</option>
-                        <option value="option1">AD</option>
-                        <option value="option2">AE</option>
-                        <option value="option3">AF</option>
-                        <option value="option4">AG</option>
-                        <option value="option5">AI</option>
-                        <option value="option6">AL</option>
-                        <option value="option7">AM</option>
-                        <option value="option8">AO</option>
-                    </ibm-select>
-                </div>
-            </div>
-            <hr>
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 14}">
-                    <ibm-select label="Marital status" display="default">
-                        <option value="op1">De Facto</option>
-                        <option value="op2">Divorced</option>
-                        <option value="op3">Married</option>
-                        <option value="op4">Separated</option>
-                        <option value="op5">Single</option>
-                        <option value="op6">Unknown</option>
-                        <option value="op7">Windowed</option>
-                    </ibm-select>
-                </div>
-            </div>
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-select label="Spouse/Partner/Defacto" display="default">
-                        <option value="op1">Non Loan Party</option>
-                    </ibm-select>
-                </div>
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-select label="Customer type" display="default">
-                        <option value="option1">Third party</option>
-                    </ibm-select>
-                </div>
-            </div>
-            <hr>
-
-            <p>Phone number section</p>
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-select label="Phone number type">
-                        <option value="mobile">Mobile</option>
-                        <option value="workphone">Work Phone</option>
-                        <option value="homephone">Home Phone</option>
-                    </ibm-select>
-                </div>
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-label [invalid]="false" invalidText="invalidText">
-                        Mobile number
-                        <input ibmText placeholder="Placeholder text" [(ngModel)]="phone_no">
-                    </ibm-label>
-                </div>
-            </div>
-            <div ibmRow class="ibRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <button ibmButton="tertiary" (click)="savePHNumberHandler()">
-                        Save number <svg icon ibmIconAdd size="16" class="bx--btn__icon"></svg>
-                    </button>
-                </div>
-            </div>
-            <div ibmRow class="ibRow-mb" *ngIf="phone_no_list.length>0">
-                <div ibmCol [columnNumbers]="{'lg': 12}">
-                    <ibm-structured-list [border]="false" [condensed]="false" [nowrap]="true">
-                        <ibm-list-row *ngFor="let item of phone_no_list">
-                            <ibm-list-column>Phone</ibm-list-column>
-                            <ibm-list-column nowrap="true">{{item}}</ibm-list-column>
-                            <ibm-list-column>
-                                <svg icon ibmIconDelete size="16" class="bx--btn__icon"
-                                    (click)="removePHNumberHandler()"></svg>
-                                <svg icon ibmIconEdit size="16" class="bx--btn__icon"></svg>
-                            </ibm-list-column>
-                        </ibm-list-row>
-
-                    </ibm-structured-list>
-                </div>
-            </div>
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-label [invalid]="false" invalidText="invalidText">
-                        Primary email address
-                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
-                            placeholder="enter email address" [autocomplete]="false">
-                    </ibm-label>
-                </div>
-            </div>
-            <div ibmRow class="ibRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <button ibmButton="tertiary">
-                        Add email address <svg icon ibmIconAdd size="16" class="bx--btn__icon"></svg>
-                    </button>
-                </div>
-            </div>
-            <div ibmRow class="ibRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 12}">
-                    <ibm-structured-list [border]="true" [condensed]="false" [nowrap]="true">
-                        <!-- <ibm-list-header>
-                            <ibm-list-column nowrap="true">Column 1</ibm-list-column>
-                            <ibm-list-column nowrap="true">Column 2</ibm-list-column>
-                            <ibm-list-column>Column 3</ibm-list-column>
-                        </ibm-list-header> -->
-                        <ibm-list-row>
-                            <ibm-list-column>Email</ibm-list-column>
-                            <ibm-list-column nowrap="true">john.smith@mail.com</ibm-list-column>
-                            <ibm-list-column>
-                                <svg icon ibmIconDelete size="16" class="bx--btn__icon"></svg>
-                                <svg icon ibmIconEdit size="16" class="bx--btn__icon"></svg>
-                            </ibm-list-column>
-                        </ibm-list-row>
-                        <ibm-list-row>
-                            <ibm-list-column>Email</ibm-list-column>
-                            <ibm-list-column nowrap="true">helen.smith@mail.com</ibm-list-column>
-                            <ibm-list-column>
-                                <svg icon ibmIconDelete size="16" class="bx--btn__icon"></svg>
-                                <svg icon ibmIconEdit size="16" class="bx--btn__icon"></svg>
-                            </ibm-list-column>
-                        </ibm-list-row>
-                    </ibm-structured-list>
-                </div>
-            </div>
-
-            <p>Residential address</p>
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 14}">
-                    <ibm-search></ibm-search>
-                </div>
-            </div>
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-label [invalid]="false" invalidText="invalidText">
-                        Address 1
-                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark" placeholder="Required field">
-                    </ibm-label>
-                </div>
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-label [invalid]="false" invalidText="invalidText">
-                        Address 2 (optional)
-                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
-                            placeholder="Unit #, Apt, Suite">
-                    </ibm-label>
-                </div>
-            </div>
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-select label="State">
-                        <option value="" disabled selected hidden>Please select</option>
-                        <option value="act">Australian Capital Territory</option>
-                        <option value="nsw">New South Wales</option>
-                        <option value="nt">Northern Territory</option>
-                        <option value="qld">Queensland</option>
-                        <option value="sa">South Australia</option>
-                        <option value="tas">Tasmania</option>
-                        <option value="vic">Victoria</option>
-                        <option value="wa">Western Australia</option>
-                    </ibm-select>
-                </div>
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-label [invalid]="false" invalidText="invalidText">
-                        Postcode
-                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
-                            placeholder="Enter 4 digit postcode">
-                    </ibm-label>
-                </div>
-            </div>
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-date-picker width=100% label="Date of birth" placeholder="dd/mm/yyyy" language="en"
-                        [theme]="dark" [disabled]=false [invalid]=false invalidText="Incorrect date" dateFormat="d/m/y">
-                    </ibm-date-picker>
-                </div>
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-
-                    <ibm-checkbox class="prefered-contact-check-box" (change)="takeResidenceHandler($event)">
-                        Taking residence
-                    </ibm-checkbox>
-                </div>
-            </div>
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 14}">
-                    <ibm-notification [notificationObj]="{
-                        type: 'error',
-                        title: '2yr history required',
-                        message: 'You must provide at least 2yrs of residential history. Press add below to include more residential history.',
-                        showClose: true,
-                        lowContrast: true}">
-                    </ibm-notification>
-                </div>
-            </div>
-
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <button ibmButton="tertiary">
-                        Add additional history <svg icon ibmIconAdd size="16" class="bx--btn__icon"></svg>
-                    </button>
-                </div>
-            </div>
-
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 14}">
-                    <ibm-select label="State">
-                        <option value="" disabled selected hidden>Please select</option>
-
-                    </ibm-select>
-                </div>
-            </div>
-
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 14}">
-                    <ibm-checkbox class="prefered-contact-check-box">
-                        Same as residential
-                    </ibm-checkbox>
-                </div>
-            </div>
-
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-label [invalid]="false" invalidText="invalidText">
-                        Address 1
-                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark" placeholder="Required field">
-                    </ibm-label>
-                </div>
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-label [invalid]="false" invalidText="invalidText">
-                        Address 2 (optional)
-                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
-                            placeholder="Unit #, Apt, Suite">
-                    </ibm-label>
-                </div>
-            </div>
-            <div ibmRow class="ibmRow-mb">
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-select label="State">
-                        <option value="" disabled selected hidden>Please select</option>
-                        <option value="act">Australian Capital Territory</option>
-                        <option value="nsw">New South Wales</option>
-                        <option value="nt">Northern Territory</option>
-                        <option value="qld">Queensland</option>
-                        <option value="sa">South Australia</option>
-                        <option value="tas">Tasmania</option>
-                        <option value="vic">Victoria</option>
-                        <option value="wa">Western Australia</option>
-                    </ibm-select>
-                </div>
-                <div ibmCol [columnNumbers]="{'lg': 7}">
-                    <ibm-label [invalid]="false" invalidText="invalidText">
-                        Postcode
-                        <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
-                            placeholder="Enter 4 digit postcode">
-                    </ibm-label>
-                </div>
-            </div>
-
-            <div ibmRow class="ibmRow-mb">
-                <ibm-table-container>
-                    <ibm-table [model]="table_model" [stickyHeader]="false" [skeleton]="false"
-                        [showSelectionColumn]="false" [striped]="false" [sortable]="false" [isDataGrid]="false">
-                    </ibm-table>
-                </ibm-table-container>
-                <ng-template #linkTemplate let-data="data">
-                    {{data.id}}
-                    
-                    <svg icon ibmIconDelete size="16" class="bx--btn__icon"></svg>
-                    <svg icon ibmIconEdit size="16" class="bx--btn__icon"></svg>
-                    <!-- <div>
-                        <ibm-overflow-menu>
-                            <ibm-overflow-menu-option>
-                                <svg icon ibmIconReply size="16"></svg>            
-                                <p>Review</p>
-                            </ibm-overflow-menu-option>
-                            <ibm-overflow-menu-option>
-                                <svg icon ibmIconAddComment size="16"></svg>            
-                                <p>Comment</p>
-                            </ibm-overflow-menu-option>
-                            <ibm-overflow-menu-option>
-                                <svg icon ibmIconFlag size="16"></svg>            
-                                <p>Flag</p>
-                            </ibm-overflow-menu-option>
-                            <ibm-overflow-menu-option>
-                                <svg icon ibmIconOverflowMenuVertical size="16"></svg>            
-                                <p>Schedule</p>
-                            </ibm-overflow-menu-option>
-                        </ibm-overflow-menu>
-                    </div> -->
-                </ng-template>
-            </div>
-
-        </div>
-
-    </div>
-</div>
+</form>>
