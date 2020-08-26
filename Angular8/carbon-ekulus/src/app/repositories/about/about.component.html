@@ -134,7 +134,7 @@
                     <div ibmCol [columnNumbers]="{'lg': 7}">
                         <ibm-label [invalid]="false" invalidText="invalidText">
                             Mobile number
-                            <input ibmText placeholder="Placeholder text" [(ngModel)]="phone_no">
+                            <input ibmText placeholder="Placeholder text" formControlName="phone_no">
                         </ibm-label>
                     </div>
                 </div>
@@ -335,6 +335,16 @@
                             Postcode
                             <input ibmText [invalid]="false" [disabled]="false" [theme]="dark"
                                 placeholder="Enter 4 digit postcode">
+                        </ibm-label>
+                    </div>
+                </div>
+
+                <div ibm class="ibmRow-mb">
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-label>
+                            TypeAHead Address
+                            <input ibmText theme="dark" placeholder="Address" [autocomplete]="false" 
+                             formControlName="autoAddress" (ngModelChange)="onAddressChange($event)">
                         </ibm-label>
                     </div>
                 </div>

@@ -25,9 +25,11 @@ export class AboutComponent implements OnInit {
 	@ViewChild('linkTemplate', { static: true })
 	protected linkTemplate: TemplateRef<any>;
 
-	constructor(private fb: FormBuilder ) { }
+	constructor(private fb: FormBuilder) { }
 
 	contactForm = this.fb.group({
+		autoAddress: [{ value: '', disabled: false }, []],
+		phone_no: [{value: '0033', disabled: false },[]],
 		PersonFirstName: [{ value: '', disabled: false }, [Validators.required, Validators.min(1), Validators.max(50)]],
 	});
 
@@ -76,5 +78,12 @@ export class AboutComponent implements OnInit {
 
 	onContactFormSubmit = () => {
 		console.log('submit');
+	}
+
+	onAddressChange = (val) => {
+		console.log('change!' + val);
+		if (val.length > 0) {
+			//  
+		}
 	}
 }
