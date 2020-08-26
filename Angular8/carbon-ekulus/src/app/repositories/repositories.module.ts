@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { NgxTypeaheadModule } from "ngx-typeahead";
 import {
 	GridModule,
 	ButtonModule,
@@ -82,7 +83,8 @@ import {
 		CheckboxCheckedModule,
 		AddModule,
 		DeleteModule,
-		EditModule
+		EditModule,
+		NgxTypeaheadModule
 	]
 })
 export class RepositoriesModule { }

@@ -339,12 +339,20 @@
                     </div>
                 </div>
 
-                <div ibm class="ibmRow-mb">
+                <div ibmRow class="ibmRow-mb">
                     <div ibmCol [columnNumbers]="{'lg': 7}">
                         <ibm-label>
                             TypeAHead Address
-                            <input ibmText theme="dark" placeholder="Address" [autocomplete]="false" 
-                             formControlName="autoAddress" (ngModelChange)="onAddressChange($event)">
+                            <input ibmText theme="dark" placeholder="Address" [autocomplete]="false"
+                                formControlName="autoAddress" (ngModelChange)="onAddressChange($event)">
+                        </ibm-label>
+                    </div>
+                    <div ibmCol [columnNumbers]="{'lg': 7}">
+                        <ibm-label>
+                            TypeAHead ngx
+                            <input ibmText [value]="search" ngxTypeahead [taUrl]="gnaf_url" [taParams]="gnaf_params" [taQueryParam]="gnaf_term"
+                                [taApi]="gnaf_api"
+                                (taSelected)="handleResultSelected($event)" />
                         </ibm-label>
                     </div>
                 </div>

@@ -21,6 +21,27 @@ export class AboutComponent implements OnInit {
 	phone_no = '';
 	phone_no_list = [];
 
+	/* ngx autocomplete - gnaf address typeAhead */
+	// https://suggestqueries.google.com/complete/search?q=fe&hl=en&ds=yt&xhr=t&client=youtube&callback=ng_jsonp_callback_0
+	public search = "";
+
+	public url = "http://suggestqueries.google.com/complete/search";
+	public params = {
+		hl: "en",
+		ds: "yt",
+		xhr: "t",
+		client: "youtube"
+	};
+
+	public gnaf_url = "https://tst-api.afgonline.com.au/afg_ekulus_local/addresses";
+	public gnaf_api = "http";
+	public gnaf_term = "searchString";
+	public gnaf_params = {
+		limit: 20
+	}
+	/* ------------------------------------ */
+	
+
 	table_model = new TableModel();
 	@ViewChild('linkTemplate', { static: true })
 	protected linkTemplate: TemplateRef<any>;
@@ -29,7 +50,7 @@ export class AboutComponent implements OnInit {
 
 	contactForm = this.fb.group({
 		autoAddress: [{ value: '', disabled: false }, []],
-		phone_no: [{value: '0033', disabled: false },[]],
+		phone_no: [{ value: '0033', disabled: false }, []],
 		PersonFirstName: [{ value: '', disabled: false }, [Validators.required, Validators.min(1), Validators.max(50)]],
 	});
 
@@ -85,5 +106,9 @@ export class AboutComponent implements OnInit {
 		if (val.length > 0) {
 			//  
 		}
+	}
+
+	handleResultSelected(result) {
+		this.search = result;
 	}
 }

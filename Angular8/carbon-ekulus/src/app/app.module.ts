@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 
 // carbon-components-angular default imports
 import { UIShellModule } from 'carbon-components-angular';
+
+import { NgxTypeaheadModule } from 'ngx-typeahead';
+
 import { 
 	NotificationFilledModule, 
 	UserAvatarModule,
@@ -38,6 +41,7 @@ import {
 		UserActivityModule,
 		InventoryManagementModule,
 		CheckboxCheckedModule,
+		NgxTypeaheadModule,
 		AddModule
 	],
 	providers: [],
