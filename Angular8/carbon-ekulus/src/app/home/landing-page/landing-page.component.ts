@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class LandingPageComponent implements OnInit {
 
 	message = 'Landing';
+	followFocus: true;
+	isNavigation: false;
+	cacheActive: true;
+	
 	constructor() { }
 
 	ngOnInit() {

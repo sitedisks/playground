@@ -14,7 +14,15 @@
     </div>
 
     <div ibmRow class="landing-page__banner">
-        <div ibmCol [columnNumbers]="{'lg': 16}">1</div>
+        <div ibmCol [columnNumbers]="{'lg': 16}">
+
+            <ibm-tabs [followFocus]="followFocus" [isNavigation]="isNavigation" [cacheActive]="cacheActive">
+				<ibm-tab heading="one">Tab Content 1</ibm-tab>
+				<ibm-tab heading="two">Tab Content 2</ibm-tab>
+				<ibm-tab heading="three">Tab Content 3</ibm-tab>
+				<ibm-tab heading="four" disabled="true">Tab Content 4</ibm-tab>
+			</ibm-tabs>
+        </div>
     </div>
 
     <div ibmRow class="landing-page__welcome">
