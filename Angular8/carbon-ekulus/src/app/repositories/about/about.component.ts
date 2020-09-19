@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit, TemplateRef } from '@angular/core';
+import { Component, ViewChild, OnInit, ElementRef, TemplateRef } from '@angular/core';
 import { TableModel, TableItem, TableHeaderItem } from 'carbon-components-angular';
 import { FormBuilder, Form, Validators } from '@angular/forms';
 
@@ -43,8 +43,7 @@ export class AboutComponent implements OnInit {
 	
 
 	table_model = new TableModel();
-	@ViewChild('linkTemplate', { static: true })
-	protected linkTemplate: TemplateRef<any>;
+	@ViewChild('linkTemplate', { static: true }) protected linkTemplate: TemplateRef<any>;
 
 	constructor(private fb: FormBuilder) { }
 
