@@ -11,7 +11,10 @@ export class LandingPageComponent implements OnInit {
 	followFocus: true;
 	isNavigation: false;
 	cacheActive: true;
-	
+
+	modal1_on = false;
+	modal2_on = false;
+
 	constructor() { }
 
 	ngOnInit() {

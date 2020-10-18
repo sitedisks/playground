@@ -17,11 +17,11 @@
         <div ibmCol [columnNumbers]="{'lg': 16}">
 
             <ibm-tabs [followFocus]="followFocus" [isNavigation]="isNavigation" [cacheActive]="cacheActive">
-				<ibm-tab heading="one">Tab Content 1</ibm-tab>
-				<ibm-tab heading="two">Tab Content 2</ibm-tab>
-				<ibm-tab heading="three">Tab Content 3</ibm-tab>
-				<ibm-tab heading="four" disabled="true">Tab Content 4</ibm-tab>
-			</ibm-tabs>
+                <ibm-tab heading="one">Tab Content 1</ibm-tab>
+                <ibm-tab heading="two">Tab Content 2</ibm-tab>
+                <ibm-tab heading="three">Tab Content 3</ibm-tab>
+                <ibm-tab heading="four" disabled="true">Tab Content 4</ibm-tab>
+            </ibm-tabs>
         </div>
     </div>
 
@@ -66,11 +66,10 @@
             </ibm-tabs>
         </div>
     </div>
-
     <div ibmRow class="landing-page__r2">
         <div ibmCol [columnNumbers]="{'md': 4, 'lg': 4}">
-            <button ibmButton="primary" size="field">Button</button>
-            <button ibmButton="secondary">A secondary button</button>
+            <button ibmButton="primary" (click)="modal1_on = true">Open</button>
+            <button ibmButton="secondary" (click)="modal2_on = true">A secondary button</button>
         </div>
         <div ibmCol [columnNumbers]="{'md': 4, 'lg': 4}">1/4</div>
         <div ibmCol [columnNumbers]="{'md': 4, 'lg': 4}">1/4</div>
@@ -98,3 +97,35 @@
         </div>
     </div>
 </div>
+
+<ibm-modal [open]="modal1_on" (overlaySelected)="false">
+    <ibm-modal-header (closeSelect)="modal1_on = false">
+        <p>No service required</p>
+    </ibm-modal-header>
+    <div class="bx--modal-content">
+        <p>First Modal</p>
+    </div>
+    <ibm-modal-footer>
+        <ng-container>
+            <button ibmButton="primary" (click)="modal1_on = false">
+                Close 1
+            </button>
+        </ng-container>
+    </ibm-modal-footer>
+</ibm-modal>
+
+<ibm-modal [open]="modal2_on" (overlaySelected)="false">
+    <ibm-modal-header (closeSelect)="modal2_on = false">
+        <p>No service required</p>
+    </ibm-modal-header>
+    <div class="bx--modal-content">
+        <p>Second Modal</p>
+    </div>
+    <ibm-modal-footer>
+        <ng-container>
+            <button ibmButton="primary" (click)="modal2_on = false">
+                Close 2
+            </button>
+        </ng-container>
+    </ibm-modal-footer>
+</ibm-modal>

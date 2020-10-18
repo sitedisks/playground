@@ -5,6 +5,7 @@ import {
 	GridModule,
 	ButtonModule,
 	TabsModule,
+	ModalModule
 } from 'carbon-components-angular';
 
 import { HomeRoutingModule } from './home-routing.module';
@@ -18,7 +19,7 @@ import { discardPeriodicTasks } from '@angular/core/testing';
 		CommonModule,
 		HomeRoutingModule,
 		BreadcrumbModule,
-		GridModule, ButtonModule, TabsModule
+		GridModule, ButtonModule, TabsModule, ModalModule
 	]
 })
 export class HomeModule { }
