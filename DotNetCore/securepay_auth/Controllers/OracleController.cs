@@ -23,12 +23,13 @@ namespace securepay_auth.Controllers
         [HttpGet]
         public async Task<ActionResult> Get()
         {
-            
-            try {
-                //var provider = new ConfigFileAuthenticationDetailsProvider("DEFAULT");
-                // http://oracle-blogs-test.compendiumblog.com/writing-an-oracle-cloud-net-application-using-vs-code-or-vs-codespaces
-                var provider = new ConfigFileAuthenticationDetailsProvider("oci/config", "DEFAULT");
-                var osClient = new ObjectStorageClient(provider, new ClientConfiguration());
+            //var provider = new ConfigFileAuthenticationDetailsProvider("DEFAULT");
+            // http://oracle-blogs-test.compendiumblog.com/writing-an-oracle-cloud-net-application-using-vs-code-or-vs-codespaces
+            var provider = new ConfigFileAuthenticationDetailsProvider("oci/eBrochure_oci.config", "DEFAULT");
+            var osClient = new ObjectStorageClient(provider, new ClientConfiguration());
+
+            try
+            {
 
                 await GetObjectExample(osClient);
                 //await PutObjectExample(osClient);
@@ -37,12 +38,17 @@ namespace securepay_auth.Controllers
             {
                 logger.Error($"Failed ObjectStorage example: {e.Message}");
             }
-            
+            finally
+            {
+                osClient.Dispose();
+            }
+
 
             return Ok("Nice OCI");
         }
 
-        public static async Task<GetObjectResponse> GetObjectExample(ObjectStorageClient osClient) {
+        public static async Task<GetObjectResponse> GetObjectExample(ObjectStorageClient osClient)
+        {
             var getObjectObjectRequest = new GetObjectRequest()
             {
                 BucketName = "bucket-vu-ebrochure",
