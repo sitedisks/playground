@@ -3,29 +3,19 @@ var app = express()
 
 // JavaScript
 const common = require("oci-common");
-// Using default configurations
 
-// Using personal configuration
-const configurationFilePath = "~/.oci/config";
-const configProfile = "config";
-// const provider = new common.ConfigFileAuthenticationDetailsProvider(
-//   configurationFilePath,
-//   configProfile
-// );
+const configurationFilePath = ".oci/config";
+const configProfile = "DEFAULT";
 
-const config = common.ConfigFileReader.parseDefault(configurationFilePath);
+const provider = new common.ConfigFileAuthenticationDetailsProvider(
+  configurationFilePath,
+  configProfile
+);
 
 
-// const configurationFilePath = "~/";
-// const configProfile = "eBrochure_oci.config";
-// const provider = new common.ConfigFileAuthenticationDetailsProvider(
-//     configurationFilePath,
-//     configProfile
-// );
 // const config = common.ConfigFileReader.parseDefault(configurationFilePath);
 // const profile = config.accumulator.configurationsByProfile.get(configProfile);
 // customCompartmentId = profile.get("customCompartmentId") || "";
-
 
 
 // respond with "hello world" when a GET request is made to the homepage

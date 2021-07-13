@@ -25,7 +25,7 @@ namespace securepay_auth.Controllers
         {
             //var provider = new ConfigFileAuthenticationDetailsProvider("DEFAULT");
             // http://oracle-blogs-test.compendiumblog.com/writing-an-oracle-cloud-net-application-using-vs-code-or-vs-codespaces
-            var provider = new ConfigFileAuthenticationDetailsProvider("oci/eBrochure_oci.config", "DEFAULT");
+            var provider = new ConfigFileAuthenticationDetailsProvider("oci/config", "PWCLOUD");
             var osClient = new ObjectStorageClient(provider, new ClientConfiguration());
 
             try
