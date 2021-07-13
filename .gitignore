@@ -251,3 +251,5 @@ DotNetCore/Fibonacci/.vs/
 DotNetCore/OAuth2/.vs/
 DotNetCore/securepay_auth/.vs/
 NodeJS/expApp/node_modules/
+NodeJS/hello/node_modules/
+NodeJS/mm/node_modules/
