@@ -12,6 +12,10 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="OCI.DotNetSDK.Common" Version="21.1.0" />
+    <PackageReference Include="OCI.DotNetSDK.Core" Version="21.1.0" />
+    <PackageReference Include="OCI.DotNetSDK.Identity" Version="21.1.0" />
+    <PackageReference Include="OCI.DotNetSDK.Objectstorage" Version="21.1.0" />
   </ItemGroup>
 
 </Project>
